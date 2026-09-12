@@ -18,7 +18,7 @@ export const SocialServicesPanel01: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -52,7 +52,7 @@ export const SocialServicesPanel02: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -86,7 +86,7 @@ export const SocialServicesPanel03: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -120,7 +120,7 @@ export const SocialServicesPanel04: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -154,7 +154,7 @@ export const SocialServicesPanel05: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -188,7 +188,7 @@ export const SocialServicesPanel06: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -222,7 +222,7 @@ export const SocialServicesPanel07: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -256,7 +256,7 @@ export const SocialServicesPanel08: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -290,7 +290,7 @@ export const SocialServicesPanel09: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -324,7 +324,7 @@ export const SocialServicesPanel10: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -358,7 +358,7 @@ export const SocialServicesPanel11: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -392,7 +392,7 @@ export const SocialServicesPanel12: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -426,7 +426,7 @@ export const SocialServicesPanel13: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -460,7 +460,7 @@ export const SocialServicesPanel14: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -494,7 +494,7 @@ export const SocialServicesPanel15: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -528,7 +528,7 @@ export const SocialServicesPanel16: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -562,7 +562,7 @@ export const SocialServicesPanel17: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -596,7 +596,7 @@ export const SocialServicesPanel18: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -630,7 +630,7 @@ export const SocialServicesPanel19: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -664,7 +664,7 @@ export const SocialServicesPanel20: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -698,7 +698,7 @@ export const SocialServicesPanel21: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -732,7 +732,7 @@ export const SocialServicesPanel22: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -766,7 +766,7 @@ export const SocialServicesPanel23: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -800,7 +800,7 @@ export const SocialServicesPanel24: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -834,7 +834,7 @@ export const SocialServicesPanel25: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -868,7 +868,7 @@ export const SocialServicesPanel26: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -902,7 +902,7 @@ export const SocialServicesPanel27: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -936,7 +936,7 @@ export const SocialServicesPanel28: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -970,7 +970,7 @@ export const SocialServicesPanel29: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1004,7 +1004,7 @@ export const SocialServicesPanel30: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1038,7 +1038,7 @@ export const SocialServicesPanel31: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1072,7 +1072,7 @@ export const SocialServicesPanel32: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1106,7 +1106,7 @@ export const SocialServicesPanel33: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1140,7 +1140,7 @@ export const SocialServicesPanel34: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1174,7 +1174,7 @@ export const SocialServicesPanel35: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1208,7 +1208,7 @@ export const SocialServicesPanel36: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1242,7 +1242,7 @@ export const SocialServicesPanel37: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1276,7 +1276,7 @@ export const SocialServicesPanel38: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1310,7 +1310,7 @@ export const SocialServicesPanel39: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1344,7 +1344,7 @@ export const SocialServicesPanel40: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1378,7 +1378,7 @@ export const SocialServicesPanel41: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1412,7 +1412,7 @@ export const SocialServicesPanel42: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1446,7 +1446,7 @@ export const SocialServicesPanel43: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1480,7 +1480,7 @@ export const SocialServicesPanel44: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1514,7 +1514,7 @@ export const SocialServicesPanel45: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1548,7 +1548,7 @@ export const SocialServicesPanel46: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1582,7 +1582,7 @@ export const SocialServicesPanel47: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1616,7 +1616,7 @@ export const SocialServicesPanel48: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1650,7 +1650,7 @@ export const SocialServicesPanel49: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1684,7 +1684,7 @@ export const SocialServicesPanel50: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1718,7 +1718,7 @@ export const SocialServicesPanel51: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1752,7 +1752,7 @@ export const SocialServicesPanel52: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1786,7 +1786,7 @@ export const SocialServicesPanel53: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1820,7 +1820,7 @@ export const SocialServicesPanel54: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1854,7 +1854,7 @@ export const SocialServicesPanel55: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1888,7 +1888,7 @@ export const SocialServicesPanel56: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1922,7 +1922,7 @@ export const SocialServicesPanel57: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1956,7 +1956,7 @@ export const SocialServicesPanel58: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1990,7 +1990,7 @@ export const SocialServicesPanel59: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -2024,7 +2024,7 @@ export const SocialServicesPanel60: React.FC<{ wardId?: number }> = ({ wardId = 
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Social Welfare & Community Support operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (

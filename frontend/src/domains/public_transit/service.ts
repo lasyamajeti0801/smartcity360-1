@@ -3,8 +3,6 @@
  * Domain: public_transit
  */
 
-import { PublicTransitStatus } from './types';
-
 const API_BASE = '/api/v1/public-transit';
 
 export async function fetchPublicTransitMetric01(wardId = 1, limit = 25): Promise<any> {

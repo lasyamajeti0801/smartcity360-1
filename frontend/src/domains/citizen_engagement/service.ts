@@ -3,8 +3,6 @@
  * Domain: citizen_engagement
  */
 
-import { CitizenEngagementStatus } from './types';
-
 const API_BASE = '/api/v1/citizen-engagement';
 
 export async function fetchCitizenEngagementMetric01(wardId = 1, limit = 25): Promise<any> {

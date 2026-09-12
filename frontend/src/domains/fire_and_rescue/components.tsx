@@ -18,7 +18,7 @@ export const FireAndRescuePanel01: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -52,7 +52,7 @@ export const FireAndRescuePanel02: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -86,7 +86,7 @@ export const FireAndRescuePanel03: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -120,7 +120,7 @@ export const FireAndRescuePanel04: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -154,7 +154,7 @@ export const FireAndRescuePanel05: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -188,7 +188,7 @@ export const FireAndRescuePanel06: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -222,7 +222,7 @@ export const FireAndRescuePanel07: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -256,7 +256,7 @@ export const FireAndRescuePanel08: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -290,7 +290,7 @@ export const FireAndRescuePanel09: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -324,7 +324,7 @@ export const FireAndRescuePanel10: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -358,7 +358,7 @@ export const FireAndRescuePanel11: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -392,7 +392,7 @@ export const FireAndRescuePanel12: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -426,7 +426,7 @@ export const FireAndRescuePanel13: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -460,7 +460,7 @@ export const FireAndRescuePanel14: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -494,7 +494,7 @@ export const FireAndRescuePanel15: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -528,7 +528,7 @@ export const FireAndRescuePanel16: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -562,7 +562,7 @@ export const FireAndRescuePanel17: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -596,7 +596,7 @@ export const FireAndRescuePanel18: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -630,7 +630,7 @@ export const FireAndRescuePanel19: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -664,7 +664,7 @@ export const FireAndRescuePanel20: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -698,7 +698,7 @@ export const FireAndRescuePanel21: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -732,7 +732,7 @@ export const FireAndRescuePanel22: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -766,7 +766,7 @@ export const FireAndRescuePanel23: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -800,7 +800,7 @@ export const FireAndRescuePanel24: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -834,7 +834,7 @@ export const FireAndRescuePanel25: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -868,7 +868,7 @@ export const FireAndRescuePanel26: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -902,7 +902,7 @@ export const FireAndRescuePanel27: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -936,7 +936,7 @@ export const FireAndRescuePanel28: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -970,7 +970,7 @@ export const FireAndRescuePanel29: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1004,7 +1004,7 @@ export const FireAndRescuePanel30: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1038,7 +1038,7 @@ export const FireAndRescuePanel31: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1072,7 +1072,7 @@ export const FireAndRescuePanel32: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1106,7 +1106,7 @@ export const FireAndRescuePanel33: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1140,7 +1140,7 @@ export const FireAndRescuePanel34: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1174,7 +1174,7 @@ export const FireAndRescuePanel35: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1208,7 +1208,7 @@ export const FireAndRescuePanel36: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1242,7 +1242,7 @@ export const FireAndRescuePanel37: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1276,7 +1276,7 @@ export const FireAndRescuePanel38: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1310,7 +1310,7 @@ export const FireAndRescuePanel39: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1344,7 +1344,7 @@ export const FireAndRescuePanel40: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1378,7 +1378,7 @@ export const FireAndRescuePanel41: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1412,7 +1412,7 @@ export const FireAndRescuePanel42: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1446,7 +1446,7 @@ export const FireAndRescuePanel43: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1480,7 +1480,7 @@ export const FireAndRescuePanel44: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1514,7 +1514,7 @@ export const FireAndRescuePanel45: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1548,7 +1548,7 @@ export const FireAndRescuePanel46: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1582,7 +1582,7 @@ export const FireAndRescuePanel47: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1616,7 +1616,7 @@ export const FireAndRescuePanel48: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1650,7 +1650,7 @@ export const FireAndRescuePanel49: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1684,7 +1684,7 @@ export const FireAndRescuePanel50: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1718,7 +1718,7 @@ export const FireAndRescuePanel51: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1752,7 +1752,7 @@ export const FireAndRescuePanel52: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1786,7 +1786,7 @@ export const FireAndRescuePanel53: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1820,7 +1820,7 @@ export const FireAndRescuePanel54: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1854,7 +1854,7 @@ export const FireAndRescuePanel55: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1888,7 +1888,7 @@ export const FireAndRescuePanel56: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1922,7 +1922,7 @@ export const FireAndRescuePanel57: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1956,7 +1956,7 @@ export const FireAndRescuePanel58: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1990,7 +1990,7 @@ export const FireAndRescuePanel59: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -2024,7 +2024,7 @@ export const FireAndRescuePanel60: React.FC<{ wardId?: number }> = ({ wardId = 1
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Fire Protection & Hazardous Materials operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (

@@ -3,8 +3,6 @@
  * Domain: public_works
  */
 
-import { PublicWorksStatus } from './types';
-
 const API_BASE = '/api/v1/public-works';
 
 export async function fetchPublicWorksMetric01(wardId = 1, limit = 25): Promise<any> {

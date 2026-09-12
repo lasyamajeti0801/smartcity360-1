@@ -3,8 +3,6 @@
  * Domain: parks_and_recreation
  */
 
-import { ParksAndRecreationStatus } from './types';
-
 const API_BASE = '/api/v1/parks-and-recreation';
 
 export async function fetchParksAndRecreationMetric01(wardId = 1, limit = 25): Promise<any> {

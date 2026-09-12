@@ -348,7 +348,6 @@ def generate_ts_types(slug, title, desc):
 def generate_ts_service(slug, title, desc):
     lines = []
     lines.append(f"/**\n * SmartCity360 - {title} Client API Service\n * Domain: {slug}\n */\n")
-    lines.append(f"import {{ {slug.title().replace('_', '')}Status }} from './types';\n")
     lines.append(f"const API_BASE = '/api/v1/{slug.replace('_', '-')}';\n")
     
     for i in range(1, 91):
@@ -379,8 +378,8 @@ def generate_ts_components(slug, title, desc):
         lines.append("      .then(json => { setData(json); setLoading(false); })")
         lines.append("      .catch(err => { setError(err.message); setLoading(false); });")
         lines.append("  }, [wardId]);\n")
-        lines.append("  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;")
-        lines.append("  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;\n")
+        lines.append(f"  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;")
+        lines.append(f"  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {{error}}</div>;\n")
         lines.append("  return (")
         lines.append("    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>")
         lines.append(f"      <h3 className='text-base font-semibold text-slate-900'>{title} — Panel {i:02d}</h3>")

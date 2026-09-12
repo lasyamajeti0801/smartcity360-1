@@ -3,8 +3,6 @@
  * Domain: urban_planning
  */
 
-import { UrbanPlanningStatus } from './types';
-
 const API_BASE = '/api/v1/urban-planning';
 
 export async function fetchUrbanPlanningMetric01(wardId = 1, limit = 25): Promise<any> {

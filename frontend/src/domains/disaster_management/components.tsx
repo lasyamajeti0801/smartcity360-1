@@ -18,7 +18,7 @@ export const DisasterManagementPanel01: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -52,7 +52,7 @@ export const DisasterManagementPanel02: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -86,7 +86,7 @@ export const DisasterManagementPanel03: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -120,7 +120,7 @@ export const DisasterManagementPanel04: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -154,7 +154,7 @@ export const DisasterManagementPanel05: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -188,7 +188,7 @@ export const DisasterManagementPanel06: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -222,7 +222,7 @@ export const DisasterManagementPanel07: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -256,7 +256,7 @@ export const DisasterManagementPanel08: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -290,7 +290,7 @@ export const DisasterManagementPanel09: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -324,7 +324,7 @@ export const DisasterManagementPanel10: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -358,7 +358,7 @@ export const DisasterManagementPanel11: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -392,7 +392,7 @@ export const DisasterManagementPanel12: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -426,7 +426,7 @@ export const DisasterManagementPanel13: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -460,7 +460,7 @@ export const DisasterManagementPanel14: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -494,7 +494,7 @@ export const DisasterManagementPanel15: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -528,7 +528,7 @@ export const DisasterManagementPanel16: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -562,7 +562,7 @@ export const DisasterManagementPanel17: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -596,7 +596,7 @@ export const DisasterManagementPanel18: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -630,7 +630,7 @@ export const DisasterManagementPanel19: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -664,7 +664,7 @@ export const DisasterManagementPanel20: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -698,7 +698,7 @@ export const DisasterManagementPanel21: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -732,7 +732,7 @@ export const DisasterManagementPanel22: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -766,7 +766,7 @@ export const DisasterManagementPanel23: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -800,7 +800,7 @@ export const DisasterManagementPanel24: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -834,7 +834,7 @@ export const DisasterManagementPanel25: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -868,7 +868,7 @@ export const DisasterManagementPanel26: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -902,7 +902,7 @@ export const DisasterManagementPanel27: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -936,7 +936,7 @@ export const DisasterManagementPanel28: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -970,7 +970,7 @@ export const DisasterManagementPanel29: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1004,7 +1004,7 @@ export const DisasterManagementPanel30: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1038,7 +1038,7 @@ export const DisasterManagementPanel31: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1072,7 +1072,7 @@ export const DisasterManagementPanel32: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1106,7 +1106,7 @@ export const DisasterManagementPanel33: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1140,7 +1140,7 @@ export const DisasterManagementPanel34: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1174,7 +1174,7 @@ export const DisasterManagementPanel35: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1208,7 +1208,7 @@ export const DisasterManagementPanel36: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1242,7 +1242,7 @@ export const DisasterManagementPanel37: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1276,7 +1276,7 @@ export const DisasterManagementPanel38: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1310,7 +1310,7 @@ export const DisasterManagementPanel39: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1344,7 +1344,7 @@ export const DisasterManagementPanel40: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1378,7 +1378,7 @@ export const DisasterManagementPanel41: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1412,7 +1412,7 @@ export const DisasterManagementPanel42: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1446,7 +1446,7 @@ export const DisasterManagementPanel43: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1480,7 +1480,7 @@ export const DisasterManagementPanel44: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1514,7 +1514,7 @@ export const DisasterManagementPanel45: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1548,7 +1548,7 @@ export const DisasterManagementPanel46: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1582,7 +1582,7 @@ export const DisasterManagementPanel47: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1616,7 +1616,7 @@ export const DisasterManagementPanel48: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1650,7 +1650,7 @@ export const DisasterManagementPanel49: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1684,7 +1684,7 @@ export const DisasterManagementPanel50: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1718,7 +1718,7 @@ export const DisasterManagementPanel51: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1752,7 +1752,7 @@ export const DisasterManagementPanel52: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1786,7 +1786,7 @@ export const DisasterManagementPanel53: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1820,7 +1820,7 @@ export const DisasterManagementPanel54: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1854,7 +1854,7 @@ export const DisasterManagementPanel55: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1888,7 +1888,7 @@ export const DisasterManagementPanel56: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1922,7 +1922,7 @@ export const DisasterManagementPanel57: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1956,7 +1956,7 @@ export const DisasterManagementPanel58: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1990,7 +1990,7 @@ export const DisasterManagementPanel59: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -2024,7 +2024,7 @@ export const DisasterManagementPanel60: React.FC<{ wardId?: number }> = ({ wardI
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Disaster Preparedness & Civil Defense operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (

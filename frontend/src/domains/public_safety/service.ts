@@ -3,8 +3,6 @@
  * Domain: public_safety
  */
 
-import { PublicSafetyStatus } from './types';
-
 const API_BASE = '/api/v1/public-safety';
 
 export async function fetchPublicSafetyMetric01(wardId = 1, limit = 25): Promise<any> {

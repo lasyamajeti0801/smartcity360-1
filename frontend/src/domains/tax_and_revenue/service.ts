@@ -3,8 +3,6 @@
  * Domain: tax_and_revenue
  */
 
-import { TaxAndRevenueStatus } from './types';
-
 const API_BASE = '/api/v1/tax-and-revenue';
 
 export async function fetchTaxAndRevenueMetric01(wardId = 1, limit = 25): Promise<any> {

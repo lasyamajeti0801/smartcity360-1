@@ -3,8 +3,6 @@
  * Domain: emergency_medical
  */
 
-import { EmergencyMedicalStatus } from './types';
-
 const API_BASE = '/api/v1/emergency-medical';
 
 export async function fetchEmergencyMedicalMetric01(wardId = 1, limit = 25): Promise<any> {

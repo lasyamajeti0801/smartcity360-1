@@ -3,8 +3,6 @@
  * Domain: building_and_permits
  */
 
-import { BuildingAndPermitsStatus } from './types';
-
 const API_BASE = '/api/v1/building-and-permits';
 
 export async function fetchBuildingAndPermitsMetric01(wardId = 1, limit = 25): Promise<any> {

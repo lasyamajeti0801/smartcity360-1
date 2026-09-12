@@ -3,8 +3,6 @@
  * Domain: environmental_monitoring
  */
 
-import { EnvironmentalMonitoringStatus } from './types';
-
 const API_BASE = '/api/v1/environmental-monitoring';
 
 export async function fetchEnvironmentalMonitoringMetric01(wardId = 1, limit = 25): Promise<any> {

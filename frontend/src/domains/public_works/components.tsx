@@ -18,7 +18,7 @@ export const PublicWorksPanel01: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -52,7 +52,7 @@ export const PublicWorksPanel02: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -86,7 +86,7 @@ export const PublicWorksPanel03: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -120,7 +120,7 @@ export const PublicWorksPanel04: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -154,7 +154,7 @@ export const PublicWorksPanel05: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -188,7 +188,7 @@ export const PublicWorksPanel06: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -222,7 +222,7 @@ export const PublicWorksPanel07: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -256,7 +256,7 @@ export const PublicWorksPanel08: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -290,7 +290,7 @@ export const PublicWorksPanel09: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -324,7 +324,7 @@ export const PublicWorksPanel10: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -358,7 +358,7 @@ export const PublicWorksPanel11: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -392,7 +392,7 @@ export const PublicWorksPanel12: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -426,7 +426,7 @@ export const PublicWorksPanel13: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -460,7 +460,7 @@ export const PublicWorksPanel14: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -494,7 +494,7 @@ export const PublicWorksPanel15: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -528,7 +528,7 @@ export const PublicWorksPanel16: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -562,7 +562,7 @@ export const PublicWorksPanel17: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -596,7 +596,7 @@ export const PublicWorksPanel18: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -630,7 +630,7 @@ export const PublicWorksPanel19: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -664,7 +664,7 @@ export const PublicWorksPanel20: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -698,7 +698,7 @@ export const PublicWorksPanel21: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -732,7 +732,7 @@ export const PublicWorksPanel22: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -766,7 +766,7 @@ export const PublicWorksPanel23: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -800,7 +800,7 @@ export const PublicWorksPanel24: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -834,7 +834,7 @@ export const PublicWorksPanel25: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -868,7 +868,7 @@ export const PublicWorksPanel26: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -902,7 +902,7 @@ export const PublicWorksPanel27: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -936,7 +936,7 @@ export const PublicWorksPanel28: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -970,7 +970,7 @@ export const PublicWorksPanel29: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1004,7 +1004,7 @@ export const PublicWorksPanel30: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1038,7 +1038,7 @@ export const PublicWorksPanel31: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1072,7 +1072,7 @@ export const PublicWorksPanel32: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1106,7 +1106,7 @@ export const PublicWorksPanel33: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1140,7 +1140,7 @@ export const PublicWorksPanel34: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1174,7 +1174,7 @@ export const PublicWorksPanel35: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1208,7 +1208,7 @@ export const PublicWorksPanel36: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1242,7 +1242,7 @@ export const PublicWorksPanel37: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1276,7 +1276,7 @@ export const PublicWorksPanel38: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1310,7 +1310,7 @@ export const PublicWorksPanel39: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1344,7 +1344,7 @@ export const PublicWorksPanel40: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1378,7 +1378,7 @@ export const PublicWorksPanel41: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1412,7 +1412,7 @@ export const PublicWorksPanel42: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1446,7 +1446,7 @@ export const PublicWorksPanel43: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1480,7 +1480,7 @@ export const PublicWorksPanel44: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1514,7 +1514,7 @@ export const PublicWorksPanel45: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1548,7 +1548,7 @@ export const PublicWorksPanel46: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1582,7 +1582,7 @@ export const PublicWorksPanel47: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1616,7 +1616,7 @@ export const PublicWorksPanel48: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1650,7 +1650,7 @@ export const PublicWorksPanel49: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1684,7 +1684,7 @@ export const PublicWorksPanel50: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1718,7 +1718,7 @@ export const PublicWorksPanel51: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1752,7 +1752,7 @@ export const PublicWorksPanel52: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1786,7 +1786,7 @@ export const PublicWorksPanel53: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1820,7 +1820,7 @@ export const PublicWorksPanel54: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1854,7 +1854,7 @@ export const PublicWorksPanel55: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1888,7 +1888,7 @@ export const PublicWorksPanel56: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1922,7 +1922,7 @@ export const PublicWorksPanel57: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1956,7 +1956,7 @@ export const PublicWorksPanel58: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -1990,7 +1990,7 @@ export const PublicWorksPanel59: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (
@@ -2024,7 +2024,7 @@ export const PublicWorksPanel60: React.FC<{ wardId?: number }> = ({ wardId = 1 }
       .catch(err => { setError(err.message); setLoading(false); });
   }, [wardId]);
 
-  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading Civil Infrastructure & Asset Integrity operational telemetry...</div>;
   if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
 
   return (

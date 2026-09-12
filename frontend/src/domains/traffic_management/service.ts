@@ -3,8 +3,6 @@
  * Domain: traffic_management
  */
 
-import { TrafficManagementStatus } from './types';
-
 const API_BASE = '/api/v1/traffic-management';
 
 export async function fetchTrafficManagementMetric01(wardId = 1, limit = 25): Promise<any> {

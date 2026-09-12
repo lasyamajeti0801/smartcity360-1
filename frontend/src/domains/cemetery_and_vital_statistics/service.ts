@@ -3,8 +3,6 @@
  * Domain: cemetery_and_vital_statistics
  */
 
-import { CemeteryAndVitalStatisticsStatus } from './types';
-
 const API_BASE = '/api/v1/cemetery-and-vital-statistics';
 
 export async function fetchCemeteryAndVitalStatisticsMetric01(wardId = 1, limit = 25): Promise<any> {

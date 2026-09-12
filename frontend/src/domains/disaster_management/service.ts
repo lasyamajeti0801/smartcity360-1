@@ -3,8 +3,6 @@
  * Domain: disaster_management
  */
 
-import { DisasterManagementStatus } from './types';
-
 const API_BASE = '/api/v1/disaster-management';
 
 export async function fetchDisasterManagementMetric01(wardId = 1, limit = 25): Promise<any> {
