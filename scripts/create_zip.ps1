@@ -47,9 +47,10 @@ if (Test-Path $ZipTargetDesktop) {
 
 tar.exe -a -c -f $ZipTargetDesktop -C "C:\Users\pedha\OneDrive\Desktop" SmartCity360
 
-# Also copy to workspace and update SmartCity360_Project.zip
 Copy-Item $ZipTargetDesktop -Destination $ZipTargetWorkspace -Force
 Copy-Item $ZipTargetDesktop -Destination $ZipStandardDesktop -Force
+Copy-Item $ZipTargetDesktop -Destination "C:\Users\pedha\Downloads\SmartCity360_Project.zip" -Force
+
 
 # Clean staging folder
 Remove-Item -Recurse -Force $ExportFolder
