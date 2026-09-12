@@ -3632,3 +3632,1603 @@ class CemeteryAndVitalStatisticsEntity90(BaseModel):
 
     def is_critical_alert(self) -> bool:
         return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity91(BaseModel):
+    """Operational domain entity 91 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity91')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity92(BaseModel):
+    """Operational domain entity 92 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity92')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity93(BaseModel):
+    """Operational domain entity 93 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity93')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity94(BaseModel):
+    """Operational domain entity 94 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity94')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity95(BaseModel):
+    """Operational domain entity 95 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity95')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity96(BaseModel):
+    """Operational domain entity 96 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity96')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity97(BaseModel):
+    """Operational domain entity 97 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity97')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity98(BaseModel):
+    """Operational domain entity 98 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity98')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity99(BaseModel):
+    """Operational domain entity 99 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity99')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity100(BaseModel):
+    """Operational domain entity 100 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity100')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity101(BaseModel):
+    """Operational domain entity 101 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity101')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity102(BaseModel):
+    """Operational domain entity 102 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity102')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity103(BaseModel):
+    """Operational domain entity 103 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity103')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity104(BaseModel):
+    """Operational domain entity 104 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity104')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity105(BaseModel):
+    """Operational domain entity 105 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity105')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity106(BaseModel):
+    """Operational domain entity 106 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity106')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity107(BaseModel):
+    """Operational domain entity 107 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity107')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity108(BaseModel):
+    """Operational domain entity 108 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity108')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity109(BaseModel):
+    """Operational domain entity 109 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity109')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity110(BaseModel):
+    """Operational domain entity 110 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity110')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity111(BaseModel):
+    """Operational domain entity 111 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity111')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity112(BaseModel):
+    """Operational domain entity 112 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity112')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity113(BaseModel):
+    """Operational domain entity 113 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity113')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity114(BaseModel):
+    """Operational domain entity 114 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity114')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity115(BaseModel):
+    """Operational domain entity 115 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity115')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity116(BaseModel):
+    """Operational domain entity 116 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity116')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity117(BaseModel):
+    """Operational domain entity 117 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity117')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity118(BaseModel):
+    """Operational domain entity 118 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity118')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity119(BaseModel):
+    """Operational domain entity 119 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity119')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity120(BaseModel):
+    """Operational domain entity 120 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity120')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity121(BaseModel):
+    """Operational domain entity 121 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity121')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity122(BaseModel):
+    """Operational domain entity 122 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity122')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity123(BaseModel):
+    """Operational domain entity 123 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity123')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity124(BaseModel):
+    """Operational domain entity 124 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity124')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity125(BaseModel):
+    """Operational domain entity 125 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity125')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity126(BaseModel):
+    """Operational domain entity 126 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity126')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity127(BaseModel):
+    """Operational domain entity 127 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity127')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity128(BaseModel):
+    """Operational domain entity 128 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity128')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity129(BaseModel):
+    """Operational domain entity 129 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity129')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CemeteryAndVitalStatisticsEntity130(BaseModel):
+    """Operational domain entity 130 for Civil Registry & Municipal Memorials."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CemeteryAndVitalStatisticsEntity130')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CemeteryAndVitalStatisticsStatus = Field(default=CemeteryAndVitalStatisticsStatus.ACTIVE)
+    priority: CemeteryAndVitalStatisticsPriority = Field(default=CemeteryAndVitalStatisticsPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)

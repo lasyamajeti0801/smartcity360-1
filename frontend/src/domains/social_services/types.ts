@@ -1097,3 +1097,543 @@ export interface SocialServicesInterface60 {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface SocialServicesInterface61 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface62 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface63 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface64 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface65 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface66 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface67 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface68 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface69 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface70 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface71 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface72 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface73 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface74 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface75 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface76 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface77 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface78 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface79 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface80 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface81 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface82 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface83 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface84 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface85 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface86 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface87 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface88 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface89 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface SocialServicesInterface90 {
+  entityId: string;
+  referenceCode: string;
+  status: SocialServicesStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}

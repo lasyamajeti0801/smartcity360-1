@@ -1097,3 +1097,543 @@ export interface FleetManagementInterface60 {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface FleetManagementInterface61 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface62 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface63 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface64 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface65 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface66 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface67 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface68 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface69 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface70 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface71 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface72 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface73 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface74 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface75 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface76 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface77 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface78 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface79 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface80 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface81 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface82 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface83 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface84 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface85 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface86 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface87 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface88 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface89 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FleetManagementInterface90 {
+  entityId: string;
+  referenceCode: string;
+  status: FleetManagementStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}

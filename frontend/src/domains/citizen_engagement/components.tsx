@@ -1364,3 +1364,683 @@ export const CitizenEngagementPanel40: React.FC<{ wardId?: number }> = ({ wardId
     </div>
   );
 };
+
+export const CitizenEngagementPanel41: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-41?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 41</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel42: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-42?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 42</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel43: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-43?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 43</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel44: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-44?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 44</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel45: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-45?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 45</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel46: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-46?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 46</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel47: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-47?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 47</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel48: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-48?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 48</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel49: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-49?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 49</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel50: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-50?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 50</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel51: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-51?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 51</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel52: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-52?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 52</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel53: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-53?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 53</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel54: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-54?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 54</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel55: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-55?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 55</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel56: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-56?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 56</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel57: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-57?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 57</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel58: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-58?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 58</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel59: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-59?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 59</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const CitizenEngagementPanel60: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/citizen-engagement/endpoint-60?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Citizen Participation & Open Democracy — Panel 60</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -3632,3 +3632,1603 @@ class EnvironmentalMonitoringEntity90(BaseModel):
 
     def is_critical_alert(self) -> bool:
         return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity91(BaseModel):
+    """Operational domain entity 91 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity91')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity92(BaseModel):
+    """Operational domain entity 92 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity92')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity93(BaseModel):
+    """Operational domain entity 93 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity93')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity94(BaseModel):
+    """Operational domain entity 94 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity94')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity95(BaseModel):
+    """Operational domain entity 95 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity95')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity96(BaseModel):
+    """Operational domain entity 96 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity96')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity97(BaseModel):
+    """Operational domain entity 97 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity97')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity98(BaseModel):
+    """Operational domain entity 98 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity98')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity99(BaseModel):
+    """Operational domain entity 99 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity99')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity100(BaseModel):
+    """Operational domain entity 100 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity100')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity101(BaseModel):
+    """Operational domain entity 101 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity101')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity102(BaseModel):
+    """Operational domain entity 102 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity102')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity103(BaseModel):
+    """Operational domain entity 103 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity103')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity104(BaseModel):
+    """Operational domain entity 104 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity104')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity105(BaseModel):
+    """Operational domain entity 105 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity105')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity106(BaseModel):
+    """Operational domain entity 106 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity106')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity107(BaseModel):
+    """Operational domain entity 107 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity107')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity108(BaseModel):
+    """Operational domain entity 108 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity108')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity109(BaseModel):
+    """Operational domain entity 109 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity109')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity110(BaseModel):
+    """Operational domain entity 110 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity110')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity111(BaseModel):
+    """Operational domain entity 111 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity111')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity112(BaseModel):
+    """Operational domain entity 112 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity112')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity113(BaseModel):
+    """Operational domain entity 113 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity113')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity114(BaseModel):
+    """Operational domain entity 114 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity114')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity115(BaseModel):
+    """Operational domain entity 115 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity115')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity116(BaseModel):
+    """Operational domain entity 116 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity116')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity117(BaseModel):
+    """Operational domain entity 117 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity117')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity118(BaseModel):
+    """Operational domain entity 118 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity118')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity119(BaseModel):
+    """Operational domain entity 119 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity119')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity120(BaseModel):
+    """Operational domain entity 120 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity120')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity121(BaseModel):
+    """Operational domain entity 121 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity121')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity122(BaseModel):
+    """Operational domain entity 122 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity122')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity123(BaseModel):
+    """Operational domain entity 123 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity123')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity124(BaseModel):
+    """Operational domain entity 124 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity124')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity125(BaseModel):
+    """Operational domain entity 125 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity125')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity126(BaseModel):
+    """Operational domain entity 126 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity126')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity127(BaseModel):
+    """Operational domain entity 127 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity127')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity128(BaseModel):
+    """Operational domain entity 128 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity128')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity129(BaseModel):
+    """Operational domain entity 129 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity129')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class EnvironmentalMonitoringEntity130(BaseModel):
+    """Operational domain entity 130 for Environmental Quality & Climate Resilience."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for EnvironmentalMonitoringEntity130')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: EnvironmentalMonitoringStatus = Field(default=EnvironmentalMonitoringStatus.ACTIVE)
+    priority: EnvironmentalMonitoringPriority = Field(default=EnvironmentalMonitoringPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)

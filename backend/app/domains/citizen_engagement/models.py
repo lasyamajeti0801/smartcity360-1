@@ -3632,3 +3632,1603 @@ class CitizenEngagementEntity90(BaseModel):
 
     def is_critical_alert(self) -> bool:
         return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity91(BaseModel):
+    """Operational domain entity 91 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity91')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity92(BaseModel):
+    """Operational domain entity 92 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity92')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity93(BaseModel):
+    """Operational domain entity 93 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity93')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity94(BaseModel):
+    """Operational domain entity 94 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity94')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity95(BaseModel):
+    """Operational domain entity 95 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity95')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity96(BaseModel):
+    """Operational domain entity 96 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity96')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity97(BaseModel):
+    """Operational domain entity 97 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity97')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity98(BaseModel):
+    """Operational domain entity 98 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity98')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity99(BaseModel):
+    """Operational domain entity 99 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity99')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity100(BaseModel):
+    """Operational domain entity 100 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity100')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity101(BaseModel):
+    """Operational domain entity 101 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity101')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity102(BaseModel):
+    """Operational domain entity 102 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity102')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity103(BaseModel):
+    """Operational domain entity 103 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity103')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity104(BaseModel):
+    """Operational domain entity 104 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity104')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity105(BaseModel):
+    """Operational domain entity 105 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity105')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity106(BaseModel):
+    """Operational domain entity 106 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity106')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity107(BaseModel):
+    """Operational domain entity 107 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity107')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity108(BaseModel):
+    """Operational domain entity 108 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity108')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity109(BaseModel):
+    """Operational domain entity 109 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity109')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity110(BaseModel):
+    """Operational domain entity 110 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity110')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity111(BaseModel):
+    """Operational domain entity 111 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity111')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity112(BaseModel):
+    """Operational domain entity 112 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity112')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity113(BaseModel):
+    """Operational domain entity 113 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity113')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity114(BaseModel):
+    """Operational domain entity 114 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity114')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity115(BaseModel):
+    """Operational domain entity 115 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity115')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity116(BaseModel):
+    """Operational domain entity 116 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity116')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity117(BaseModel):
+    """Operational domain entity 117 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity117')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity118(BaseModel):
+    """Operational domain entity 118 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity118')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity119(BaseModel):
+    """Operational domain entity 119 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity119')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity120(BaseModel):
+    """Operational domain entity 120 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity120')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity121(BaseModel):
+    """Operational domain entity 121 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity121')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity122(BaseModel):
+    """Operational domain entity 122 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity122')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity123(BaseModel):
+    """Operational domain entity 123 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity123')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity124(BaseModel):
+    """Operational domain entity 124 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity124')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity125(BaseModel):
+    """Operational domain entity 125 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity125')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity126(BaseModel):
+    """Operational domain entity 126 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity126')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity127(BaseModel):
+    """Operational domain entity 127 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity127')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity128(BaseModel):
+    """Operational domain entity 128 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity128')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity129(BaseModel):
+    """Operational domain entity 129 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity129')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class CitizenEngagementEntity130(BaseModel):
+    """Operational domain entity 130 for Citizen Participation & Open Democracy."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for CitizenEngagementEntity130')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: CitizenEngagementStatus = Field(default=CitizenEngagementStatus.ACTIVE)
+    priority: CitizenEngagementPriority = Field(default=CitizenEngagementPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)

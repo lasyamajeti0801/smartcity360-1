@@ -486,3 +486,243 @@ export async function fetchEnergyGridMetric60(wardId = 1, limit = 25): Promise<a
   }
   return response.json();
 }
+
+export async function fetchEnergyGridMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchEnergyGridMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Municipal Power & Smart Grid metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

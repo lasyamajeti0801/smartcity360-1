@@ -1364,3 +1364,683 @@ export const PublicHealthPanel40: React.FC<{ wardId?: number }> = ({ wardId = 1 
     </div>
   );
 };
+
+export const PublicHealthPanel41: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-41?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 41</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel42: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-42?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 42</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel43: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-43?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 43</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel44: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-44?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 44</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel45: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-45?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 45</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel46: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-46?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 46</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel47: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-47?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 47</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel48: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-48?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 48</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel49: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-49?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 49</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel50: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-50?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 50</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel51: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-51?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 51</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel52: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-52?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 52</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel53: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-53?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 53</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel54: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-54?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 54</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel55: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-55?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 55</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel56: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-56?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 56</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel57: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-57?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 57</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel58: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-58?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 58</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel59: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-59?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 59</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const PublicHealthPanel60: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/public-health/endpoint-60?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Public Health Surveillance & Hygiene — Panel 60</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};

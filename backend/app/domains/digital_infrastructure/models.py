@@ -3632,3 +3632,1603 @@ class DigitalInfrastructureEntity90(BaseModel):
 
     def is_critical_alert(self) -> bool:
         return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity91(BaseModel):
+    """Operational domain entity 91 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity91')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity92(BaseModel):
+    """Operational domain entity 92 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity92')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity93(BaseModel):
+    """Operational domain entity 93 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity93')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity94(BaseModel):
+    """Operational domain entity 94 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity94')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity95(BaseModel):
+    """Operational domain entity 95 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity95')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity96(BaseModel):
+    """Operational domain entity 96 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity96')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity97(BaseModel):
+    """Operational domain entity 97 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity97')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity98(BaseModel):
+    """Operational domain entity 98 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity98')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity99(BaseModel):
+    """Operational domain entity 99 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity99')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity100(BaseModel):
+    """Operational domain entity 100 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity100')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity101(BaseModel):
+    """Operational domain entity 101 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity101')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity102(BaseModel):
+    """Operational domain entity 102 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity102')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity103(BaseModel):
+    """Operational domain entity 103 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity103')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity104(BaseModel):
+    """Operational domain entity 104 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity104')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity105(BaseModel):
+    """Operational domain entity 105 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity105')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity106(BaseModel):
+    """Operational domain entity 106 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity106')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity107(BaseModel):
+    """Operational domain entity 107 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity107')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity108(BaseModel):
+    """Operational domain entity 108 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity108')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity109(BaseModel):
+    """Operational domain entity 109 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity109')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity110(BaseModel):
+    """Operational domain entity 110 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity110')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity111(BaseModel):
+    """Operational domain entity 111 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity111')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity112(BaseModel):
+    """Operational domain entity 112 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity112')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity113(BaseModel):
+    """Operational domain entity 113 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity113')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity114(BaseModel):
+    """Operational domain entity 114 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity114')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity115(BaseModel):
+    """Operational domain entity 115 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity115')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity116(BaseModel):
+    """Operational domain entity 116 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity116')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity117(BaseModel):
+    """Operational domain entity 117 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity117')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity118(BaseModel):
+    """Operational domain entity 118 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity118')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity119(BaseModel):
+    """Operational domain entity 119 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity119')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity120(BaseModel):
+    """Operational domain entity 120 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity120')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity121(BaseModel):
+    """Operational domain entity 121 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity121')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity122(BaseModel):
+    """Operational domain entity 122 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity122')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity123(BaseModel):
+    """Operational domain entity 123 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity123')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity124(BaseModel):
+    """Operational domain entity 124 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity124')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity125(BaseModel):
+    """Operational domain entity 125 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity125')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity126(BaseModel):
+    """Operational domain entity 126 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity126')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity127(BaseModel):
+    """Operational domain entity 127 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity127')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity128(BaseModel):
+    """Operational domain entity 128 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity128')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity129(BaseModel):
+    """Operational domain entity 129 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity129')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class DigitalInfrastructureEntity130(BaseModel):
+    """Operational domain entity 130 for Smart City Cyber-Physical Infrastructure."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for DigitalInfrastructureEntity130')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: DigitalInfrastructureStatus = Field(default=DigitalInfrastructureStatus.ACTIVE)
+    priority: DigitalInfrastructurePriority = Field(default=DigitalInfrastructurePriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)

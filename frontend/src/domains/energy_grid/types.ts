@@ -1097,3 +1097,543 @@ export interface EnergyGridInterface60 {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface EnergyGridInterface61 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface62 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface63 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface64 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface65 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface66 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface67 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface68 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface69 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface70 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface71 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface72 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface73 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface74 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface75 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface76 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface77 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface78 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface79 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface80 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface81 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface82 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface83 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface84 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface85 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface86 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface87 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface88 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface89 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface EnergyGridInterface90 {
+  entityId: string;
+  referenceCode: string;
+  status: EnergyGridStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}

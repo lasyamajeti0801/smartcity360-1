@@ -1097,3 +1097,543 @@ export interface PublicHealthInterface60 {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface PublicHealthInterface61 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface62 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface63 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface64 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface65 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface66 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface67 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface68 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface69 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface70 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface71 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface72 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface73 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface74 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface75 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface76 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface77 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface78 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface79 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface80 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface81 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface82 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface83 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface84 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface85 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface86 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface87 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface88 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface89 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface PublicHealthInterface90 {
+  entityId: string;
+  referenceCode: string;
+  status: PublicHealthStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}

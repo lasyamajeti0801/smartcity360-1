@@ -1364,3 +1364,683 @@ export const EnergyGridPanel40: React.FC<{ wardId?: number }> = ({ wardId = 1 })
     </div>
   );
 };
+
+export const EnergyGridPanel41: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-41?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 41</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel42: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-42?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 42</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel43: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-43?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 43</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel44: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-44?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 44</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel45: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-45?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 45</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel46: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-46?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 46</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel47: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-47?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 47</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel48: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-48?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 48</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel49: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-49?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 49</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel50: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-50?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 50</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel51: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-51?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 51</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel52: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-52?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 52</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel53: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-53?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 53</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel54: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-54?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 54</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel55: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-55?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 55</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel56: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-56?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 56</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel57: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-57?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 57</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel58: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-58?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 58</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel59: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-59?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 59</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const EnergyGridPanel60: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/energy-grid/endpoint-60?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Municipal Power & Smart Grid — Panel 60</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};

@@ -1097,3 +1097,543 @@ export interface FireAndRescueInterface60 {
   createdAt: string;
   updatedAt: string;
 }
+
+export interface FireAndRescueInterface61 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface62 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface63 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface64 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface65 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface66 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface67 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface68 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface69 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface70 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface71 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface72 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface73 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface74 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface75 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface76 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface77 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface78 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface79 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface80 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface81 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface82 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface83 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface84 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface85 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface86 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface87 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface88 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface89 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface FireAndRescueInterface90 {
+  entityId: string;
+  referenceCode: string;
+  status: FireAndRescueStatus;
+  wardId: number;
+  zoneCode: string;
+  latitude: number;
+  longitude: number;
+  primaryMetricValue: number;
+  thresholdLimit: number;
+  safetyMarginPercentage: number;
+  isCompliant: boolean;
+  supervisorNotes?: string;
+  tags: string[];
+  createdAt: string;
+  updatedAt: string;
+}

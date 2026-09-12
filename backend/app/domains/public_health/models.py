@@ -3632,3 +3632,1603 @@ class PublicHealthEntity90(BaseModel):
 
     def is_critical_alert(self) -> bool:
         return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity91(BaseModel):
+    """Operational domain entity 91 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity91')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity92(BaseModel):
+    """Operational domain entity 92 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity92')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity93(BaseModel):
+    """Operational domain entity 93 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity93')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity94(BaseModel):
+    """Operational domain entity 94 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity94')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity95(BaseModel):
+    """Operational domain entity 95 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity95')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity96(BaseModel):
+    """Operational domain entity 96 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity96')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity97(BaseModel):
+    """Operational domain entity 97 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity97')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity98(BaseModel):
+    """Operational domain entity 98 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity98')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity99(BaseModel):
+    """Operational domain entity 99 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity99')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity100(BaseModel):
+    """Operational domain entity 100 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity100')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity101(BaseModel):
+    """Operational domain entity 101 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity101')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity102(BaseModel):
+    """Operational domain entity 102 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity102')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity103(BaseModel):
+    """Operational domain entity 103 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity103')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity104(BaseModel):
+    """Operational domain entity 104 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity104')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity105(BaseModel):
+    """Operational domain entity 105 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity105')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity106(BaseModel):
+    """Operational domain entity 106 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity106')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity107(BaseModel):
+    """Operational domain entity 107 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity107')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity108(BaseModel):
+    """Operational domain entity 108 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity108')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity109(BaseModel):
+    """Operational domain entity 109 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity109')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity110(BaseModel):
+    """Operational domain entity 110 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity110')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity111(BaseModel):
+    """Operational domain entity 111 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity111')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity112(BaseModel):
+    """Operational domain entity 112 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity112')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity113(BaseModel):
+    """Operational domain entity 113 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity113')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity114(BaseModel):
+    """Operational domain entity 114 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity114')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity115(BaseModel):
+    """Operational domain entity 115 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity115')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity116(BaseModel):
+    """Operational domain entity 116 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity116')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity117(BaseModel):
+    """Operational domain entity 117 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity117')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity118(BaseModel):
+    """Operational domain entity 118 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity118')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity119(BaseModel):
+    """Operational domain entity 119 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity119')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity120(BaseModel):
+    """Operational domain entity 120 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity120')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity121(BaseModel):
+    """Operational domain entity 121 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity121')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity122(BaseModel):
+    """Operational domain entity 122 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity122')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity123(BaseModel):
+    """Operational domain entity 123 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity123')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity124(BaseModel):
+    """Operational domain entity 124 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity124')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity125(BaseModel):
+    """Operational domain entity 125 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity125')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity126(BaseModel):
+    """Operational domain entity 126 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity126')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity127(BaseModel):
+    """Operational domain entity 127 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity127')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity128(BaseModel):
+    """Operational domain entity 128 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity128')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity129(BaseModel):
+    """Operational domain entity 129 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity129')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)
+
+class PublicHealthEntity130(BaseModel):
+    """Operational domain entity 130 for Public Health Surveillance & Hygiene."""
+    model_config = ConfigDict(from_attributes=True, extra='ignore')
+
+    entity_id: str = Field(..., description='Unique identifier for PublicHealthEntity130')
+    reference_code: str = Field(..., description='Official municipal reference code')
+    status: PublicHealthStatus = Field(default=PublicHealthStatus.ACTIVE)
+    priority: PublicHealthPriority = Field(default=PublicHealthPriority.STANDARD)
+    ward_id: int = Field(default=1, ge=1, le=150, description='Municipal jurisdictional ward number')
+    zone_code: str = Field(default='ZONE-CENTRAL', description='Municipal operational zone code')
+    latitude: float = Field(default=17.385044, ge=-90.0, le=90.0)
+    longitude: float = Field(default=78.486671, ge=-180.0, le=180.0)
+    altitude_meters: Optional[float] = Field(default=542.0)
+    primary_metric_value: float = Field(default=100.0, description='Domain standard quantitative measurement')
+    secondary_metric_value: float = Field(default=45.5, description='Secondary operational metric')
+    threshold_limit: float = Field(default=150.0, description='Configured statutory threshold')
+    safety_margin_percentage: float = Field(default=15.0)
+    is_compliant: bool = Field(default=True)
+    supervisor_notes: Optional[str] = Field(default=None)
+    assigned_officer_id: Optional[str] = Field(default=None)
+    tags: List[str] = Field(default_factory=lambda: ['civic', 'smart-city', 'telemetry'])
+    metadata_payload: Dict[str, Any] = Field(default_factory=dict)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+    @field_validator('primary_metric_value')
+    @classmethod
+    def validate_metric(cls, v: float) -> float:
+        if v < 0:
+            raise ValueError('Metric value cannot be negative in municipal calculations')
+        return round(v, 4)
+
+    def calculate_utilization_ratio(self) -> float:
+        if self.threshold_limit <= 0:
+            return 0.0
+        return round((self.primary_metric_value / self.threshold_limit) * 100, 2)
+
+    def is_critical_alert(self) -> bool:
+        return self.calculate_utilization_ratio() > (100.0 - self.safety_margin_percentage)

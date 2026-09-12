@@ -486,3 +486,243 @@ export async function fetchProcurementAndContractsMetric60(wardId = 1, limit = 2
   }
   return response.json();
 }
+
+export async function fetchProcurementAndContractsMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchProcurementAndContractsMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Procurement & Vendor Management metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

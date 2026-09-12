@@ -1991,3 +1991,883 @@ async def query_endpoint_90(
     ]
     result = await service.execute_building_and_permits_service_workflow_90(dummy_records, 'api_system_agent')
     return result
+
+@router.get('/endpoint-91', summary='Operational Query Endpoint 91')
+async def query_endpoint_91(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 91 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_91(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-92', summary='Operational Query Endpoint 92')
+async def query_endpoint_92(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 92 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_92(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-93', summary='Operational Query Endpoint 93')
+async def query_endpoint_93(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 93 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_93(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-94', summary='Operational Query Endpoint 94')
+async def query_endpoint_94(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 94 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_94(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-95', summary='Operational Query Endpoint 95')
+async def query_endpoint_95(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 95 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_95(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-96', summary='Operational Query Endpoint 96')
+async def query_endpoint_96(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 96 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_96(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-97', summary='Operational Query Endpoint 97')
+async def query_endpoint_97(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 97 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_97(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-98', summary='Operational Query Endpoint 98')
+async def query_endpoint_98(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 98 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_98(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-99', summary='Operational Query Endpoint 99')
+async def query_endpoint_99(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 99 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_99(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-100', summary='Operational Query Endpoint 100')
+async def query_endpoint_100(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 100 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_100(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-101', summary='Operational Query Endpoint 101')
+async def query_endpoint_101(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 101 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_101(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-102', summary='Operational Query Endpoint 102')
+async def query_endpoint_102(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 102 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_102(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-103', summary='Operational Query Endpoint 103')
+async def query_endpoint_103(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 103 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_103(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-104', summary='Operational Query Endpoint 104')
+async def query_endpoint_104(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 104 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_104(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-105', summary='Operational Query Endpoint 105')
+async def query_endpoint_105(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 105 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_105(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-106', summary='Operational Query Endpoint 106')
+async def query_endpoint_106(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 106 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_106(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-107', summary='Operational Query Endpoint 107')
+async def query_endpoint_107(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 107 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_107(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-108', summary='Operational Query Endpoint 108')
+async def query_endpoint_108(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 108 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_108(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-109', summary='Operational Query Endpoint 109')
+async def query_endpoint_109(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 109 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_109(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-110', summary='Operational Query Endpoint 110')
+async def query_endpoint_110(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 110 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_110(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-111', summary='Operational Query Endpoint 111')
+async def query_endpoint_111(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 111 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_111(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-112', summary='Operational Query Endpoint 112')
+async def query_endpoint_112(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 112 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_112(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-113', summary='Operational Query Endpoint 113')
+async def query_endpoint_113(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 113 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_113(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-114', summary='Operational Query Endpoint 114')
+async def query_endpoint_114(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 114 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_114(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-115', summary='Operational Query Endpoint 115')
+async def query_endpoint_115(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 115 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_115(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-116', summary='Operational Query Endpoint 116')
+async def query_endpoint_116(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 116 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_116(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-117', summary='Operational Query Endpoint 117')
+async def query_endpoint_117(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 117 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_117(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-118', summary='Operational Query Endpoint 118')
+async def query_endpoint_118(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 118 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_118(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-119', summary='Operational Query Endpoint 119')
+async def query_endpoint_119(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 119 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_119(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-120', summary='Operational Query Endpoint 120')
+async def query_endpoint_120(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 120 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_120(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-121', summary='Operational Query Endpoint 121')
+async def query_endpoint_121(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 121 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_121(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-122', summary='Operational Query Endpoint 122')
+async def query_endpoint_122(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 122 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_122(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-123', summary='Operational Query Endpoint 123')
+async def query_endpoint_123(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 123 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_123(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-124', summary='Operational Query Endpoint 124')
+async def query_endpoint_124(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 124 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_124(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-125', summary='Operational Query Endpoint 125')
+async def query_endpoint_125(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 125 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_125(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-126', summary='Operational Query Endpoint 126')
+async def query_endpoint_126(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 126 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_126(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-127', summary='Operational Query Endpoint 127')
+async def query_endpoint_127(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 127 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_127(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-128', summary='Operational Query Endpoint 128')
+async def query_endpoint_128(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 128 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_128(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-129', summary='Operational Query Endpoint 129')
+async def query_endpoint_129(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 129 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_129(dummy_records, 'api_system_agent')
+    return result
+
+@router.get('/endpoint-130', summary='Operational Query Endpoint 130')
+async def query_endpoint_130(
+    ward_id: int = Query(default=1, ge=1, le=150),
+    limit: int = Query(default=25, ge=1, le=100),
+    status_filter: Optional[str] = Query(default=None)
+) -> Dict[str, Any]:
+    """Query endpoint 130 for Building Codes, Safety & Structural Permits."""
+    dummy_records = [
+        {
+            'entity_id': f'BUIL-{idx}',
+            'reference_code': f'REF-{idx:05d}',
+            'primary_metric_value': 85.0 + (idx * 2.5),
+            'threshold_limit': 150.0,
+            'ward_id': ward_id,
+            'safety_margin_percentage': 12.5,
+            'status': status_filter or 'active'
+        }
+        for idx in range(1, limit + 1)
+    ]
+    result = await service.execute_building_and_permits_service_workflow_130(dummy_records, 'api_system_agent')
+    return result

@@ -486,3 +486,243 @@ export async function fetchPublicSafetyMetric60(wardId = 1, limit = 25): Promise
   }
   return response.json();
 }
+
+export async function fetchPublicSafetyMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicSafetyMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civic Security & Police Administration metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

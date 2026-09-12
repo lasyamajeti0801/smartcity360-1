@@ -486,3 +486,243 @@ export async function fetchLegalAndComplianceMetric60(wardId = 1, limit = 25): P
   }
   return response.json();
 }
+
+export async function fetchLegalAndComplianceMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchLegalAndComplianceMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Statutory Compliance & Municipal Court metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

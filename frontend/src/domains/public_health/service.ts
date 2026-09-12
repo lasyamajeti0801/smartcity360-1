@@ -486,3 +486,243 @@ export async function fetchPublicHealthMetric60(wardId = 1, limit = 25): Promise
   }
   return response.json();
 }
+
+export async function fetchPublicHealthMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicHealthMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Health Surveillance & Hygiene metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

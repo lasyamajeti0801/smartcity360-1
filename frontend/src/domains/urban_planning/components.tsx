@@ -1364,3 +1364,683 @@ export const UrbanPlanningPanel40: React.FC<{ wardId?: number }> = ({ wardId = 1
     </div>
   );
 };
+
+export const UrbanPlanningPanel41: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-41?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 41</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel42: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-42?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 42</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel43: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-43?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 43</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel44: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-44?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 44</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel45: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-45?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 45</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel46: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-46?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 46</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel47: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-47?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 47</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel48: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-48?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 48</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel49: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-49?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 49</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel50: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-50?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 50</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel51: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-51?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 51</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel52: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-52?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 52</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel53: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-53?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 53</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel54: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-54?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 54</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel55: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-55?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 55</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel56: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-56?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 56</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel57: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-57?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 57</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel58: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-58?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 58</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel59: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-59?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 59</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const UrbanPlanningPanel60: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/urban-planning/endpoint-60?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Urban Planning & Zoning Regulation — Panel 60</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};

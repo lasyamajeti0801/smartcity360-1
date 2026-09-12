@@ -486,3 +486,243 @@ export async function fetchTrafficManagementMetric60(wardId = 1, limit = 25): Pr
   }
   return response.json();
 }
+
+export async function fetchTrafficManagementMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchTrafficManagementMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Intelligent Traffic Control System metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

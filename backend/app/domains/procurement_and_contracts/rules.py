@@ -3346,3 +3346,1483 @@ def evaluate_procurement_and_contracts_statute_90(payload: Dict[str, Any], conte
         explanation='Operational metrics satisfy municipal regulatory standards',
         recommended_action='No immediate intervention required'
     )
+
+def evaluate_procurement_and_contracts_statute_91(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 91 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-091'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_92(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 92 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-092'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_93(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 93 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-093'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_94(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 94 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-094'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_95(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 95 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-095'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_96(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 96 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-096'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_97(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 97 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-097'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_98(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 98 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-098'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_99(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 99 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-099'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_100(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 100 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-100'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_101(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 101 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-101'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_102(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 102 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-102'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_103(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 103 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-103'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_104(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 104 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-104'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_105(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 105 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-105'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_106(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 106 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-106'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_107(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 107 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-107'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_108(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 108 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-108'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_109(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 109 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-109'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_110(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 110 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-110'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_111(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 111 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-111'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_112(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 112 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-112'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_113(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 113 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-113'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_114(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 114 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-114'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_115(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 115 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-115'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_116(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 116 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-116'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_117(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 117 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-117'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_118(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 118 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-118'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_119(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 119 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-119'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_120(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 120 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-120'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_121(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 121 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-121'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_122(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 122 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-122'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_123(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 123 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-123'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_124(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 124 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-124'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_125(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 125 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-125'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_126(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 126 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-126'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_127(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 127 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-127'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_128(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 128 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-128'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_129(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 129 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-129'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_procurement_and_contracts_statute_130(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> ProcurementAndContractsRuleResult:
+    """Statutory Evaluation Rule 130 for Public Procurement & Vendor Management."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-PROC-130'
+
+    if metric > limit:
+        return ProcurementAndContractsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return ProcurementAndContractsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return ProcurementAndContractsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )

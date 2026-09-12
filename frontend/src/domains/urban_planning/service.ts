@@ -486,3 +486,243 @@ export async function fetchUrbanPlanningMetric60(wardId = 1, limit = 25): Promis
   }
   return response.json();
 }
+
+export async function fetchUrbanPlanningMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchUrbanPlanningMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Urban Planning & Zoning Regulation metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

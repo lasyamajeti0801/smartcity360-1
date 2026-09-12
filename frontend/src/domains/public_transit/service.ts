@@ -486,3 +486,243 @@ export async function fetchPublicTransitMetric60(wardId = 1, limit = 25): Promis
   }
   return response.json();
 }
+
+export async function fetchPublicTransitMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicTransitMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Public Transit & Mobility Network metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

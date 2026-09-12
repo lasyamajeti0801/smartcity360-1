@@ -3346,3 +3346,1483 @@ def evaluate_fire_and_rescue_statute_90(payload: Dict[str, Any], context: Option
         explanation='Operational metrics satisfy municipal regulatory standards',
         recommended_action='No immediate intervention required'
     )
+
+def evaluate_fire_and_rescue_statute_91(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 91 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-091'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_92(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 92 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-092'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_93(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 93 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-093'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_94(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 94 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-094'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_95(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 95 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-095'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_96(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 96 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-096'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_97(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 97 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-097'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_98(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 98 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-098'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_99(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 99 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-099'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_100(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 100 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-100'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_101(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 101 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-101'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_102(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 102 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-102'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_103(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 103 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-103'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_104(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 104 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-104'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_105(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 105 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-105'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_106(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 106 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-106'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_107(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 107 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-107'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_108(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 108 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-108'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_109(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 109 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-109'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_110(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 110 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-110'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_111(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 111 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-111'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_112(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 112 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-112'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_113(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 113 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-113'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_114(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 114 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-114'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_115(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 115 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-115'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_116(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 116 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-116'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_117(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 117 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-117'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_118(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 118 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-118'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_119(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 119 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-119'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_120(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 120 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-120'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_121(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 121 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-121'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_122(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 122 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-122'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_123(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 123 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-123'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_124(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 124 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-124'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_125(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 125 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-125'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_126(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 126 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-126'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_127(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 127 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-127'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_128(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 128 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-128'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_129(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 129 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-129'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_fire_and_rescue_statute_130(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> FireAndRescueRuleResult:
+    """Statutory Evaluation Rule 130 for Fire Protection & Hazardous Materials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-FIRE-130'
+
+    if metric > limit:
+        return FireAndRescueRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return FireAndRescueRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return FireAndRescueRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )

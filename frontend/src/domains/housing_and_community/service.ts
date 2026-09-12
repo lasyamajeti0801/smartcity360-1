@@ -486,3 +486,243 @@ export async function fetchHousingAndCommunityMetric60(wardId = 1, limit = 25): 
   }
   return response.json();
 }
+
+export async function fetchHousingAndCommunityMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchHousingAndCommunityMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Affordable Housing & Code Enforcement metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

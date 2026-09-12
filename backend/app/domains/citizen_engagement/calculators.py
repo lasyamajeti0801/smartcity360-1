@@ -3065,3 +3065,1363 @@ def compute_citizen_engagement_algorithm_90(data_points: List[Dict[str, Any]], c
         'composite_index': round(weighted_index, 4),
         'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
     }
+
+def compute_citizen_engagement_algorithm_91(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 91 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 91
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-091',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_92(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 92 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 92
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-092',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_93(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 93 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 93
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-093',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_94(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 94 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 94
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-094',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_95(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 95 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 95
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-095',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_96(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 96 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 96
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-096',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_97(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 97 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 97
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-097',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_98(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 98 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 98
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-098',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_99(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 99 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 99
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-099',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_100(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 100 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 100
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-100',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_101(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 101 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 101
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-101',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_102(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 102 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 102
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-102',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_103(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 103 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 103
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-103',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_104(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 104 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 104
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-104',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_105(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 105 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 105
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-105',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_106(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 106 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 106
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-106',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_107(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 107 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 107
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-107',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_108(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 108 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 108
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-108',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_109(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 109 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 109
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-109',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_110(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 110 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 110
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-110',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_111(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 111 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 111
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-111',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_112(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 112 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 112
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-112',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_113(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 113 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 113
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-113',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_114(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 114 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 114
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-114',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_115(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 115 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 115
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-115',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_116(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 116 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 116
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-116',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_117(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 117 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 117
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-117',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_118(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 118 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 118
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-118',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_119(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 119 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 119
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-119',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_120(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 120 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 120
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-120',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_121(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 121 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 121
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-121',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_122(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 122 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 122
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-122',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_123(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 123 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 123
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-123',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_124(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 124 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 124
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-124',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_125(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 125 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 125
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-125',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_126(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 126 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 126
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-126',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_127(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 127 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 127
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-127',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_128(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 128 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 128
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-128',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_129(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 129 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 129
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-129',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }
+
+def compute_citizen_engagement_algorithm_130(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:
+    """Quantitative Algorithm 130 for Citizen Participation & Open Democracy."""
+    if not data_points:
+        return {'count': 0, 'mean': 0.0, 'variance': 0.0, 'composite_index': 0.0, 'status': 'insufficient_data'}
+
+    values = [float(p.get('primary_metric_value', 0.0)) for p in data_points]
+    total = sum(values)
+    n = len(values)
+    mean = total / n
+    variance = sum((x - mean) ** 2 for x in values) / n if n > 1 else 0.0
+    std_dev = math.sqrt(variance)
+    min_val = min(values)
+    max_val = max(values)
+    spread = max_val - min_val
+    # Municipal weighted decay formula 130
+    decay_weights = [math.exp(-0.05 * idx) for idx in range(n)]
+    weighted_sum = sum(v * w for v, w in zip(values, decay_weights))
+    weight_norm = sum(decay_weights)
+    weighted_index = (weighted_sum / weight_norm) * coefficient if weight_norm > 0 else mean
+
+    return {
+        'algorithm_id': 'CITIZEN_ENGAGEMENT-CALC-130',
+        'sample_size': n,
+        'total_aggregate': round(total, 4),
+        'mean_value': round(mean, 4),
+        'standard_deviation': round(std_dev, 4),
+        'variance': round(variance, 4),
+        'minimum': round(min_val, 4),
+        'maximum': round(max_val, 4),
+        'spread': round(spread, 4),
+        'composite_index': round(weighted_index, 4),
+        'evaluation_status': 'OPTIMAL' if weighted_index < 120.0 else 'ELEVATED'
+    }

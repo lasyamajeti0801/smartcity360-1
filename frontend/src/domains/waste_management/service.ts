@@ -486,3 +486,243 @@ export async function fetchWasteManagementMetric60(wardId = 1, limit = 25): Prom
   }
   return response.json();
 }
+
+export async function fetchWasteManagementMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchWasteManagementMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Solid Waste & Circular Economy metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

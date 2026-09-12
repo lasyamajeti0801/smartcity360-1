@@ -486,3 +486,243 @@ export async function fetchBuildingAndPermitsMetric60(wardId = 1, limit = 25): P
   }
   return response.json();
 }
+
+export async function fetchBuildingAndPermitsMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchBuildingAndPermitsMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Building Codes, Safety & Structural Permits metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

@@ -486,3 +486,243 @@ export async function fetchFireAndRescueMetric60(wardId = 1, limit = 25): Promis
   }
   return response.json();
 }
+
+export async function fetchFireAndRescueMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchFireAndRescueMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Fire Protection & Hazardous Materials metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}

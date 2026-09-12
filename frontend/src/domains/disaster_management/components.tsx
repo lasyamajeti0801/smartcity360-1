@@ -1364,3 +1364,683 @@ export const DisasterManagementPanel40: React.FC<{ wardId?: number }> = ({ wardI
     </div>
   );
 };
+
+export const DisasterManagementPanel41: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-41?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 41</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel42: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-42?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 42</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel43: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-43?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 43</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel44: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-44?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 44</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel45: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-45?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 45</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel46: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-46?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 46</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel47: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-47?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 47</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel48: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-48?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 48</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel49: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-49?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 49</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel50: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-50?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 50</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel51: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-51?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 51</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel52: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-52?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 52</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel53: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-53?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 53</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel54: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-54?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 54</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel55: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-55?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 55</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel56: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-56?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 56</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel57: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-57?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 57</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel58: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-58?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 58</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel59: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-59?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 59</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const DisasterManagementPanel60: React.FC<{ wardId?: number }> = ({ wardId = 1 }) => {
+  const [data, setData] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setLoading(true);
+    fetch(`/api/v1/disaster-management/endpoint-60?ward_id=${wardId}&limit=10`)
+      .then(res => res.json())
+      .then(json => { setData(json); setLoading(false); })
+      .catch(err => { setError(err.message); setLoading(false); });
+  }, [wardId]);
+
+  if (loading) return <div className='p-4 text-sm text-slate-500'>Loading {title} operational telemetry...</div>;
+  if (error) return <div className='p-4 text-sm text-rose-600 font-medium'>Operational Telemetry Error: {error}</div>;
+
+  return (
+    <div className='rounded-lg border border-slate-200 bg-white p-6 shadow-sm'>
+      <h3 className='text-base font-semibold text-slate-900'>Disaster Preparedness & Civil Defense — Panel 60</h3>
+      <p className='mt-1 text-xs text-slate-500'>Jurisdictional Ward: {wardId} | System Status: Active</p>
+      <div className='mt-4 grid grid-cols-2 gap-4'>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Records Evaluated</span>
+          <div className='text-lg font-bold text-slate-900'>{data?.records_evaluated ?? 0}</div>
+        </div>
+        <div className='rounded border border-slate-100 bg-slate-50 p-3'>
+          <span className='text-xs text-slate-500'>Compliance Rate</span>
+          <div className='text-lg font-bold text-emerald-600'>{data?.compliance_rate_pct ?? 100}%</div>
+        </div>
+      </div>
+    </div>
+  );
+};

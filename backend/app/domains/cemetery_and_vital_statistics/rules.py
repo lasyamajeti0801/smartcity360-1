@@ -3346,3 +3346,1483 @@ def evaluate_cemetery_and_vital_statistics_statute_90(payload: Dict[str, Any], c
         explanation='Operational metrics satisfy municipal regulatory standards',
         recommended_action='No immediate intervention required'
     )
+
+def evaluate_cemetery_and_vital_statistics_statute_91(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 91 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-091'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_92(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 92 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-092'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_93(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 93 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-093'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_94(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 94 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-094'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_95(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 95 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-095'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_96(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 96 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-096'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_97(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 97 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-097'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_98(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 98 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-098'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_99(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 99 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-099'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_100(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 100 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-100'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_101(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 101 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-101'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_102(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 102 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-102'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_103(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 103 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-103'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_104(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 104 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-104'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_105(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 105 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-105'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_106(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 106 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-106'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_107(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 107 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-107'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_108(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 108 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-108'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_109(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 109 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-109'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_110(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 110 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-110'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_111(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 111 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-111'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_112(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 112 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-112'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_113(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 113 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-113'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_114(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 114 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-114'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_115(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 115 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-115'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_116(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 116 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-116'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_117(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 117 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-117'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_118(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 118 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-118'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_119(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 119 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-119'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_120(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 120 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-120'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_121(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 121 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-121'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_122(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 122 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-122'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_123(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 123 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-123'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_124(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 124 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-124'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_125(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 125 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-125'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_126(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 126 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-126'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_127(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 127 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-127'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_128(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 128 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-128'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_129(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 129 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-129'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )
+
+def evaluate_cemetery_and_vital_statistics_statute_130(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> CemeteryAndVitalStatisticsRuleResult:
+    """Statutory Evaluation Rule 130 for Civil Registry & Municipal Memorials."""
+    metric = float(payload.get('primary_metric_value', 0.0))
+    limit = float(payload.get('threshold_limit', 100.0))
+    ward = int(payload.get('ward_id', 1))
+    status = str(payload.get('status', 'active'))
+    margin = float(payload.get('safety_margin_percentage', 10.0))
+    rule_code = 'MUNI-CEME-130'
+
+    if metric > limit:
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=False,
+            rule_code=rule_code,
+            severity='HIGH' if (metric > limit * 1.25) else 'MEDIUM',
+            explanation=f'Metric {metric} exceeded allowable statutory limit {limit} in Ward {ward}',
+            recommended_action='Dispatch field compliance inspector for on-site assessment',
+            remediation_cost_estimate=round(metric * 45.0, 2)
+        )
+
+    if metric > (limit * (1.0 - (margin / 100.0))):
+        return CemeteryAndVitalStatisticsRuleResult(
+            passed=True,
+            rule_code=rule_code,
+            severity='WARNING',
+            explanation=f'Metric {metric} approached safety buffer threshold {margin}% in Ward {ward}',
+            recommended_action='Schedule preventative review in next maintenance cycle',
+            remediation_cost_estimate=150.0
+        )
+
+    return CemeteryAndVitalStatisticsRuleResult(
+        passed=True,
+        rule_code=rule_code,
+        severity='NORMAL',
+        explanation='Operational metrics satisfy municipal regulatory standards',
+        recommended_action='No immediate intervention required'
+    )

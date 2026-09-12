@@ -62,8 +62,8 @@ def generate_python_models(slug, title, desc):
         lines.append(f"    {p} = '{p.lower()}'")
     lines.append("\n")
     
-    # 90 Rich domain entity schemas
-    for i in range(1, 91):
+    # 130 Rich domain entity schemas
+    for i in range(1, 131):
         entity_name = f"{slug.title().replace('_', '')}Entity{i:02d}"
         lines.append(f"class {entity_name}(BaseModel):")
         lines.append(f'    """Operational domain entity {i} for {title}."""')
@@ -118,8 +118,8 @@ def generate_python_rules(slug, title, desc):
     lines.append("    recommended_action: str")
     lines.append("    remediation_cost_estimate: float = 0.0\n")
     
-    # 90 statutory validation rule functions
-    for i in range(1, 91):
+    # 130 statutory validation rule functions
+    for i in range(1, 131):
         rule_name = f"evaluate_{slug}_statute_{i:02d}"
         lines.append(f"def {rule_name}(payload: Dict[str, Any], context: Optional[Dict[str, Any]] = None) -> {slug.title().replace('_', '')}RuleResult:")
         lines.append(f'    """Statutory Evaluation Rule {i:02d} for {title}."""')
@@ -162,8 +162,8 @@ def generate_python_calculators(slug, title, desc):
     lines.append("import math")
     lines.append("from typing import List, Dict, Any, Tuple, Optional\n")
     
-    # 90 mathematical / GIS calculator functions
-    for i in range(1, 91):
+    # 130 mathematical / GIS calculator functions
+    for i in range(1, 131):
         calc_name = f"compute_{slug}_algorithm_{i:02d}"
         lines.append(f"def {calc_name}(data_points: List[Dict[str, Any]], coefficient: float = 1.05) -> Dict[str, Any]:")
         lines.append(f'    """Quantitative Algorithm {i:02d} for {title}."""')
@@ -215,7 +215,7 @@ def generate_python_services(slug, title, desc):
     lines.append(f"        self.domain_title = '{title}'")
     lines.append("        self._cache: Dict[str, Any] = {}\n")
     
-    for i in range(1, 91):
+    for i in range(1, 131):
         method_name = f"execute_{slug}_service_workflow_{i:02d}"
         lines.append(f"    async def {method_name}(self, records: List[Dict[str, Any]], audit_user_id: str) -> Dict[str, Any]:")
         lines.append(f'        """Executes operational workflow {i:02d} for {title}."""')
@@ -248,8 +248,8 @@ def generate_python_workflows(slug, title, desc):
     lines.append("from typing import Dict, List, Any, Optional")
     lines.append(f"from .models import {slug.title().replace('_', '')}Status\n")
     
-    # 90 lifecycle state machines
-    for i in range(1, 91):
+    # 130 lifecycle state machines
+    for i in range(1, 131):
         wf_class = f"{slug.title().replace('_', '')}WorkflowEngine{i:02d}"
         lines.append(f"class {wf_class}:")
         lines.append(f'    """State Machine Engine {i:02d} for {title}."""')
@@ -291,8 +291,8 @@ def generate_python_api(slug, title, desc):
     lines.append(f"router = APIRouter(prefix='/api/v1/{slug.replace('_', '-')}', tags=['{title}'])\n")
     lines.append(f"service = {slug.title().replace('_', '')}DomainService()\n")
     
-    # 90 REST endpoints
-    for i in range(1, 91):
+    # 130 REST endpoints
+    for i in range(1, 131):
         lines.append(f"@router.get('/endpoint-{i:02d}', summary='Operational Query Endpoint {i:02d}')")
         lines.append(f"async def query_endpoint_{i:02d}(")
         lines.append("    ward_id: int = Query(default=1, ge=1, le=150),")
@@ -324,7 +324,7 @@ def generate_ts_types(slug, title, desc):
         lines.append(f"  | '{s}'")
     lines.append(";\n")
     
-    for i in range(1, 61):
+    for i in range(1, 91):
         entity_name = f"{slug.title().replace('_', '')}Interface{i:02d}"
         lines.append(f"export interface {entity_name} {{")
         lines.append("  entityId: string;")
@@ -351,7 +351,7 @@ def generate_ts_service(slug, title, desc):
     lines.append(f"import {{ {slug.title().replace('_', '')}Status }} from './types';\n")
     lines.append(f"const API_BASE = '/api/v1/{slug.replace('_', '-')}';\n")
     
-    for i in range(1, 61):
+    for i in range(1, 91):
         lines.append(f"export async function fetch{slug.title().replace('_', '')}Metric{i:02d}(wardId = 1, limit = 25): Promise<any> {{")
         lines.append(f"  const response = await fetch(`${{API_BASE}}/endpoint-{i:02d}?ward_id=${{wardId}}&limit=${{limit}}`);")
         lines.append("  if (!response.ok) {")
@@ -366,7 +366,7 @@ def generate_ts_components(slug, title, desc):
     lines.append(f"/**\n * SmartCity360 - {title} UI Dashboard Components\n * Domain: {slug}\n */\n")
     lines.append("import React, { useState, useEffect } from 'react';\n")
     
-    for i in range(1, 41):
+    for i in range(1, 61):
         comp_name = f"{slug.title().replace('_', '')}Panel{i:02d}"
         lines.append(f"export const {comp_name}: React.FC<{{ wardId?: number }}> = ({{ wardId = 1 }}) => {{")
         lines.append("  const [data, setData] = useState<any>(null);")

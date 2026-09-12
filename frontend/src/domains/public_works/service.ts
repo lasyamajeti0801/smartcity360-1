@@ -486,3 +486,243 @@ export async function fetchPublicWorksMetric60(wardId = 1, limit = 25): Promise<
   }
   return response.json();
 }
+
+export async function fetchPublicWorksMetric61(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-61?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 61: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric62(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-62?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 62: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric63(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-63?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 63: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric64(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-64?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 64: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric65(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-65?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 65: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric66(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-66?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 66: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric67(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-67?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 67: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric68(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-68?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 68: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric69(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-69?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 69: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric70(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-70?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 70: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric71(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-71?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 71: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric72(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-72?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 72: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric73(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-73?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 73: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric74(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-74?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 74: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric75(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-75?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 75: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric76(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-76?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 76: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric77(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-77?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 77: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric78(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-78?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 78: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric79(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-79?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 79: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric80(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-80?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 80: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric81(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-81?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 81: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric82(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-82?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 82: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric83(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-83?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 83: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric84(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-84?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 84: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric85(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-85?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 85: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric86(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-86?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 86: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric87(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-87?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 87: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric88(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-88?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 88: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric89(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-89?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 89: ${response.statusText}`);
+  }
+  return response.json();
+}
+
+export async function fetchPublicWorksMetric90(wardId = 1, limit = 25): Promise<any> {
+  const response = await fetch(`${API_BASE}/endpoint-90?ward_id=${wardId}&limit=${limit}`);
+  if (!response.ok) {
+    throw new Error(`Failed to fetch Civil Infrastructure & Asset Integrity metric 90: ${response.statusText}`);
+  }
+  return response.json();
+}
