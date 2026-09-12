@@ -1,0 +1,11 @@
+﻿[run]
+source = backend/app
+omit =
+    */tests/*
+    */__pycache__/*
+    */venv/*
+    */.venv/*
+
+[report]
+show_missing = True
+skip_covered = False

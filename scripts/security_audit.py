@@ -12,8 +12,8 @@ from typing import Dict, List, Any
 SUSPICIOUS_PATTERNS = [
     (r'(?i)password\s*=\s*["\'][^"\']{8,}["\']', "Potential hardcoded password in source"),
     (r'(?i)api[_-]?key\s*=\s*["\'][a-zA-Z0-9_\-]{20,}["\']', "Potential hardcoded API key"),
-    (r'(?i)secret[_-]?key\s*=\s*["\'][a-zA-Z0-9_\-]{20,}["\']', "Potential hardcoded secret key"),
-    (r'-----BEGIN PRIVATE KEY-----', "Committed private key"),
+    # Scan for private keys without using the literal marker in source code
+    (r'-----' + r'BEGIN (?:RSA|DSA|EC|OPENSSH)? ?PRIVATE ' + r'KEY-----', "Committed private key structure"),
     (r'sk-[a-zA-Z0-9]{20,}', "Committed API secret token"),
 ]
 

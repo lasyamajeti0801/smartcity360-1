@@ -98,7 +98,7 @@ SmartCity360/
 
 ---
 
-## Getting Started Locally
+## Installation Instructions
 
 ### Prerequisites
 - Python 3.12 or higher
@@ -110,27 +110,51 @@ SmartCity360/
 ```bash
 git clone <repository-url>
 cd "Smart City 360"
-cp .env.example .env
+cp example.env .env
 ```
 
-### 2. Backend Setup
+### 2. Install Dependencies
 ```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate   # On Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-uvicorn app.main:app --reload --port 8000
-```
-- API Documentation (Swagger UI): `http://localhost:8000/docs`
-- Health Checks: `http://localhost:8000/health`
+# Install backend dependencies
+pip install -r backend/requirements.txt
 
-### 3. Frontend Setup
+# Install frontend dependencies
+cd frontend && npm install && cd ..
+```
+
+## Build Instructions
+
+To build and compile all platform assets for production:
+
 ```bash
+# Build frontend production bundle
 cd frontend
-npm install
-npm run dev
+npm run build
+cd ..
+
+# Build container images (optional)
+docker compose build
 ```
-- Access the web interface at `http://localhost:5173`
+
+## Run Instructions
+
+### 1. Run via Root Entry Point (Recommended)
+```bash
+python main.py
+```
+
+### 2. Run Backend and Frontend Separately
+```bash
+# Start Backend API (Port 8000)
+uvicorn app.main:app --app-dir backend --reload --port 8000
+
+# Start Frontend Portal (Port 5173)
+cd frontend && npm run dev
+```
+
+- Web Interface: `http://localhost:5173`
+- API Documentation (Swagger UI): `http://localhost:8000/docs`
+- Health Check: `http://localhost:8000/health`
 
 ---
 
