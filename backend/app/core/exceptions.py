@@ -46,7 +46,7 @@ class InvalidStateTransitionException(SmartCityException):
         super().__init__(
             code="INVALID_STATE_TRANSITION",
             message=f"Cannot transition {entity} from '{current_state}' to '{attempted_state}'.",
-            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            status_code=422,
             details={"current_state": current_state, "attempted_state": attempted_state}
         )
 

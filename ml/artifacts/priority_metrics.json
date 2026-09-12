@@ -1,0 +1,54 @@
+{
+  "model_key": "COMPLAINT_PRIORITY_CLASSIFIER",
+  "version": "1.0.0",
+  "task": "NLP_MULTICLASS_CLASSIFICATION",
+  "framework": "scikit-learn",
+  "vectorizer": "TF-IDF (1,2 n-grams)",
+  "classifier": "LogisticRegression (L2, balanced)",
+  "train_samples": 1600,
+  "test_samples": 400,
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "per_class": {
+      "CRITICAL": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 109.0
+      },
+      "HIGH": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 128.0
+      },
+      "LOW": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 66.0
+      },
+      "MEDIUM": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 97.0
+      },
+      "accuracy": 1.0,
+      "macro avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 400.0
+      },
+      "weighted avg": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1-score": 1.0,
+        "support": 400.0
+      }
+    }
+  },
+  "artifact_file": "priority_classifier_v1.joblib"
+}

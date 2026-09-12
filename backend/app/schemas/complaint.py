@@ -88,3 +88,16 @@ class ComplaintCommentCreateRequest(BaseModel):
 class CitizenFeedbackRequest(BaseModel):
     rating: int = Field(ge=1, le=5)
     feedback: Optional[str] = None
+
+class AITriageRequest(BaseModel):
+    title: str = Field(min_length=3, max_length=255)
+    description: str = Field(min_length=5)
+
+class AITriageResponse(BaseModel):
+    predicted_priority: str
+    priority_confidence: float
+    predicted_department: str
+    department_confidence: float
+    recommended_sla_hours: int
+    probabilities: Optional[dict] = None
+    model_version: str

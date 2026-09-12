@@ -18,9 +18,12 @@ from backend.app.schemas.complaint import (
     ComplaintCreateRequest,
     ComplaintResponse,
     ComplaintStatusUpdateRequest,
-    CitizenFeedbackRequest
+    CitizenFeedbackRequest,
+    AITriageRequest,
+    AITriageResponse
 )
 from backend.app.services.complaint_service import ComplaintService
+from backend.app.services.ml_service import ml_service
 from backend.app.repositories.complaint_repo import ComplaintRepository
 
 router = APIRouter(prefix="/complaints", tags=["Civic Complaints"])
@@ -132,3 +135,30 @@ async def submit_citizen_feedback(
     repo = ComplaintRepository(db)
     full_c = await repo.get_by_ticket_number(complaint.ticket_number)
     return ComplaintResponse.model_validate(full_c)
+
+@router.post("/ai-triage", response_model=AITriageResponse, summary="Predict complaint priority, department routing, and SLA recommendation")
+async def ai_triage_complaint(req: AITriageRequest):
+    """Run NLP model inference against complaint text to predict priority, department, and turnaround SLA."""
+    priority_res = ml_service.predict_priority(req.title, req.description)
+    dept_res = ml_service.predict_department(req.title, req.description)
+
+    # Calculate recommended SLA hours based on priority
+    p = priority_res.get("priority", "MEDIUM")
+    sla_map = {"CRITICAL": 6, "HIGH": 24, "MEDIUM": 48, "LOW": 72}
+    recommended_sla = sla_map.get(p, 48)
+
+    return AITriageResponse(
+        predicted_priority=p,
+        priority_confidence=priority_res.get("confidence", 0.8),
+        predicted_department=dept_res.get("department", "ADMIN"),
+        department_confidence=dept_res.get("confidence", 0.8),
+        recommended_sla_hours=recommended_sla,
+        probabilities=priority_res.get("probabilities"),
+        model_version=priority_res.get("model_version", "1.0.0")
+    )
+
+@router.get("/models/registry", summary="Retrieve AI/ML model registry and evaluation benchmarks")
+async def get_model_registry():
+    """Returns metadata and validation benchmarks for deployed ML models."""
+    return ml_service.get_registry_manifest()
+

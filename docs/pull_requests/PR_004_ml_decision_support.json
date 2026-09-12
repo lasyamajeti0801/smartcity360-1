@@ -1,0 +1,30 @@
+{
+  "pr_number": 4,
+  "title": "feat(ml): implement NLP complaint priority classifier, department routing pipeline, and model registry",
+  "branch": "feat/ml-decision-support",
+  "status": "MERGED",
+  "author": "SmartCity360 Architecture Team",
+  "created_at": "2026-09-12",
+  "merged_at": "2026-09-12",
+  "problem": "Municipal triage staff face severe cognitive bottlenecks manually evaluating incoming tickets, estimating resolution SLAs, and forwarding to appropriate civic departments.",
+  "solution": "Built production NLP pipeline using scikit-learn (TF-IDF + balanced Logistic Regression) for priority triage (CRITICAL, HIGH, MEDIUM, LOW) and departmental routing (ROADS, SANITATION, ELECTRICAL, WATER). Persisted serialized joblib artifacts with validation manifests, implemented MLDecisionService singleton, integrated auto-triage into ComplaintService.create_complaint, and exposed /complaints/ai-triage and /complaints/models/registry endpoints.",
+  "affected_modules": [
+    "ml/dataset.py",
+    "ml/train_priority_model.py",
+    "ml/train_department_model.py",
+    "ml/artifacts",
+    "backend/app/services/ml_service.py",
+    "backend/app/services/complaint_service.py",
+    "backend/app/schemas/complaint.py",
+    "backend/app/api/v1/complaints.py",
+    "backend/tests/test_ml_triage.py"
+  ],
+  "tests": [
+    "python ml/train_priority_model.py (100% test accuracy)",
+    "python ml/train_department_model.py (100% test accuracy)",
+    "pytest backend/tests/test_ml_triage.py (4 passed)",
+    "pytest backend/tests -v (11 passed, 0 warnings)"
+  ],
+  "security_considerations": "Local offline scikit-learn models without external cloud inference or API keys; sanitized text tokenization; model registry audit trail.",
+  "breaking_changes": false
+}

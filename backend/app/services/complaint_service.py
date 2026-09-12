@@ -31,6 +31,7 @@ from backend.app.models.complaint import (
 )
 from backend.app.models.department import Department
 from backend.app.schemas.complaint import ComplaintCreateRequest, ComplaintStatusUpdateRequest
+from backend.app.services.ml_service import ml_service
 
 # Valid state machine transitions
 ALLOWED_TRANSITIONS = {
@@ -80,6 +81,10 @@ class ComplaintService:
         ticket_number = self._generate_ticket_number()
         sla_due_at = datetime.now(timezone.utc) + timedelta(hours=category.default_sla_hours)
 
+        # Auto-predict priority using ML decision model
+        ai_triage = ml_service.predict_priority(req.title, req.description)
+        predicted_priority = ai_triage.get("priority", "MEDIUM")
+
         complaint = Complaint(
             ticket_number=ticket_number,
             citizen_id=citizen_id,
@@ -87,7 +92,7 @@ class ComplaintService:
             department_id=department.id,
             title=req.title,
             description=req.description,
-            priority="MEDIUM",
+            priority=predicted_priority,
             status=STATUS_NEW,
             latitude=req.latitude,
             longitude=req.longitude,
