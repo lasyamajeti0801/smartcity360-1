@@ -255,6 +255,19 @@ async def seed_data():
         db.add(staff_profile)
         await db.flush()
 
+        # Emergency Operator User
+        emergency_user = User(
+            email="emergency@smartcity360.local",
+            hashed_password=get_password_hash("EmergencySecurePass2026!"),
+            full_name="Captain Rachel Adams (911 Dispatch)",
+            phone_number="+1-555-010-0911",
+            is_active=True,
+            is_verified=True,
+            roles=[roles[ROLE_EMERGENCY_OPERATOR]]
+        )
+        db.add(emergency_user)
+        await db.flush()
+
         # 6. Seed Sample Complaints (Realistic GPS in Metro Corridor)
         complaints_data = [
             (
