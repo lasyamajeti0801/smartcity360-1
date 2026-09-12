@@ -375,6 +375,31 @@ async def seed_data():
         for f in facilities:
             db.add(f)
 
+        # 8b. Seed Waste Zones & Streetlights & Water
+        waste_zones = [
+            WasteZone(zone_code="WZ-CENTRAL", name="Central Urban Core Zone", collection_frequency="DAILY", daily_tonnage_capacity=25.0, assigned_crew_leader="Supervisor Dave"),
+            WasteZone(zone_code="WZ-NORTH", name="North Residential Sector", collection_frequency="ALTERNATE_DAYS", daily_tonnage_capacity=15.0, assigned_crew_leader="Supervisor Anna"),
+        ]
+        for wz in waste_zones:
+            db.add(wz)
+
+        streetlights = [
+            StreetlightAsset(pole_number="SL-POLE-401", latitude=12.9716, longitude=77.5946, street_name="MG Road Junction", luminaire_type="LED-60W", wattage=60, is_operational=True),
+            StreetlightAsset(pole_number="SL-POLE-402", latitude=12.9684, longitude=77.5891, street_name="Elm Avenue", luminaire_type="LED-60W", wattage=60, is_operational=False),
+        ]
+        for sl in streetlights:
+            db.add(sl)
+
+        water_asset = WaterAsset(
+            facility_code="WTR-RES-01",
+            facility_type="RESERVOIR",
+            latitude=12.9780,
+            longitude=77.5900,
+            capacity_liters=5000000.0,
+            current_supply_status="NORMAL"
+        )
+        db.add(water_asset)
+
         # 9. Seed Announcements
         bulletin = Announcement(
             title="Scheduled Water Supply Maintenance in Wards 4 & 5",
