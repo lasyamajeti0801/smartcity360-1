@@ -1,0 +1,23 @@
+{
+  "pr_number": 6,
+  "title": "feat(emergency): implement 911 operations command service, rapid response unit dispatch, on-scene arrival tracking, and facility directory",
+  "branch": "feat/emergency-dispatch-command",
+  "status": "MERGED",
+  "author": "SmartCity360 Architecture Team",
+  "created_at": "2026-09-12",
+  "merged_at": "2026-09-12",
+  "problem": "Municipal public safety command lacked an integrated real-time dispatch engine for coordinating fire, ambulance, and police squads with automatic availability toggling and on-scene milestone tracking.",
+  "solution": "Built EmergencyService with lifecycle state machine (REPORTED, DISPATCHED, RESPONDING, CONTAINED, RESOLVED, CLOSED). Implemented team dispatch with automatic unit availability lock, on-scene arrival timestamping, containment verification, incident resolution with automated squad release, and public safety facility directory queries.",
+  "affected_modules": [
+    "backend/app/services/emergency_service.py",
+    "backend/app/schemas/emergency.py",
+    "backend/app/api/v1/emergency.py",
+    "backend/tests/test_emergency.py"
+  ],
+  "tests": [
+    "pytest backend/tests/test_emergency.py (2 passed)",
+    "pytest backend/tests -v (14 passed, 100% pass rate)"
+  ],
+  "security_considerations": "Restricted dispatch commands, validated caller identity, audit timestamps, and emergency team isolation.",
+  "breaking_changes": false
+}

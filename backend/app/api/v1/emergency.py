@@ -2,8 +2,6 @@
 SmartCity360 - Emergency Services & Public Facility Endpoints
 """
 
-from datetime import datetime, timezone
-import uuid
 from typing import List, Optional
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -15,12 +13,15 @@ from backend.app.schemas.emergency import (
     EmergencyIncidentCreateRequest,
     EmergencyIncidentResponse,
     EmergencyResponseTeamResponse,
-    FacilityResponse
+    FacilityResponse,
+    EmergencyDispatchCreateRequest,
+    EmergencyResolveRequest
 )
+from backend.app.services.emergency_service import EmergencyService
 
 router = APIRouter(prefix="/emergency", tags=["Emergency & Public Safety"])
 
-@router.get("/incidents", response_model=List[EmergencyIncidentResponse], summary="List emergency incidents")
+@router.get("/incidents", response_model=List[EmergencyIncidentResponse], summary="List emergency incidents with filter")
 async def list_emergency_incidents(
     status: Optional[str] = Query(None),
     severity: Optional[str] = Query(None),
@@ -40,34 +41,59 @@ async def list_emergency_incidents(
     incidents = res.scalars().all()
     return [EmergencyIncidentResponse.model_validate(i) for i in incidents]
 
+@router.get("/incidents/{incident_id}", response_model=EmergencyIncidentResponse, summary="Get emergency incident by ID")
+async def get_emergency_incident(incident_id: str, db: AsyncSession = Depends(get_db)):
+    service = EmergencyService(db)
+    inc = await service.get_incident(incident_id)
+    return EmergencyIncidentResponse.model_validate(inc)
+
 @router.post("/incidents", response_model=EmergencyIncidentResponse, status_code=status.HTTP_201_CREATED, summary="Create emergency incident")
 async def create_emergency_incident(
     req: EmergencyIncidentCreateRequest,
     db: AsyncSession = Depends(get_db)
 ):
-    date_str = datetime.now(timezone.utc).strftime("%Y%m%d")
-    rand_suffix = uuid.uuid4().hex[:6].upper()
-    inc_num = f"EMG-{date_str}-{rand_suffix}"
+    service = EmergencyService(db)
+    inc = await service.create_incident(req)
+    return EmergencyIncidentResponse.model_validate(inc)
 
-    inc = EmergencyIncident(
-        incident_number=inc_num,
-        incident_type=req.incident_type,
-        severity=req.severity,
-        status="REPORTED",
-        title=req.title,
-        description=req.description,
-        latitude=req.latitude,
-        longitude=req.longitude,
-        location_address=req.location_address,
-        caller_name=req.caller_name,
-        caller_phone=req.caller_phone
-    )
-    db.add(inc)
-    await db.flush()
+@router.post("/incidents/{incident_id}/dispatch", response_model=EmergencyIncidentResponse, summary="Dispatch response unit squad")
+async def dispatch_response_team(
+    incident_id: str,
+    req: EmergencyDispatchCreateRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    service = EmergencyService(db)
+    inc = await service.dispatch_team(incident_id, req)
+    return EmergencyIncidentResponse.model_validate(inc)
 
-    q = select(EmergencyIncident).where(EmergencyIncident.id == inc.id).options(selectinload(EmergencyIncident.dispatches))
-    res = await db.execute(q)
-    return EmergencyIncidentResponse.model_validate(res.scalars().first())
+@router.post("/incidents/{incident_id}/arrive", response_model=EmergencyIncidentResponse, summary="Mark squad arrival on scene")
+async def mark_team_arrival(
+    incident_id: str,
+    team_id: str = Query(...),
+    db: AsyncSession = Depends(get_db)
+):
+    service = EmergencyService(db)
+    inc = await service.mark_arrived(incident_id, team_id)
+    return EmergencyIncidentResponse.model_validate(inc)
+
+@router.post("/incidents/{incident_id}/contain", response_model=EmergencyIncidentResponse, summary="Mark incident contained")
+async def mark_incident_contained(
+    incident_id: str,
+    db: AsyncSession = Depends(get_db)
+):
+    service = EmergencyService(db)
+    inc = await service.mark_contained(incident_id)
+    return EmergencyIncidentResponse.model_validate(inc)
+
+@router.post("/incidents/{incident_id}/resolve", response_model=EmergencyIncidentResponse, summary="Resolve incident and release units")
+async def resolve_emergency_incident(
+    incident_id: str,
+    req: EmergencyResolveRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    service = EmergencyService(db)
+    inc = await service.resolve_incident(incident_id, req)
+    return EmergencyIncidentResponse.model_validate(inc)
 
 @router.get("/teams", response_model=List[EmergencyResponseTeamResponse], summary="List emergency squads & response teams")
 async def list_response_teams(

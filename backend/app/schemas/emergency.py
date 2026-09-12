@@ -75,3 +75,11 @@ class FacilityResponse(BaseModel):
     operating_hours: str
     is_operational: bool
     is_wheelchair_accessible: bool
+
+class EmergencyDispatchCreateRequest(BaseModel):
+    team_id: str
+    dispatch_notes: Optional[str] = None
+
+class EmergencyResolveRequest(BaseModel):
+    notes: Optional[str] = None
+
