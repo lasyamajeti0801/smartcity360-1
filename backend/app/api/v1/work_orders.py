@@ -2,8 +2,6 @@
 SmartCity360 - Municipal Work Order Management Endpoints
 """
 
-from datetime import datetime, timezone
-import uuid
 from typing import List, Optional
 from fastapi import APIRouter, Depends, Query, status
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -11,18 +9,20 @@ from sqlalchemy import select
 from sqlalchemy.orm import selectinload
 from backend.app.core.database import get_db
 from backend.app.core.security import decode_token, oauth2_scheme
-from backend.app.core.exceptions import EntityNotFoundException
-from backend.app.models.work_order import WorkOrder, WorkOrderTask, WorkOrderEvidence
+from backend.app.models.work_order import WorkOrder
 from backend.app.schemas.work_order import (
     WorkOrderCreateRequest,
     WorkOrderResponse,
     WorkOrderStatusUpdateRequest,
-    WorkOrderTaskResponse
+    WorkOrderEvidenceCreateRequest,
+    WorkOrderAssignRequest,
+    WorkOrderVerifyRequest
 )
+from backend.app.services.work_order_service import WorkOrderService
 
 router = APIRouter(prefix="/work-orders", tags=["Field Work Orders"])
 
-@router.get("", response_model=List[WorkOrderResponse], summary="List work orders")
+@router.get("", response_model=List[WorkOrderResponse], summary="List work orders with multi-parameter filter")
 async def list_work_orders(
     department_id: Optional[str] = Query(None),
     status: Optional[str] = Query(None),
@@ -51,47 +51,21 @@ async def list_work_orders(
     orders = res.scalars().all()
     return [WorkOrderResponse.model_validate(o) for o in orders]
 
+@router.get("/{work_order_id}", response_model=WorkOrderResponse, summary="Get work order details by ID")
+async def get_work_order(work_order_id: str, db: AsyncSession = Depends(get_db)):
+    service = WorkOrderService(db)
+    wo = await service.get_by_id(work_order_id)
+    return WorkOrderResponse.model_validate(wo)
+
 @router.post("", response_model=WorkOrderResponse, status_code=status.HTTP_201_CREATED, summary="Create field work order")
 async def create_work_order(
     req: WorkOrderCreateRequest,
     token: str = Depends(oauth2_scheme),
     db: AsyncSession = Depends(get_db)
 ):
-    date_str = datetime.now(timezone.utc).strftime("%Y%m%d")
-    rand_suffix = uuid.uuid4().hex[:6].upper()
-    order_num = f"WO-{date_str}-{rand_suffix}"
-
-    wo = WorkOrder(
-        order_number=order_num,
-        complaint_id=req.complaint_id,
-        department_id=req.department_id,
-        assigned_technician_id=req.assigned_technician_id,
-        title=req.title,
-        description=req.description,
-        priority=req.priority,
-        status="ASSIGNED" if req.assigned_technician_id else "CREATED",
-        latitude=req.latitude,
-        longitude=req.longitude,
-        location_address=req.location_address,
-        due_date=req.due_date
-    )
-    db.add(wo)
-    await db.flush()
-
-    for idx, t_title in enumerate(req.task_titles):
-        task = WorkOrderTask(
-            work_order_id=wo.id,
-            title=t_title,
-            is_completed=False,
-            order_index=idx
-        )
-        db.add(task)
-    await db.flush()
-
-    # Fetch loaded
-    q = select(WorkOrder).where(WorkOrder.id == wo.id).options(selectinload(WorkOrder.tasks), selectinload(WorkOrder.evidence))
-    res = await db.execute(q)
-    return WorkOrderResponse.model_validate(res.scalars().first())
+    service = WorkOrderService(db)
+    wo = await service.create_work_order(req)
+    return WorkOrderResponse.model_validate(wo)
 
 @router.patch("/{work_order_id}/status", response_model=WorkOrderResponse, summary="Update work order status")
 async def update_work_order_status(
@@ -99,23 +73,49 @@ async def update_work_order_status(
     req: WorkOrderStatusUpdateRequest,
     db: AsyncSession = Depends(get_db)
 ):
-    query = (
-        select(WorkOrder)
-        .where(WorkOrder.id == work_order_id, WorkOrder.is_deleted == False)
-        .options(selectinload(WorkOrder.tasks), selectinload(WorkOrder.evidence))
-    )
-    res = await db.execute(query)
-    wo = res.scalars().first()
-    if not wo:
-        raise EntityNotFoundException("WorkOrder", work_order_id)
+    service = WorkOrderService(db)
+    wo = await service.update_status(work_order_id, req)
+    return WorkOrderResponse.model_validate(wo)
 
-    wo.status = req.status.upper()
-    if req.completion_percentage is not None:
-        wo.completion_percentage = req.completion_percentage
-    if req.field_notes:
-        wo.field_notes = req.field_notes
-    if wo.status == "COMPLETED":
-        wo.completed_at = datetime.now(timezone.utc)
+@router.post("/{work_order_id}/tasks/{task_id}/toggle", response_model=WorkOrderResponse, summary="Toggle checklist task completion")
+async def toggle_work_order_task(
+    work_order_id: str,
+    task_id: str,
+    db: AsyncSession = Depends(get_db)
+):
+    service = WorkOrderService(db)
+    wo = await service.toggle_task(work_order_id, task_id)
+    return WorkOrderResponse.model_validate(wo)
 
-    await db.flush()
+@router.post("/{work_order_id}/evidence", response_model=WorkOrderResponse, summary="Attach field photographic evidence")
+async def attach_work_order_evidence(
+    work_order_id: str,
+    req: WorkOrderEvidenceCreateRequest,
+    token: str = Depends(oauth2_scheme),
+    db: AsyncSession = Depends(get_db)
+):
+    payload = decode_token(token)
+    staff_id = payload.get("sub")
+    service = WorkOrderService(db)
+    wo = await service.attach_evidence(work_order_id, staff_id, req)
+    return WorkOrderResponse.model_validate(wo)
+
+@router.post("/{work_order_id}/assign", response_model=WorkOrderResponse, summary="Assign technician and supervisor to work order")
+async def assign_work_order_staff(
+    work_order_id: str,
+    req: WorkOrderAssignRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    service = WorkOrderService(db)
+    wo = await service.assign_staff(work_order_id, req)
+    return WorkOrderResponse.model_validate(wo)
+
+@router.post("/{work_order_id}/verify", response_model=WorkOrderResponse, summary="Supervisor verification and sign-off")
+async def verify_work_order(
+    work_order_id: str,
+    req: WorkOrderVerifyRequest,
+    db: AsyncSession = Depends(get_db)
+):
+    service = WorkOrderService(db)
+    wo = await service.verify_work_order(work_order_id, req)
     return WorkOrderResponse.model_validate(wo)

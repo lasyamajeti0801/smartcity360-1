@@ -1,0 +1,23 @@
+{
+  "pr_number": 5,
+  "title": "feat(work-orders): implement field staff execution service, task checklist toggling, evidence capture, and supervisor signoff",
+  "branch": "feat/work-orders-field-execution",
+  "status": "MERGED",
+  "author": "SmartCity360 Architecture Team",
+  "created_at": "2026-09-12",
+  "merged_at": "2026-09-12",
+  "problem": "Municipal field crews lacked interactive task-level checklist tracking, photographic proof of work attachment, and formal supervisor sign-off verification linked directly to civic complaint resolution.",
+  "solution": "Built comprehensive WorkOrderService encapsulating full field dispatch state machine (CREATED, ASSIGNED, ACCEPTED, IN_PROGRESS, BLOCKED, SUBMITTED, VERIFICATION, COMPLETED). Engineered atomic checklist toggling with automatic percentage recalculation, photographic evidence attachment (BEFORE, AFTER, RECEIPT), supervisor approval/rejection workflows, and automated synchronized resolution of underlying complaints.",
+  "affected_modules": [
+    "backend/app/services/work_order_service.py",
+    "backend/app/schemas/work_order.py",
+    "backend/app/api/v1/work_orders.py",
+    "backend/tests/test_work_orders.py"
+  ],
+  "tests": [
+    "pytest backend/tests/test_work_orders.py (1 passed)",
+    "pytest backend/tests -v (12 passed, 100% pass rate)"
+  ],
+  "security_considerations": "Strict supervisor role-based approval gating, audit history logging, and staff ID validation.",
+  "breaking_changes": false
+}

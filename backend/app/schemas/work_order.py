@@ -65,3 +65,17 @@ class WorkOrderStatusUpdateRequest(BaseModel):
     status: str
     completion_percentage: Optional[int] = Field(None, ge=0, le=100)
     field_notes: Optional[str] = None
+
+class WorkOrderEvidenceCreateRequest(BaseModel):
+    evidence_type: str = Field(default="PHOTO", pattern="^(BEFORE|AFTER|RECEIPT|PERMIT|INSPECTION|PHOTO)$")
+    file_url: str = Field(min_length=5, max_length=512)
+    caption: Optional[str] = Field(None, max_length=255)
+
+class WorkOrderAssignRequest(BaseModel):
+    assigned_technician_id: str
+    supervisor_id: Optional[str] = None
+
+class WorkOrderVerifyRequest(BaseModel):
+    is_approved: bool
+    notes: Optional[str] = None
+
