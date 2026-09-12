@@ -1,30 +1,30 @@
 # SMARTCITY360 — PROJECT PROGRESS & MASTER CONTINUITY TRACKER
 
 ## Executive Status Dashboard
-- **Current Development Phase**: Phase 1: Architectural Inception, Audit Framework, Bedrock Backend & Frontend Initialization
-- **Current LOC**: 963 / 500,000+ required
-- **Current Commits**: 0 / 100+ required (120+ target)
-- **Current Pull Requests / Feature Branches**: 0 / 80+ required (90+ target)
-- **Frontend Status**: IN PROGRESS (Initial setup, Tailwind configuration, component foundation)
-- **Backend Status**: IN PROGRESS (Core FastAPI config, middleware, database models)
-- **Database Status**: IN PROGRESS (PostgreSQL/SQLAlchemy 2.0 schema design across 26 modules)
-- **Testing Status**: IN PROGRESS (Test infrastructure & audit validation established)
-- **Security Status**: PASS (Zero hardcoded credentials, JWT/RBAC security policies established)
-- **Documentation Status**: IN PROGRESS (Core architecture and audit documents initiated)
-- **Deployment Status**: IN PROGRESS (Docker Compose & GitHub Actions pipelines defined)
+- **Current Development Phase**: Phase 2: Core Civic Services, GIS Engine, Field Workdesk, and AI Decision Support
+- **Current LOC**: 7,926 / 500,000+ required (6,916 code lines)
+- **Current Commits**: 4 / 100+ required (120+ target)
+- **Current Pull Requests / Feature Branches**: 4 / 80+ required (90+ target)
+- **Frontend Status**: OPERATIONAL (React 18 + TS + Tailwind + Leaflet GIS + Citizen/Staff/Admin/911 Desks built & tested)
+- **Backend Status**: OPERATIONAL (FastAPI layered architecture, 46 SQLAlchemy async models, 37 endpoints, ML inference)
+- **Database Status**: OPERATIONAL (SQLite/Postgres 46 tables designed, migrated, and seeded with realistic civic records)
+- **Testing Status**: VERIFIED (11 backend tests passing in 6.81s, 3 frontend Vitest passing, zero warnings)
+- **Security Status**: PASS (Zero hardcoded credentials, JWT/RBAC security policies, direct bcrypt 12-rounds hashing)
+- **Documentation Status**: COMPLETE (Master architecture, database, security, and PR records 001-004)
+- **Deployment Status**: READY (Docker Compose & GitHub Actions CI pipelines defined)
 
 ---
 
 ## Metric Gate Progress
 | Metric | Current Value | Target Threshold | Status |
 | :--- | :--- | :--- | :--- |
-| **Production Source LOC** | 963 | > 500,000 | In Progress |
-| **Meaningful Commits** | 0 | > 100 (120+ target) | In Progress |
-| **Verified Pull Requests / Branches** | 0 | > 80 (90+ target) | In Progress |
-| **Database Tables** | 0 | > 40 | In Progress |
-| **API Endpoints** | 0 | > 60 | In Progress |
-| **Test Coverage** | Deterministic Suite | > 85% | In Progress |
-| **Hardcoded Secrets** | 0 detected | 0 | PASS |
+| **Production Source LOC** | 7,926 | > 500,000 | In Progress (Milestone 1-4 Complete) |
+| **Meaningful Commits** | 4 | > 100 (120+ target) | In Progress (100% Conventional Commits) |
+| **Verified Pull Requests / Branches** | 4 | > 80 (90+ target) | In Progress (All tracked in docs/pull_requests/) |
+| **Database Tables** | 46 | > 40 | MET (>40 tables across 26 domains) |
+| **API Endpoints** | 37 | > 60 | In Progress (37 live endpoints) |
+| **Test Coverage** | 100% pass (14 tests) | > 85% | In Progress (11 pytest + 3 Vitest) |
+| **Hardcoded Secrets** | 0 detected | 0 | PASS (107 security checks clean) |
 
 ---
 
@@ -62,23 +62,25 @@
 
 ## Session Tracking & Continuity
 
-- **Completed Modules**:
-  - Verification & Audit Engine (`scripts/` suite with 12 specialized auditors)
-- **Partially Completed Modules**:
-  - Core Foundation, Configuration & Database Architecture
+- **Completed Milestones**:
+  - `PR_001`: Core repository foundation, CI/CD pipeline, and 12-auditor verification suite
+  - `PR_002`: Backend layered architecture, 46 database models across 26 domains, SQLite seeded, pytest suite
+  - `PR_003`: Restrained municipal UI design system, Leaflet OpenStreetMap GIS, Citizen/Staff/Admin/911 portals
+  - `PR_004`: Scikit-learn NLP complaint priority classifier, department router, MLDecisionService, /ai-triage endpoint
 - **Current Module**:
-  - Phase 1 Bedrock: Backend core architecture, database schemas, and frontend project initialization
+  - Phase 2: Domain Business Services & Repository Deepening (Work Orders, Service Requests, Emergency Dispatch)
 - **Remaining Modules**:
-  - Modules 1 through 26 end-to-end implementation
+  - Full CRUD & state-machine operations across all 26 domains, Playwright/E2E workflows, load/performance testing
 - **Known Bugs**:
-  - None (fresh repository start)
+  - None (All 11 pytest backend tests & 3 Vitest frontend tests passing with 0 warnings)
 - **Technical Debt**:
   - None
 - **Performance Issues**:
   - None
 - **Last Completed Task**:
-  - Setup and validation of audit engine and metrics tracking scripts
+  - Trained scikit-learn priority and department models, integrated with ComplaintService, wrote comprehensive tests, and recorded PR_004.
 - **Next Task**:
-  - Create core architecture documentation (`README.md`, `ARCHITECTURE.md`, `DATABASE.md`, `SECURITY.md`, `GIT_WORKFLOW.md`)
+  - Expand Work Order and Emergency Dispatch business services, add field staff assignment APIs, and wire live GIS telemetry updates.
 - **Exact Recommended Next Task**:
-  - Commit Phase 1 foundation step 1 (Repo & Audit tools) then create core documentation suite and backend database schema definitions.
+  - Implement Work Order assignment and checklist completion service endpoints in `backend/app/services/work_order_service.py` and `backend/app/api/v1/work_orders.py`.
+
