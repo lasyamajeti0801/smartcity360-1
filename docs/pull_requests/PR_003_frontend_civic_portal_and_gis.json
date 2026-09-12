@@ -1,0 +1,29 @@
+{
+  "pr_number": 3,
+  "title": "feat(frontend): implement restrained municipal UI system, Leaflet GIS map, citizen portal, and admin consoles",
+  "branch": "feat/frontend-civic-portal",
+  "status": "MERGED",
+  "author": "SmartCity360 Architecture Team",
+  "created_at": "2026-09-12",
+  "merged_at": "2026-09-12",
+  "problem": "Generic AI-dashboard aesthetics (neon glowing gradients, giant empty heroes) fail municipal usability, accessibility, and credibility standards.",
+  "solution": "Engineered a serious, accessible government portal utilizing Tailwind CSS tokens, Leaflet OpenStreetMap interactive GIS engine, multi-role workspaces (Citizen, Field Staff, City Administrator, Emergency Operator), data tables, and an interactive coordinate pin picker.",
+  "affected_modules": [
+    "frontend/src/components/ui",
+    "frontend/src/components/layout",
+    "frontend/src/components/maps",
+    "frontend/src/features/citizen",
+    "frontend/src/features/admin",
+    "frontend/src/features/staff",
+    "frontend/src/features/emergency",
+    "frontend/src/services",
+    "frontend/src/app"
+  ],
+  "tests": [
+    "npm.cmd run build (Typecheck and bundle validation)",
+    "python scripts/frontend_audit.py (Component and feature coverage verification)",
+    "python scripts/security_audit.py (PASS)"
+  ],
+  "security_considerations": "Sanitized map inputs, accessible contrast ratios (WCAG 2.1 AA), and zero third-party commercial API key exposure.",
+  "breaking_changes": false
+}
