@@ -3,8 +3,6 @@
  * Domain: economic_development
  */
 
-import { EconomicDevelopmentStatus } from './types';
-
 const API_BASE = '/api/v1/economic-development';
 
 export async function fetchEconomicDevelopmentMetric01(wardId = 1, limit = 25): Promise<any> {

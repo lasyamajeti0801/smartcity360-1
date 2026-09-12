@@ -3,8 +3,6 @@
  * Domain: digital_infrastructure
  */
 
-import { DigitalInfrastructureStatus } from './types';
-
 const API_BASE = '/api/v1/digital-infrastructure';
 
 export async function fetchDigitalInfrastructureMetric01(wardId = 1, limit = 25): Promise<any> {

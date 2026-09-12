@@ -3,8 +3,6 @@
  * Domain: water_management
  */
 
-import { WaterManagementStatus } from './types';
-
 const API_BASE = '/api/v1/water-management';
 
 export async function fetchWaterManagementMetric01(wardId = 1, limit = 25): Promise<any> {

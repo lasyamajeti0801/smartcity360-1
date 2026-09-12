@@ -3,8 +3,6 @@
  * Domain: housing_and_community
  */
 
-import { HousingAndCommunityStatus } from './types';
-
 const API_BASE = '/api/v1/housing-and-community';
 
 export async function fetchHousingAndCommunityMetric01(wardId = 1, limit = 25): Promise<any> {

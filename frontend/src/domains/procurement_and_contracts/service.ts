@@ -3,8 +3,6 @@
  * Domain: procurement_and_contracts
  */
 
-import { ProcurementAndContractsStatus } from './types';
-
 const API_BASE = '/api/v1/procurement-and-contracts';
 
 export async function fetchProcurementAndContractsMetric01(wardId = 1, limit = 25): Promise<any> {

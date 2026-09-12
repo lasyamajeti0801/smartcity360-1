@@ -3,8 +3,6 @@
  * Domain: public_health
  */
 
-import { PublicHealthStatus } from './types';
-
 const API_BASE = '/api/v1/public-health';
 
 export async function fetchPublicHealthMetric01(wardId = 1, limit = 25): Promise<any> {

@@ -3,8 +3,6 @@
  * Domain: fleet_management
  */
 
-import { FleetManagementStatus } from './types';
-
 const API_BASE = '/api/v1/fleet-management';
 
 export async function fetchFleetManagementMetric01(wardId = 1, limit = 25): Promise<any> {

@@ -3,8 +3,6 @@
  * Domain: social_services
  */
 
-import { SocialServicesStatus } from './types';
-
 const API_BASE = '/api/v1/social-services';
 
 export async function fetchSocialServicesMetric01(wardId = 1, limit = 25): Promise<any> {

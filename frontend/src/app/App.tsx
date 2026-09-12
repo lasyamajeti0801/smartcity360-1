@@ -8,6 +8,13 @@ import { ReportIssueModal } from '../features/citizen/ReportIssueModal';
 import { AdminDashboard } from '../features/admin/AdminDashboard';
 import { WorkOrderQueue } from '../features/staff/WorkOrderQueue';
 import { EmergencyControlCenter } from '../features/emergency/EmergencyControlCenter';
+import { CitizensDirectory } from '../features/citizens/CitizensDirectory';
+import { TrafficTransitControl } from '../features/traffic/TrafficTransitControl';
+import { WasteManagementSystem } from '../features/waste/WasteManagementSystem';
+import { WaterTelemetrySystem } from '../features/water/WaterTelemetrySystem';
+import { ReportsAnalytics } from '../features/reports/ReportsAnalytics';
+import { NotificationsCenter } from '../features/notifications/NotificationsCenter';
+import { CitySettings } from '../features/settings/CitySettings';
 import { CityMap } from '../components/maps/CityMap';
 import { Card } from '../components/ui/Card';
 import { apiClient } from '../services/api';
@@ -77,50 +84,86 @@ export const App: React.FC = () => {
     }));
   };
 
-  // Render view based on active role and tab
+  // Render view based on active tab & role
   const renderContent = () => {
-    if (currentRole === 'Emergency Operator' || activeTab === 'emergency') {
-      return <EmergencyControlCenter />;
-    }
-
-    if (currentRole === 'Field Staff' || currentRole === 'Department Staff' || activeTab === 'workorders') {
-      return <WorkOrderQueue />;
-    }
-
-    if (currentRole === 'City Administrator' || currentRole === 'System Administrator') {
-      if (activeTab === 'map') {
-        return (
-          <Card title="City-Wide Geospatial Asset & Incident Explorer" subtitle="Interactive multi-layer GIS view.">
-            <div className="h-[600px] w-full">
-              <CityMap complaints={complaints} facilities={facilities} />
-            </div>
-          </Card>
-        );
-      }
-      return <AdminDashboard kpis={kpis} complaints={complaints} />;
-    }
-
-    // Default: Citizen View
     switch (activeTab) {
+      case 'citizens':
+        return <CitizensDirectory />;
+
       case 'services':
         return <ServiceCatalog />;
+
+      case 'emergency':
+        return <EmergencyControlCenter />;
+
+      case 'traffic':
+        return <TrafficTransitControl />;
+
+      case 'waste':
+        return <WasteManagementSystem />;
+
+      case 'water':
+        return <WaterTelemetrySystem />;
+
+      case 'reports':
+        return <ReportsAnalytics />;
+
+      case 'notifications':
+        return <NotificationsCenter />;
+
+      case 'settings':
+        return <CitySettings />;
+
+      case 'workorders':
+        return <WorkOrderQueue />;
+
       case 'map':
         return (
-          <Card title="Municipal GIS Map & Facilities" subtitle="Public spatial view of city infrastructure and hospitals.">
-            <div className="h-[600px] w-full">
+          <Card
+            title="Municipal GIS Geospatial Asset & Infrastructure Radar"
+            subtitle="Interactive OpenStreetMap layer with public facilities, medical clinics, and live reported issues."
+          >
+            <div className="h-[620px] w-full">
               <CityMap complaints={complaints} facilities={facilities} />
             </div>
           </Card>
         );
+
       case 'complaints':
-      case 'dashboard':
-      default:
+        if (currentRole === 'City Administrator' || currentRole === 'System Administrator') {
+          return <AdminDashboard kpis={kpis} complaints={complaints} />;
+        }
+        if (currentRole === 'Field Staff' || currentRole === 'Department Staff') {
+          return <WorkOrderQueue />;
+        }
         return (
           <CitizenDashboard
             complaints={complaints}
             facilities={facilities}
             onOpenReportModal={() => setIsReportModalOpen(true)}
             onNavigateToServices={() => setActiveTab('services')}
+            onNavigateToTab={(t) => setActiveTab(t)}
+          />
+        );
+
+      case 'dashboard':
+      default:
+        if (currentRole === 'Emergency Operator') {
+          return <EmergencyControlCenter />;
+        }
+        if (currentRole === 'Field Staff' || currentRole === 'Department Staff') {
+          return <WorkOrderQueue />;
+        }
+        if (currentRole === 'City Administrator' || currentRole === 'System Administrator') {
+          return <AdminDashboard kpis={kpis} complaints={complaints} />;
+        }
+        return (
+          <CitizenDashboard
+            complaints={complaints}
+            facilities={facilities}
+            onOpenReportModal={() => setIsReportModalOpen(true)}
+            onNavigateToServices={() => setActiveTab('services')}
+            onNavigateToTab={(t) => setActiveTab(t)}
           />
         );
     }
@@ -132,6 +175,7 @@ export const App: React.FC = () => {
         currentRole={currentRole}
         onRoleChange={handleRoleChange}
         onReportClick={() => setIsReportModalOpen(true)}
+        activeTab={activeTab}
       />
 
       <div className="flex flex-1">
@@ -158,3 +202,4 @@ export const App: React.FC = () => {
     </div>
   );
 };
+

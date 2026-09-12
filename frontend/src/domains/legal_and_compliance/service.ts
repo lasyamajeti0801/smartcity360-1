@@ -3,8 +3,6 @@
  * Domain: legal_and_compliance
  */
 
-import { LegalAndComplianceStatus } from './types';
-
 const API_BASE = '/api/v1/legal-and-compliance';
 
 export async function fetchLegalAndComplianceMetric01(wardId = 1, limit = 25): Promise<any> {

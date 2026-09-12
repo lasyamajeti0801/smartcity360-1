@@ -3,8 +3,6 @@
  * Domain: waste_management
  */
 
-import { WasteManagementStatus } from './types';
-
 const API_BASE = '/api/v1/waste-management';
 
 export async function fetchWasteManagementMetric01(wardId = 1, limit = 25): Promise<any> {

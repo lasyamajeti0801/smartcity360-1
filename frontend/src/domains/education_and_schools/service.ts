@@ -3,8 +3,6 @@
  * Domain: education_and_schools
  */
 
-import { EducationAndSchoolsStatus } from './types';
-
 const API_BASE = '/api/v1/education-and-schools';
 
 export async function fetchEducationAndSchoolsMetric01(wardId = 1, limit = 25): Promise<any> {

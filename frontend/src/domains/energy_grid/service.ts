@@ -3,8 +3,6 @@
  * Domain: energy_grid
  */
 
-import { EnergyGridStatus } from './types';
-
 const API_BASE = '/api/v1/energy-grid';
 
 export async function fetchEnergyGridMetric01(wardId = 1, limit = 25): Promise<any> {
