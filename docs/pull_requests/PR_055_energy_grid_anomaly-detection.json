@@ -1,0 +1,22 @@
+{
+  "pr_number": 55,
+  "title": "feat(energy_gri): implement time-series anomaly detection and outlier filtering for city sensors (PR #055)",
+  "branch": "feature/energy_grid-anomaly-detection-pr055",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-13",
+  "merged_at": "2026-09-13",
+  "problem": "Municipal domain energy_grid required enterprise grade time-series anomaly detection and outlier filtering for city sensors.",
+  "solution": "Implemented and verified anomaly-detection pipeline for energy_grid with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "energy_grid"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}

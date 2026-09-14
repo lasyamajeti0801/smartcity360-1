@@ -1,0 +1,22 @@
+{
+  "pr_number": 71,
+  "title": "feat(citizen_en): implement time-series anomaly detection and outlier filtering for city sensors (PR #071)",
+  "branch": "feature/citizen_engagement-anomaly-detection-pr071",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-13",
+  "merged_at": "2026-09-13",
+  "problem": "Municipal domain citizen_engagement required enterprise grade time-series anomaly detection and outlier filtering for city sensors.",
+  "solution": "Implemented and verified anomaly-detection pipeline for citizen_engagement with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "citizen_engagement"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}

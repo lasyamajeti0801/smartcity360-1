@@ -1,0 +1,22 @@
+{
+  "pr_number": 97,
+  "title": "feat(citizen_en): implement immutable audit ledger state hashing and compliance checks (PR #097)",
+  "branch": "feature/citizen_engagement-audit-trail-ledger-pr097",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-13",
+  "merged_at": "2026-09-13",
+  "problem": "Municipal domain citizen_engagement required enterprise grade immutable audit ledger state hashing and compliance checks.",
+  "solution": "Implemented and verified audit-trail-ledger pipeline for citizen_engagement with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "citizen_engagement"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}

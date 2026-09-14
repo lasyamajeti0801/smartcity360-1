@@ -1,0 +1,22 @@
+{
+  "pr_number": 94,
+  "title": "feat(public_wor): implement machine learning workforce optimization and dynamic unit allocation (PR #094)",
+  "branch": "feature/public_works-predictive-dispatch-pr094",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-13",
+  "merged_at": "2026-09-13",
+  "problem": "Municipal domain public_works required enterprise grade machine learning workforce optimization and dynamic unit allocation.",
+  "solution": "Implemented and verified predictive-dispatch pipeline for public_works with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "public_works"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}

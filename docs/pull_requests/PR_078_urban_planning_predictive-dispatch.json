@@ -1,0 +1,22 @@
+{
+  "pr_number": 78,
+  "title": "feat(urban_plan): implement machine learning workforce optimization and dynamic unit allocation (PR #078)",
+  "branch": "feature/urban_planning-predictive-dispatch-pr078",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-13",
+  "merged_at": "2026-09-13",
+  "problem": "Municipal domain urban_planning required enterprise grade machine learning workforce optimization and dynamic unit allocation.",
+  "solution": "Implemented and verified predictive-dispatch pipeline for urban_planning with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "urban_planning"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}
