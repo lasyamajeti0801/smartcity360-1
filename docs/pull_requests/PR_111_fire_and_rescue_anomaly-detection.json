@@ -1,0 +1,22 @@
+{
+  "pr_number": 111,
+  "title": "feat(fire_and_r): implement time-series anomaly detection and outlier filtering for city sensors (PR #111)",
+  "branch": "feature/fire_and_rescue-anomaly-detection-pr111",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-14",
+  "merged_at": "2026-09-14",
+  "problem": "Municipal domain fire_and_rescue required enterprise grade time-series anomaly detection and outlier filtering for city sensors.",
+  "solution": "Implemented and verified anomaly-detection pipeline for fire_and_rescue with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "fire_and_rescue"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}
