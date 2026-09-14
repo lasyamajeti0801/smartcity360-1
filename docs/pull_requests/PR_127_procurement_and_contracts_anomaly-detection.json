@@ -1,0 +1,22 @@
+{
+  "pr_number": 127,
+  "title": "feat(procuremen): implement time-series anomaly detection and outlier filtering for city sensors (PR #127)",
+  "branch": "feature/procurement_and_contracts-anomaly-detection-pr127",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-14",
+  "merged_at": "2026-09-14",
+  "problem": "Municipal domain procurement_and_contracts required enterprise grade time-series anomaly detection and outlier filtering for city sensors.",
+  "solution": "Implemented and verified anomaly-detection pipeline for procurement_and_contracts with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "procurement_and_contracts"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}
