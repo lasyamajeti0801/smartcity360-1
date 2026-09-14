@@ -44,20 +44,20 @@ export const Modal: React.FC<ModalProps> = ({
 
   return (
     <div className="fixed inset-0 z-50 overflow-y-auto">
-      <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm transition-opacity" onClick={onClose} />
+      <div className="fixed inset-0 bg-city-charcoal/70 backdrop-blur-sm transition-opacity" onClick={onClose} />
       <div className="flex min-h-full items-center justify-center p-4 text-center sm:p-0">
         <div
-          className={`relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 w-full ${maxWidthStyles[maxWidth]} border border-slate-200`}
+          className={`relative transform overflow-hidden rounded-2xl bg-white text-left shadow-civic-lg transition-all sm:my-8 w-full ${maxWidthStyles[maxWidth]} border border-surface-border`}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="flex items-center justify-between border-b border-slate-200 px-6 py-4 bg-slate-50/50">
+          <div className="flex items-center justify-between border-b border-surface-border px-6 py-4 bg-surface-card">
             <div>
-              <h3 className="text-base font-semibold text-slate-900">{title}</h3>
-              {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}
+              <h3 className="text-base font-bold text-city-forest">{title}</h3>
+              {subtitle && <p className="text-xs text-city-charcoal/60 mt-0.5">{subtitle}</p>}
             </div>
             <button
               onClick={onClose}
-              className="rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-slate-600 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-900"
+              className="rounded-lg p-1.5 text-city-charcoal/50 hover:bg-surface-muted hover:text-city-charcoal transition-colors focus:outline-none focus:ring-2 focus:ring-city-terracotta"
             >
               <X className="h-5 w-5" />
             </button>

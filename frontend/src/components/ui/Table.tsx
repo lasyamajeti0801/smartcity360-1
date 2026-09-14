@@ -27,11 +27,8 @@ export function Table<T>({
 }: TableProps<T>) {
   if (isLoading) {
     return (
-      <div className="w-full py-12 flex flex-col items-center justify-center text-slate-500 bg-white rounded-md border border-slate-200">
-        <svg className="animate-spin h-6 w-6 text-slate-700 mb-2" fill="none" viewBox="0 0 24 24">
-          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-        </svg>
+      <div className="w-full py-12 flex flex-col items-center justify-center text-city-charcoal/60 bg-white rounded-xl border border-surface-border">
+        <div className="w-6 h-6 border-2 border-city-terracotta border-t-transparent rounded-full animate-spin mb-2" />
         <span className="text-xs font-medium">Retrieving verified city records...</span>
       </div>
     );
@@ -39,17 +36,17 @@ export function Table<T>({
 
   if (data.length === 0) {
     return (
-      <div className="w-full py-12 flex flex-col items-center justify-center text-slate-500 bg-white rounded-md border border-slate-200">
-        <p className="text-sm font-medium">{emptyMessage}</p>
-        <p className="text-xs text-slate-400 mt-1">Adjust search terms or filters to display data.</p>
+      <div className="w-full py-12 flex flex-col items-center justify-center text-city-charcoal/60 bg-white rounded-xl border border-surface-border">
+        <p className="text-sm font-semibold text-city-forest">{emptyMessage}</p>
+        <p className="text-xs text-city-charcoal/50 mt-1">Adjust search terms or filters to display data.</p>
       </div>
     );
   }
 
   return (
-    <div className="w-full overflow-x-auto rounded-md border border-slate-200 bg-white shadow-sm">
-      <table className="min-w-full divide-y divide-slate-200 text-left text-sm">
-        <thead className="bg-slate-50 text-xs uppercase font-semibold text-slate-600 tracking-wider">
+    <div className="w-full overflow-x-auto rounded-xl border border-surface-border bg-white shadow-civic">
+      <table className="min-w-full divide-y divide-surface-border text-left text-sm">
+        <thead className="bg-surface-card text-xs uppercase font-semibold text-city-charcoal/70 tracking-wider font-mono">
           <tr>
             {columns.map((col) => (
               <th
@@ -64,17 +61,17 @@ export function Table<T>({
             ))}
           </tr>
         </thead>
-        <tbody className="divide-y divide-slate-200 bg-white">
+        <tbody className="divide-y divide-surface-border bg-white">
           {data.map((row) => (
             <tr
               key={keyExtractor(row)}
               onClick={() => onRowClick && onRowClick(row)}
-              className={`transition-colors hover:bg-slate-50/80 ${onRowClick ? 'cursor-pointer' : ''}`}
+              className={`transition-colors hover:bg-surface-card ${onRowClick ? 'cursor-pointer' : ''}`}
             >
               {columns.map((col) => (
                 <td
                   key={col.key}
-                  className={`px-4 py-3 text-slate-700 whitespace-nowrap ${
+                  className={`px-4 py-3 text-city-charcoal whitespace-nowrap ${
                     col.align === 'right' ? 'text-right' : col.align === 'center' ? 'text-center' : 'text-left'
                   } ${col.className || ''}`}
                 >

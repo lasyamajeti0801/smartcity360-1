@@ -3,6 +3,7 @@ import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
 import { Table, Column } from '../../components/ui/Table';
+import { useToast } from '../../context/ToastContext';
 import {
   Trash2
 } from 'lucide-react';
@@ -29,6 +30,7 @@ interface WasteTruck {
 }
 
 export const WasteManagementSystem: React.FC = () => {
+  const { addToast } = useToast();
   const [bins, setBins] = useState<SmartBin[]>([
     {
       id: 'b1',
@@ -120,21 +122,22 @@ export const WasteManagementSystem: React.FC = () => {
           : b
       )
     );
+    addToast('Sanitation clearance team dispatched to sensor node', 'info');
   };
 
   const binCols: Column<SmartBin>[] = [
     {
       key: 'bin_code',
       header: 'Bin Sensor Code',
-      render: (b) => <span className="font-mono font-bold text-teal-800 text-xs">{b.bin_code}</span>,
+      render: (b) => <span className="font-mono font-bold text-city-forest text-xs">{b.bin_code}</span>,
     },
     {
       key: 'location',
       header: 'Location & Ward',
       render: (b) => (
         <div>
-          <div className="font-bold text-slate-900">{b.location}</div>
-          <div className="text-[11px] text-slate-500">Ward {b.ward}</div>
+          <div className="font-bold text-city-charcoal">{b.location}</div>
+          <div className="text-[11px] text-city-charcoal/60">Ward {b.ward}</div>
         </div>
       ),
     },
@@ -145,10 +148,10 @@ export const WasteManagementSystem: React.FC = () => {
         <span
           className={`text-[10px] font-bold px-2 py-0.5 rounded border ${
             b.type === 'ORGANIC'
-              ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
+              ? 'bg-purple-100/70 text-purple-950 border-purple-300'
               : b.type === 'RECYCLABLE'
-              ? 'bg-sky-50 text-sky-800 border-sky-300'
-              : 'bg-slate-100 text-slate-800 border-slate-300'
+              ? 'bg-purple-50 text-purple-700 border-purple-200'
+              : 'bg-purple-50/50 text-purple-900 border-purple-200'
           }`}
         >
           {b.type}
@@ -161,19 +164,19 @@ export const WasteManagementSystem: React.FC = () => {
       render: (b) => (
         <div className="w-28">
           <div className="flex justify-between text-[10px] font-mono mb-0.5 font-bold">
-            <span className={b.fill_percentage >= 85 ? 'text-red-600' : 'text-slate-700'}>
+            <span className={b.fill_percentage >= 85 ? 'text-red-700' : 'text-city-charcoal'}>
               {b.fill_percentage}%
             </span>
-            <span className="text-slate-400">{b.fill_percentage >= 85 ? 'OVERFILL' : 'NORMAL'}</span>
+            <span className="text-city-charcoal/50">{b.fill_percentage >= 85 ? 'OVERFILL' : 'NORMAL'}</span>
           </div>
-          <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+          <div className="w-full bg-city-sand/40 rounded-full h-2 overflow-hidden">
             <div
               className={`h-2 rounded-full ${
                 b.fill_percentage >= 85
                   ? 'bg-red-600'
                   : b.fill_percentage >= 60
-                  ? 'bg-amber-500'
-                  : 'bg-teal-600'
+                  ? 'bg-city-amber'
+                  : 'bg-city-forest'
               }`}
               style={{ width: `${b.fill_percentage}%` }}
             />
@@ -184,7 +187,7 @@ export const WasteManagementSystem: React.FC = () => {
     {
       key: 'last_cleared',
       header: 'Last Emptied',
-      render: (b) => <span className="text-[11px] text-slate-500">{b.last_cleared}</span>,
+      render: (b) => <span className="text-[11px] text-city-charcoal/60">{b.last_cleared}</span>,
     },
     {
       key: 'id',
@@ -194,7 +197,7 @@ export const WasteManagementSystem: React.FC = () => {
           size="sm"
           variant="outline"
           onClick={() => handleEmptyBin(b.id)}
-          className="text-[10px] px-2 py-0.5 h-6 border-slate-300 hover:bg-teal-50 hover:text-teal-800 hover:border-teal-400"
+          className="text-[10px] px-2.5 py-0.5 h-6 border-city-terracotta/40 text-city-terracotta hover:bg-city-terracotta hover:text-white transition-colors"
         >
           Dispatch Clear
         </Button>
@@ -206,15 +209,15 @@ export const WasteManagementSystem: React.FC = () => {
     {
       key: 'truck_code',
       header: 'Truck Unit',
-      render: (t) => <span className="font-mono font-bold text-slate-900 text-xs">{t.truck_code}</span>,
+      render: (t) => <span className="font-mono font-bold text-city-charcoal text-xs">{t.truck_code}</span>,
     },
     {
       key: 'driver_name',
       header: 'Assigned Driver',
       render: (t) => (
         <div>
-          <div className="font-semibold text-slate-900">{t.driver_name}</div>
-          <div className="text-[11px] text-slate-500">Assigned Ward {t.ward_assigned}</div>
+          <div className="font-semibold text-city-charcoal">{t.driver_name}</div>
+          <div className="text-[11px] text-city-charcoal/60">Assigned Ward {t.ward_assigned}</div>
         </div>
       ),
     },
@@ -222,7 +225,7 @@ export const WasteManagementSystem: React.FC = () => {
       key: 'capacity_used_pct',
       header: 'Payload',
       render: (t) => (
-        <div className="font-mono text-xs font-bold text-slate-900">
+        <div className="font-mono text-xs font-bold text-city-charcoal">
           {t.capacity_used_pct}% capacity ({t.bins_collected} bins)
         </div>
       ),
@@ -249,15 +252,15 @@ export const WasteManagementSystem: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner */}
-      <div className="bg-slate-900 text-white rounded-xl p-5 border border-slate-800 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-city-forest to-city-charcoal text-white rounded-xl p-5 border border-city-forest/40 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2">
-            <Trash2 className="h-5 w-5 text-teal-400" />
+            <Trash2 className="h-5 w-5 text-city-amber" />
             <h1 className="text-lg font-bold tracking-tight text-white">
               Municipal Waste & Smart Sanitation Command
             </h1>
           </div>
-          <p className="text-xs text-slate-300 mt-1">
+          <p className="text-xs text-city-ivory/80 mt-1">
             IoT optical waste bin fill telemetry, automated collection truck routing, and circular economy recycling metrics.
           </p>
         </div>
@@ -267,9 +270,9 @@ export const WasteManagementSystem: React.FC = () => {
             variant="primary"
             onClick={() => {
               setBins((prev) => prev.map((b) => (b.fill_percentage >= 80 ? { ...b, fill_percentage: 5, last_cleared: 'Just now' } : b)));
-              alert('Automated collection route optimized and all full bins dispatched!');
+              addToast('Automated collection route optimized and all critical bins dispatched!', 'success');
             }}
-            className="bg-teal-600 hover:bg-teal-500 text-xs"
+            className="bg-city-terracotta hover:bg-city-terracotta/90 text-white font-semibold text-xs border-0"
           >
             ⚡ Optimize Collection Routes
           </Button>
@@ -278,27 +281,27 @@ export const WasteManagementSystem: React.FC = () => {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-        <Card className="border-l-4 border-l-teal-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Daily Waste Collected</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">842 Metric Tons</div>
-          <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">100% Ward coverage completed</div>
+        <Card className="border-l-4 border-l-city-terracotta">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Daily Waste Collected</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">842 Metric Tons</div>
+          <div className="text-[10px] text-city-forest font-semibold mt-0.5">100% Ward coverage completed</div>
         </Card>
-        <Card className="border-l-4 border-l-emerald-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Recycling Diversion</div>
-          <div className="text-2xl font-black text-emerald-600 mt-0.5">48.6% Diverted</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Compost & plastic recycling</div>
+        <Card className="border-l-4 border-l-city-forest">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Recycling Diversion</div>
+          <div className="text-2xl font-black text-city-forest mt-0.5">48.6% Diverted</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Compost & plastic recycling</div>
         </Card>
-        <Card className="border-l-4 border-l-amber-500">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Bins Requiring Clearance</div>
-          <div className="text-2xl font-black text-amber-600 mt-0.5">
+        <Card className="border-l-4 border-l-city-amber">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Bins Requiring Clearance</div>
+          <div className="text-2xl font-black text-city-amber mt-0.5">
             {bins.filter((b) => b.fill_percentage >= 80).length} Bins
           </div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Exceeding 80% fill threshold</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Exceeding 80% fill threshold</div>
         </Card>
-        <Card className="border-l-4 border-l-sky-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Sanitation Fleet Readiness</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">42 / 45 Active</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">GPS tracked in real-time</div>
+        <Card className="border-l-4 border-l-city-ochre">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Sanitation Fleet Readiness</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">42 / 45 Active</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">GPS tracked in real-time</div>
         </Card>
       </div>
 

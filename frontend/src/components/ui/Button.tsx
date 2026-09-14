@@ -24,11 +24,11 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variantStyles = {
-    primary: 'bg-slate-900 text-white hover:bg-slate-800 focus:ring-slate-900 shadow-sm',
-    secondary: 'bg-slate-100 text-slate-800 hover:bg-slate-200 focus:ring-slate-400 border border-slate-300',
-    outline: 'border border-slate-300 text-slate-700 bg-white hover:bg-slate-50 focus:ring-slate-400 shadow-sm',
-    danger: 'bg-red-700 text-white hover:bg-red-800 focus:ring-red-700 shadow-sm',
-    success: 'bg-emerald-700 text-white hover:bg-emerald-800 focus:ring-emerald-700 shadow-sm',
+    primary: 'bg-gradient-to-r from-purple-600 to-purple-700 text-white hover:from-purple-500 hover:to-purple-600 focus:ring-purple-500 shadow-civic font-semibold',
+    secondary: 'bg-purple-50 text-purple-900 hover:bg-purple-100 focus:ring-purple-400 border border-purple-200 font-semibold',
+    outline: 'border border-purple-300 text-purple-900 bg-white hover:bg-purple-50 focus:ring-purple-500 shadow-sm font-semibold',
+    danger: 'bg-rose-600 text-white hover:bg-rose-700 focus:ring-rose-500 shadow-sm font-semibold',
+    success: 'bg-emerald-600 text-white hover:bg-emerald-700 focus:ring-emerald-500 shadow-sm font-semibold',
   };
 
   return (

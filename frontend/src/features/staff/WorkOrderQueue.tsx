@@ -1,210 +1,325 @@
 import React, { useState } from 'react';
-import { Card } from '../../components/ui/Card';
+import {
+  CheckSquare,
+  Square,
+  MapPin,
+  Camera,
+  CheckCircle2,
+  ShieldCheck
+} from 'lucide-react';
 import { Badge } from '../../components/ui/Badge';
-import { Button } from '../../components/ui/Button';
-import { Table, Column } from '../../components/ui/Table';
-import { WorkOrder } from '../../types';
-import { CheckSquare, Square, MapPin, Camera, CheckCircle2 } from 'lucide-react';
+import { useCityData } from '../../context/CityDataContext';
+import { useToast } from '../../context/ToastContext';
+import { WorkOrderTask } from '../../types';
 
 export const WorkOrderQueue: React.FC = () => {
-  const [workOrders] = useState<WorkOrder[]>([
-    {
-      id: 'wo-1',
-      order_number: 'WO-20260912-001',
-      title: 'Pothole Excavation & Cold Mix Asphalt Remediation',
-      description: 'Excavate 15cm road crater, clear loose debris, compact subgrade, and lay asphalt binder.',
-      priority: 'HIGH',
-      status: 'IN_PROGRESS',
-      completion_percentage: 65,
-      department_id: 'ROADS',
-      assigned_technician_id: 'tech-01',
-      latitude: 12.9716,
-      longitude: 77.5946,
-      location_address: 'MG Road Junction, Ward 4',
-      due_date: '2026-09-13T14:00:00Z',
-      created_at: '2026-09-12T08:45:00Z',
-    },
-    {
-      id: 'wo-2',
-      order_number: 'WO-20260912-002',
-      title: 'High-Output LED Luminaire Module Replacement',
-      description: 'Replace 4 burnt out 60W LED fixtures on Street Poles #402 through #405.',
-      priority: 'MEDIUM',
-      status: 'ACCEPTED',
-      completion_percentage: 15,
-      department_id: 'ELECTRICAL',
-      assigned_technician_id: 'tech-02',
-      latitude: 12.9684,
-      longitude: 77.5891,
-      location_address: 'Elm Avenue, Sector 7',
-      due_date: '2026-09-14T10:00:00Z',
-      created_at: '2026-09-12T09:10:00Z',
-    },
+  const { workOrders, updateWorkOrderStatus } = useCityData();
+  const { success, info } = useToast();
+
+  const [selectedId, setSelectedId] = useState<string>(workOrders[0]?.id || '');
+  const [filter, setFilter] = useState<string>('ALL');
+
+  // Selected Order
+  const activeOrder = workOrders.find((w) => w.id === selectedId) || workOrders[0];
+
+  // Checklist state per active order
+  const [tasks, setTasks] = useState<WorkOrderTask[]>([
+    { id: 't1', title: 'Deploy orange safety cones & perimeter warning signage', completed: true },
+    { id: 't2', title: 'Conduct initial structural depth inspection & measure boundary', completed: true },
+    { id: 't3', title: 'Saw-cut square edge and clear subgrade loose aggregates', completed: false },
+    { id: 't4', title: 'Apply hot bitumen tack coat and mechanical roller compaction', completed: false },
+    { id: 't5', title: 'Capture high-resolution completion evidence photo', completed: false },
   ]);
 
-  const [selectedOrder, setSelectedOrder] = useState<WorkOrder>(workOrders[0]);
-  const [tasks, setTasks] = useState<{ id: string; title: string; completed: boolean }[]>([
-    { id: 't1', title: 'Deploy orange safety cones and warning signage', completed: true },
-    { id: 't2', title: 'Saw-cut square perimeter around damaged asphalt crater', completed: true },
-    { id: 't3', title: 'Pave hot asphalt mix and mechanical roller compaction', completed: false },
-    { id: 't4', title: 'Capture high-resolution completion evidence photo', completed: false },
-  ]);
+  const [notes, setNotes] = useState<string>(activeOrder?.field_notes || '');
+  const [hasEvidence, setHasEvidence] = useState<boolean>(false);
+
+  const filteredOrders = workOrders.filter((wo) => {
+    if (filter === 'ALL') return true;
+    if (filter === 'ACTIVE') return wo.status !== 'COMPLETED' && wo.status !== 'VERIFICATION';
+    if (filter === 'COMPLETED') return wo.status === 'COMPLETED' || wo.status === 'VERIFICATION';
+    return true;
+  });
 
   const handleToggleTask = (taskId: string) => {
     const updated = tasks.map((t) => (t.id === taskId ? { ...t, completed: !t.completed } : t));
     setTasks(updated);
+
     const completedCount = updated.filter((t) => t.completed).length;
     const pct = Math.round((completedCount / updated.length) * 100);
 
-    setSelectedOrder((prev) => ({
-      ...prev,
-      completion_percentage: pct,
-      status: pct === 100 ? 'VERIFICATION' : 'IN_PROGRESS',
-    }));
+    if (activeOrder) {
+      const nextStatus = pct === 100 ? 'COMPLETED' : 'IN_PROGRESS';
+      updateWorkOrderStatus(activeOrder.id, nextStatus, pct, notes);
+      if (pct === 100) {
+        success('Work Order Completed', `All tasks verified for ${activeOrder.order_number}. Complaint resolved.`);
+      }
+    }
   };
 
-  const columns: Column<WorkOrder>[] = [
-    {
-      key: 'order_number',
-      header: 'Order #',
-      render: (wo) => <span className="font-mono font-bold text-sky-700">{wo.order_number}</span>,
-    },
-    {
-      key: 'title',
-      header: 'Assigned Task',
-      render: (wo) => (
-        <div>
-          <div className="font-medium text-slate-900">{wo.title}</div>
-          <div className="text-xs text-slate-500">{wo.location_address}</div>
-        </div>
-      ),
-    },
-    {
-      key: 'priority',
-      header: 'Priority',
-      render: (wo) => <Badge status={wo.priority}>{wo.priority}</Badge>,
-    },
-    {
-      key: 'status',
-      header: 'Status',
-      render: (wo) => <Badge status={wo.status}>{wo.status}</Badge>,
-    },
-    {
-      key: 'completion_percentage',
-      header: 'Progress',
-      render: (wo) => (
-        <div className="flex items-center space-x-2">
-          <div className="w-16 bg-slate-200 h-2 rounded-full overflow-hidden">
-            <div className="bg-sky-600 h-full" style={{ width: `${wo.completion_percentage}%` }} />
-          </div>
-          <span className="text-xs font-mono font-medium text-slate-700">{wo.completion_percentage}%</span>
-        </div>
-      ),
-    },
+  const handleStatusStep = (newStatus: string) => {
+    if (!activeOrder) return;
+    const pct = newStatus === 'COMPLETED' ? 100 : activeOrder.completion_percentage;
+    updateWorkOrderStatus(activeOrder.id, newStatus, pct, notes);
+    success('Status Updated', `Work Order ${activeOrder.order_number} transitioned to ${newStatus}.`);
+  };
+
+  const workflowSteps = [
+    'ASSIGNED',
+    'ACCEPTED',
+    'EN_ROUTE',
+    'ON_SITE',
+    'IN_PROGRESS',
+    'COMPLETED',
   ];
 
   return (
-    <div className="space-y-6">
-      <div className="flex items-center justify-between border-b border-slate-200 pb-4">
+    <div className="space-y-4 select-none font-sans">
+      {/* Header & Filter */}
+      <div className="bg-white p-4 rounded-xl border border-surface-border shadow-civic flex flex-col sm:flex-row sm:items-center justify-between gap-3">
         <div>
-          <h1 className="text-xl font-bold text-slate-900 tracking-tight">Field Staff Work Order Queue</h1>
-          <p className="text-xs text-slate-500 mt-0.5">
-            Operational work tickets dispatched to maintenance crews with field checklist verification.
+          <h2 className="text-base font-bold text-city-forest">
+            Municipal Work Order Dispatch Queue
+          </h2>
+          <p className="text-xs text-city-charcoal/70 mt-0.5">
+            Real-time field execution desk linked directly to citizen complaints & admin audit ledger.
           </p>
         </div>
-        <Badge status="IN_PROGRESS">{workOrders.length} Dispatched Tasks</Badge>
+
+        <div className="flex items-center space-x-1.5 bg-surface-muted p-1 rounded-lg border border-surface-border">
+          {(['ALL', 'ACTIVE', 'COMPLETED'] as const).map((f) => (
+            <button
+              key={f}
+              onClick={() => setFilter(f)}
+              className={`px-3 py-1 rounded text-xs font-semibold transition-colors ${
+                filter === f
+                  ? 'bg-city-forest text-white shadow-sm'
+                  : 'text-city-charcoal/70 hover:text-city-charcoal'
+              }`}
+            >
+              {f === 'ALL' ? 'All Jobs' : f === 'ACTIVE' ? 'Active Jobs' : 'Completed'}
+            </button>
+          ))}
+        </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-        {/* Left 7 cols: Work Order List */}
-        <div className="lg:col-span-7">
-          <Card title="Dispatched Work Orders" subtitle="Select a task to review checklist and update status.">
-            <Table
-              columns={columns}
-              data={workOrders}
-              keyExtractor={(wo) => wo.id}
-              onRowClick={(wo) => setSelectedOrder(wo)}
-            />
-          </Card>
+      {/* Main Split Grid: Left List, Right Inspector */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-5">
+        {/* Left: Work Order Cards List */}
+        <div className="lg:col-span-5 space-y-2.5">
+          {filteredOrders.length === 0 ? (
+            <div className="bg-white p-8 rounded-xl border border-surface-border text-center text-xs text-city-charcoal/60">
+              No work orders match the selected filter.
+            </div>
+          ) : (
+            filteredOrders.map((wo) => {
+              const isSelected = activeOrder?.id === wo.id;
+              return (
+                <div
+                  key={wo.id}
+                  onClick={() => {
+                    setSelectedId(wo.id);
+                    setNotes(wo.field_notes || '');
+                  }}
+                  className={`p-4 rounded-xl border transition-all cursor-pointer text-left space-y-2.5 ${
+                    isSelected
+                      ? 'bg-city-terracotta/10 border-city-terracotta ring-1 ring-city-terracotta shadow-civic'
+                      : 'bg-white border-surface-border hover:border-city-terracotta/40 shadow-sm'
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="font-mono text-xs font-bold text-city-terracotta">
+                      {wo.order_number}
+                    </span>
+                    <Badge status={wo.status}>{wo.status}</Badge>
+                  </div>
+
+                  <div>
+                    <h3 className="text-xs font-bold text-city-forest leading-snug">{wo.title}</h3>
+                    <p className="text-[11px] text-city-charcoal/70 mt-0.5 flex items-center space-x-1">
+                      <MapPin className="w-3 h-3 text-city-terracotta shrink-0" />
+                      <span className="truncate">{wo.location_address}</span>
+                    </p>
+                  </div>
+
+                  <div className="pt-2 border-t border-surface-border flex items-center justify-between text-[11px]">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-city-charcoal/60">Progress:</span>
+                      <div className="w-16 bg-surface-muted h-1.5 rounded-full overflow-hidden">
+                        <div
+                          className="bg-city-terracotta h-full rounded-full"
+                          style={{ width: `${wo.completion_percentage}%` }}
+                        />
+                      </div>
+                      <span className="font-mono font-bold text-city-forest">{wo.completion_percentage}%</span>
+                    </div>
+
+                    <span className="font-semibold text-city-amber font-mono">
+                      {wo.priority}
+                    </span>
+                  </div>
+                </div>
+              );
+            })
+          )}
         </div>
 
-        {/* Right 5 cols: Active Work Order Details & Checklist */}
-        <div className="lg:col-span-5">
-          <Card
-            title={selectedOrder.order_number}
-            subtitle={selectedOrder.title}
-            action={<Badge status={selectedOrder.status}>{selectedOrder.status}</Badge>}
-          >
-            <div className="space-y-4">
-              <div className="p-3 bg-slate-50 rounded-md border border-slate-200 text-xs text-slate-600 space-y-1.5">
-                <div className="flex items-center text-slate-700 font-medium">
-                  <MapPin className="h-3.5 w-3.5 text-sky-600 mr-1.5 shrink-0" />
-                  <span>{selectedOrder.location_address}</span>
+        {/* Right: Selected Order Detailed Inspector Panel */}
+        <div className="lg:col-span-7">
+          {activeOrder ? (
+            <div className="bg-white rounded-xl border border-surface-border p-6 shadow-civic space-y-6">
+              {/* Top Order Title & Badges */}
+              <div className="pb-4 border-b border-surface-border flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                <div>
+                  <div className="flex items-center space-x-2">
+                    <span className="font-mono text-xs font-extrabold text-city-terracotta">
+                      {activeOrder.order_number}
+                    </span>
+                    <Badge status={activeOrder.status}>{activeOrder.status}</Badge>
+                    <Badge status={activeOrder.priority}>{activeOrder.priority}</Badge>
+                  </div>
+                  <h3 className="text-base font-bold text-city-forest mt-1">
+                    {activeOrder.title}
+                  </h3>
                 </div>
-                <p className="leading-relaxed">{selectedOrder.description}</p>
+
+                <div className="text-left sm:text-right">
+                  <span className="text-[10px] text-city-charcoal/60 block">SLA DEADLINE</span>
+                  <span className="text-xs font-mono font-bold text-city-terracotta">
+                    {activeOrder.due_date ? new Date(activeOrder.due_date).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit' }) : '14 Sep 14:00'}
+                  </span>
+                </div>
               </div>
 
-              {/* Progress bar */}
+              {/* Status Progression Bar */}
               <div>
-                <div className="flex items-center justify-between text-xs font-semibold mb-1">
-                  <span className="text-slate-700">Task Completion Progress</span>
-                  <span className="font-mono text-sky-700">{selectedOrder.completion_percentage}%</span>
-                </div>
-                <div className="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden">
-                  <div
-                    className="bg-sky-600 h-full transition-all duration-300"
-                    style={{ width: `${selectedOrder.completion_percentage}%` }}
-                  />
+                <p className="text-xs font-semibold text-city-forest mb-2">
+                  Operational Workflow State Transition
+                </p>
+                <div className="grid grid-cols-3 sm:grid-cols-6 gap-1.5">
+                  {workflowSteps.map((step) => {
+                    const isCurrent = activeOrder.status === step;
+                    return (
+                      <button
+                        key={step}
+                        type="button"
+                        onClick={() => handleStatusStep(step)}
+                        className={`py-1.5 px-2 rounded text-[10px] font-mono font-bold transition-all border ${
+                          isCurrent
+                            ? 'bg-city-terracotta text-white border-city-terracotta shadow-sm ring-2 ring-city-amber/30'
+                            : 'bg-surface-card text-city-charcoal/70 border-surface-border hover:bg-city-sand/30'
+                        }`}
+                      >
+                        {step}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
-              {/* Interactive checklist */}
-              <div className="space-y-2 pt-2 border-t border-slate-200">
-                <h4 className="text-xs font-bold uppercase tracking-wider text-slate-600">
-                  Field Execution Checklist
-                </h4>
-                <div className="space-y-2">
+              {/* Field Verification Checklist */}
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <p className="text-xs font-bold text-city-forest flex items-center space-x-1.5">
+                    <CheckCircle2 className="w-4 h-4 text-city-terracotta" />
+                    <span>Field Procedure & Safety Checklist</span>
+                  </p>
+                  <span className="text-xs font-mono text-city-forest font-bold">
+                    {activeOrder.completion_percentage}% Done
+                  </span>
+                </div>
+
+                <div className="space-y-2 bg-surface-card p-3.5 rounded-xl border border-surface-border">
                   {tasks.map((task) => (
-                    <div
+                    <button
                       key={task.id}
+                      type="button"
                       onClick={() => handleToggleTask(task.id)}
-                      className={`flex items-start space-x-2.5 p-2 rounded-md border cursor-pointer transition-colors ${
-                        task.completed
-                          ? 'bg-emerald-50/60 border-emerald-200 text-emerald-900'
-                          : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
-                      }`}
+                      className="w-full flex items-start space-x-2.5 p-1.5 rounded text-left hover:bg-white transition-colors"
                     >
                       {task.completed ? (
-                        <CheckSquare className="h-4 w-4 text-emerald-600 mt-0.5 shrink-0" />
+                        <CheckSquare className="w-4 h-4 text-city-terracotta shrink-0 mt-0.5" />
                       ) : (
-                        <Square className="h-4 w-4 text-slate-400 mt-0.5 shrink-0" />
+                        <Square className="w-4 h-4 text-city-charcoal/40 shrink-0 mt-0.5" />
                       )}
-                      <span className={`text-xs font-medium ${task.completed ? 'line-through text-slate-500' : ''}`}>
+                      <span
+                        className={`text-xs ${
+                          task.completed
+                            ? 'line-through text-city-charcoal/50'
+                            : 'text-city-charcoal font-medium'
+                        }`}
+                      >
                         {task.title}
                       </span>
-                    </div>
+                    </button>
                   ))}
                 </div>
               </div>
 
-              {/* Action buttons */}
-              <div className="pt-3 border-t border-slate-200 flex items-center space-x-2">
-                <Button size="sm" variant="outline" className="w-1/2">
-                  <Camera className="h-3.5 w-3.5 mr-1" />
-                  Attach Evidence
-                </Button>
-                <Button
-                  size="sm"
-                  variant="primary"
-                  className="w-1/2 bg-emerald-700 hover:bg-emerald-800"
-                  disabled={selectedOrder.completion_percentage < 100}
+              {/* Evidence Capture & Notes UI */}
+              <div className="space-y-3 pt-2">
+                <p className="text-xs font-bold text-city-forest">
+                  Field Evidence & Completion Photo
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                  <div
+                    onClick={() => {
+                      setHasEvidence(true);
+                      info('Evidence Uploaded', 'Asphalt compaction photo attached to work order record.');
+                    }}
+                    className={`p-4 rounded-xl border-2 border-dashed flex flex-col items-center justify-center text-center cursor-pointer transition-colors ${
+                      hasEvidence
+                        ? 'border-city-success bg-city-sand/30'
+                        : 'border-surface-border bg-surface-card hover:bg-city-sand/20'
+                    }`}
+                  >
+                    <Camera className="w-6 h-6 text-city-forest mb-1" />
+                    <span className="text-xs font-semibold text-city-forest">
+                      {hasEvidence ? 'Evidence Photo Attached ✓' : 'Upload Field Evidence Photo'}
+                    </span>
+                    <span className="text-[10px] text-city-charcoal/60 mt-0.5">
+                      JPG/PNG with GPS EXIF timestamp
+                    </span>
+                  </div>
+
+                  <div className="space-y-1">
+                    <label className="block text-[11px] font-semibold text-city-charcoal">
+                      Field Notes / Crew Observations
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={notes}
+                      onChange={(e) => setNotes(e.target.value)}
+                      placeholder="Enter details on weather conditions, materials used, compaction tests..."
+                      className="w-full p-2.5 rounded-lg border border-surface-border text-xs text-city-charcoal focus:outline-none focus:ring-1 focus:ring-city-terracotta"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Action Submit */}
+              <div className="pt-4 border-t border-surface-border flex items-center justify-between">
+                <div className="text-xs text-city-charcoal/60 flex items-center space-x-1.5">
+                  <ShieldCheck className="w-4 h-4 text-city-leaf" />
+                  <span>Syncs automatically with Citizen complaint & Admin command radar.</span>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() => handleStatusStep('COMPLETED')}
+                  className="px-5 py-2.5 rounded-lg bg-city-terracotta hover:bg-city-terracotta-dark text-white text-xs font-bold shadow-civic border border-city-amber/30 transition-colors flex items-center space-x-2"
                 >
-                  <CheckCircle2 className="h-3.5 w-3.5 mr-1" />
-                  Submit for Approval
-                </Button>
+                  <CheckCircle2 className="w-4 h-4" />
+                  <span>Mark Work Order Completed</span>
+                </button>
               </div>
             </div>
-          </Card>
+          ) : (
+            <div className="bg-white p-12 rounded-xl border border-surface-border text-center text-xs text-city-charcoal/60">
+              Select a work order from the left to view operational details and update status.
+            </div>
+          )}
         </div>
       </div>
     </div>

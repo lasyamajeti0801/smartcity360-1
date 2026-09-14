@@ -5,6 +5,7 @@ import { Button } from '../../components/ui/Button';
 import { Table, Column } from '../../components/ui/Table';
 import { CityMap } from '../../components/maps/CityMap';
 import { EmergencyIncident } from '../../types';
+import { useToast } from '../../context/ToastContext';
 import {
   Radio,
   Siren,
@@ -17,6 +18,7 @@ import {
 } from 'lucide-react';
 
 export const EmergencyControlCenter: React.FC = () => {
+  const { addToast } = useToast();
   const [incidents, setIncidents] = useState<EmergencyIncident[]>([
     {
       id: 'emg-1',
@@ -93,6 +95,7 @@ export const EmergencyControlCenter: React.FC = () => {
     setNewTitle('');
     setNewDesc('');
     setNewLocation('');
+    addToast(`Emergency dispatch ${newInc.incident_number} initiated. Units alerting.`, 'error');
   };
 
   const handleAdvanceStatus = (id: string, newStatus: string) => {
@@ -102,6 +105,7 @@ export const EmergencyControlCenter: React.FC = () => {
     if (selectedIncident && selectedIncident.id === id) {
       setSelectedIncident((prev) => (prev ? { ...prev, status: newStatus } : null));
     }
+    addToast(`Incident status updated to: ${newStatus}`, 'info');
   };
 
   const toggleUnitStatus = (unitId: string) => {
@@ -109,6 +113,7 @@ export const EmergencyControlCenter: React.FC = () => {
       prev.map((u) => {
         if (u.id !== unitId) return u;
         const nextStatus = u.status === 'AVAILABLE' ? 'DISPATCHED' : u.status === 'DISPATCHED' ? 'ON_SCENE' : 'AVAILABLE';
+        addToast(`${u.name} status updated: ${nextStatus}`, 'info');
         return { ...u, status: nextStatus };
       })
     );
@@ -132,9 +137,9 @@ export const EmergencyControlCenter: React.FC = () => {
       header: 'Incident Details',
       render: (i) => (
         <div className="max-w-xs">
-          <div className="font-bold text-slate-900 truncate">{i.title}</div>
-          <div className="text-[11px] text-slate-500 flex items-center mt-0.5">
-            <MapPin className="h-3 w-3 mr-1 text-slate-400 shrink-0" />
+          <div className="font-bold text-city-charcoal truncate">{i.title}</div>
+          <div className="text-[11px] text-city-charcoal/60 flex items-center mt-0.5">
+            <MapPin className="h-3 w-3 mr-1 text-city-charcoal/40 shrink-0" />
             <span className="truncate">{i.location_address}</span>
           </div>
         </div>
@@ -154,7 +159,7 @@ export const EmergencyControlCenter: React.FC = () => {
       key: 'created_at',
       header: 'Elapsed',
       render: (i) => (
-        <span className="text-[11px] font-mono font-medium text-slate-600">
+        <span className="text-[11px] font-mono font-medium text-city-charcoal/70">
           {new Date(i.created_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
         </span>
       ),
@@ -167,7 +172,7 @@ export const EmergencyControlCenter: React.FC = () => {
           {i.status === 'RESPONDING' && (
             <button
               onClick={() => handleAdvanceStatus(i.id, 'ON_SCENE')}
-              className="text-[10px] font-semibold bg-amber-500 hover:bg-amber-600 text-white px-2 py-0.5 rounded"
+              className="text-[10px] font-semibold bg-city-amber hover:bg-city-amber/90 text-white px-2 py-0.5 rounded shadow-xs"
             >
               Mark On-Scene
             </button>
@@ -175,7 +180,7 @@ export const EmergencyControlCenter: React.FC = () => {
           {i.status === 'ON_SCENE' && (
             <button
               onClick={() => handleAdvanceStatus(i.id, 'CONTAINED')}
-              className="text-[10px] font-semibold bg-teal-600 hover:bg-teal-700 text-white px-2 py-0.5 rounded"
+              className="text-[10px] font-semibold bg-city-forest hover:bg-city-forest/90 text-white px-2 py-0.5 rounded shadow-xs"
             >
               Mark Contained
             </button>
@@ -183,13 +188,13 @@ export const EmergencyControlCenter: React.FC = () => {
           {i.status === 'CONTAINED' && (
             <button
               onClick={() => handleAdvanceStatus(i.id, 'RESOLVED')}
-              className="text-[10px] font-semibold bg-emerald-600 hover:bg-emerald-700 text-white px-2 py-0.5 rounded"
+              className="text-[10px] font-semibold bg-city-forest hover:bg-city-forest/90 text-white px-2 py-0.5 rounded shadow-xs"
             >
               Close
             </button>
           )}
           {i.status === 'RESOLVED' && (
-            <span className="text-[11px] text-emerald-700 font-semibold flex items-center">
+            <span className="text-[11px] text-city-forest font-semibold flex items-center">
               <CheckCircle className="h-3 w-3 mr-0.5" /> Cleared
             </span>
           )}
@@ -201,9 +206,9 @@ export const EmergencyControlCenter: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner with Red Flashing Alert */}
-      <div className="bg-gradient-to-r from-red-950 via-slate-900 to-red-900 text-white rounded-xl p-5 border border-red-800 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-[#5B1E1E] via-city-charcoal to-[#7A2828] text-white rounded-xl p-5 border border-red-800/60 shadow-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div className="flex items-center space-x-3.5">
-          <div className="h-11 w-11 rounded-full bg-red-600 flex items-center justify-center animate-pulse shrink-0 ring-4 ring-red-900">
+          <div className="h-11 w-11 rounded-full bg-red-600 flex items-center justify-center animate-pulse shrink-0 ring-4 ring-red-900/60">
             <Radio className="h-5 w-5 text-white" />
           </div>
           <div>
@@ -226,7 +231,7 @@ export const EmergencyControlCenter: React.FC = () => {
             variant="danger"
             size="sm"
             onClick={() => setIsNewDispatchOpen(true)}
-            className="bg-red-600 hover:bg-red-500 font-bold text-xs px-3.5 py-2 shadow-md border-0"
+            className="bg-red-600 hover:bg-red-500 font-bold text-xs px-3.5 py-2 shadow-md border-0 text-white"
           >
             <PlusCircle className="h-4 w-4 mr-1.5" />
             + New Emergency Dispatch
@@ -237,33 +242,33 @@ export const EmergencyControlCenter: React.FC = () => {
       {/* KPI Stats Bar */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
         <Card className="border-l-4 border-l-red-600">
-          <div className="text-[11px] font-bold uppercase text-slate-500">Active Incidents</div>
-          <div className="text-2xl font-black text-red-600 mt-0.5">
+          <div className="text-[11px] font-bold uppercase text-city-charcoal/60">Active Incidents</div>
+          <div className="text-2xl font-black text-red-700 mt-0.5">
             {incidents.filter((i) => i.status !== 'RESOLVED').length}
           </div>
-          <div className="text-[10px] text-slate-500 mt-0.5">1 Critical Structural Fire</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">1 Critical Structural Fire</div>
         </Card>
 
-        <Card className="border-l-4 border-l-amber-500">
-          <div className="text-[11px] font-bold uppercase text-slate-500">Average Response Time</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">4.2 min</div>
-          <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">Below 6.0 min statutory goal</div>
+        <Card className="border-l-4 border-l-city-amber">
+          <div className="text-[11px] font-bold uppercase text-city-charcoal/60">Average Response Time</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">4.2 min</div>
+          <div className="text-[10px] text-city-forest font-semibold mt-0.5">Below 6.0 min statutory goal</div>
         </Card>
 
-        <Card className="border-l-4 border-l-teal-600">
-          <div className="text-[11px] font-bold uppercase text-slate-500">Field Squads On-Scene</div>
-          <div className="text-2xl font-black text-teal-700 mt-0.5">
+        <Card className="border-l-4 border-l-city-terracotta">
+          <div className="text-[11px] font-bold uppercase text-city-charcoal/60">Field Squads On-Scene</div>
+          <div className="text-2xl font-black text-city-terracotta mt-0.5">
             {responseUnits.filter((u) => u.status === 'ON_SCENE' || u.status === 'DISPATCHED').length}
           </div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Across all zones</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Across all zones</div>
         </Card>
 
-        <Card className="border-l-4 border-l-emerald-600">
-          <div className="text-[11px] font-bold uppercase text-slate-500">Available Reserve Units</div>
-          <div className="text-2xl font-black text-emerald-700 mt-0.5">
+        <Card className="border-l-4 border-l-city-forest">
+          <div className="text-[11px] font-bold uppercase text-city-charcoal/60">Available Reserve Units</div>
+          <div className="text-2xl font-black text-city-forest mt-0.5">
             {responseUnits.filter((u) => u.status === 'AVAILABLE').length}
           </div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Ready at municipal bases</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Ready at municipal bases</div>
         </Card>
       </div>
 
@@ -303,17 +308,17 @@ export const EmergencyControlCenter: React.FC = () => {
                 <div
                   key={u.id}
                   onClick={() => toggleUnitStatus(u.id)}
-                  className="p-3 bg-slate-50 hover:bg-slate-100 border border-slate-200 rounded-lg flex items-center justify-between cursor-pointer transition-colors"
+                  className="p-3 bg-surface-card hover:bg-city-sand/20 border border-surface-border rounded-lg flex items-center justify-between cursor-pointer transition-colors"
                 >
                   <div className="space-y-0.5">
-                    <div className="text-xs font-bold text-slate-900 flex items-center space-x-1.5">
+                    <div className="text-xs font-bold text-city-charcoal flex items-center space-x-1.5">
                       {u.type === 'FIRE' && <Flame className="h-3.5 w-3.5 text-red-600" />}
-                      {u.type === 'EMS' && <Siren className="h-3.5 w-3.5 text-indigo-600" />}
-                      {u.type === 'POLICE' && <ShieldCheck className="h-3.5 w-3.5 text-blue-600" />}
-                      {u.type === 'HAZMAT' && <AlertTriangle className="h-3.5 w-3.5 text-amber-600" />}
+                      {u.type === 'EMS' && <Siren className="h-3.5 w-3.5 text-city-ochre" />}
+                      {u.type === 'POLICE' && <ShieldCheck className="h-3.5 w-3.5 text-city-forest" />}
+                      {u.type === 'HAZMAT' && <AlertTriangle className="h-3.5 w-3.5 text-city-amber" />}
                       <span>{u.name}</span>
                     </div>
-                    <div className="text-[11px] text-slate-500">{u.station}</div>
+                    <div className="text-[11px] text-city-charcoal/60">{u.station}</div>
                   </div>
                   <div className="text-right">
                     <Badge
@@ -327,7 +332,7 @@ export const EmergencyControlCenter: React.FC = () => {
                     >
                       {u.status}
                     </Badge>
-                    <div className="text-[9px] text-slate-400 mt-1">Tap to cycle</div>
+                    <div className="text-[9px] text-city-charcoal/40 mt-1">Tap to cycle</div>
                   </div>
                 </div>
               ))}
@@ -336,7 +341,7 @@ export const EmergencyControlCenter: React.FC = () => {
 
           {/* Quick Dispatch Protocols Card */}
           <Card title="Emergency Standard Operating Protocols" subtitle="Municipal safety directives">
-            <div className="space-y-2 text-xs text-slate-600">
+            <div className="space-y-2 text-xs text-city-charcoal/80">
               <div className="p-2 bg-red-50 rounded border border-red-200 text-red-900">
                 <span className="font-bold">Code Red (Structural Fire):</span> Minimum 2 fire engines + 1 ALS ambulance automatically dispatched within 90 seconds.
               </div>
@@ -350,41 +355,41 @@ export const EmergencyControlCenter: React.FC = () => {
 
       {/* New Dispatch Modal */}
       {isNewDispatchOpen && (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl shadow-2xl border border-slate-200 max-w-lg w-full overflow-hidden">
-            <div className="bg-red-950 text-white p-4 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 bg-city-charcoal/70 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-surface-card rounded-xl shadow-2xl border border-surface-border max-w-lg w-full overflow-hidden">
+            <div className="bg-gradient-to-r from-[#5B1E1E] to-[#7A2828] text-white p-4 flex items-center justify-between">
               <div className="flex items-center space-x-2">
-                <Siren className="h-5 w-5 text-red-400 animate-pulse" />
+                <Siren className="h-5 w-5 text-red-300 animate-pulse" />
                 <h3 className="text-sm font-bold text-white">Create Immediate 911 Emergency Dispatch</h3>
               </div>
               <button
                 onClick={() => setIsNewDispatchOpen(false)}
-                className="text-slate-400 hover:text-white text-base font-bold"
+                className="text-city-ivory/70 hover:text-white text-base font-bold"
               >
                 ✕
               </button>
             </div>
 
-            <form onSubmit={handleCreateDispatch} className="p-5 space-y-3.5 text-xs text-slate-700">
+            <form onSubmit={handleCreateDispatch} className="p-5 space-y-3.5 text-xs text-city-charcoal">
               <div>
-                <label className="block font-bold text-slate-900 mb-1">Incident Title / Summary *</label>
+                <label className="block font-bold text-city-charcoal mb-1">Incident Title / Summary *</label>
                 <input
                   type="text"
                   required
                   placeholder="e.g. Gas Leak Reported at Metro Station"
                   value={newTitle}
                   onChange={(e) => setNewTitle(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-300 rounded-md p-2 text-xs focus:ring-2 focus:ring-red-500"
+                  className="w-full bg-surface-card border border-surface-border rounded-md p-2 text-xs text-city-charcoal focus:ring-2 focus:ring-city-terracotta outline-none"
                 />
               </div>
 
               <div className="grid grid-cols-2 gap-3">
                 <div>
-                  <label className="block font-bold text-slate-900 mb-1">Incident Category</label>
+                  <label className="block font-bold text-city-charcoal mb-1">Incident Category</label>
                   <select
                     value={newType}
                     onChange={(e) => setNewType(e.target.value)}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-md p-2 text-xs"
+                    className="w-full bg-surface-card border border-surface-border rounded-md p-2 text-xs text-city-charcoal focus:ring-2 focus:ring-city-terracotta outline-none"
                   >
                     <option value="FIRE_RESCUE">Fire & Rescue</option>
                     <option value="TRAFFIC_COLLISION">Major Traffic Collision</option>
@@ -395,11 +400,11 @@ export const EmergencyControlCenter: React.FC = () => {
                 </div>
 
                 <div>
-                  <label className="block font-bold text-slate-900 mb-1">Severity Level</label>
+                  <label className="block font-bold text-city-charcoal mb-1">Severity Level</label>
                   <select
                     value={newSeverity}
                     onChange={(e) => setNewSeverity(e.target.value as any)}
-                    className="w-full bg-slate-50 border border-slate-300 rounded-md p-2 text-xs"
+                    className="w-full bg-surface-card border border-surface-border rounded-md p-2 text-xs text-city-charcoal focus:ring-2 focus:ring-city-terracotta outline-none"
                   >
                     <option value="CRITICAL">CRITICAL (Immediate Threat)</option>
                     <option value="HIGH">HIGH (Urgent Dispatch)</option>
@@ -410,28 +415,28 @@ export const EmergencyControlCenter: React.FC = () => {
               </div>
 
               <div>
-                <label className="block font-bold text-slate-900 mb-1">Incident Location Address</label>
+                <label className="block font-bold text-city-charcoal mb-1">Incident Location Address</label>
                 <input
                   type="text"
                   placeholder="e.g. 5th Avenue & Central Mall, Ward 2"
                   value={newLocation}
                   onChange={(e) => setNewLocation(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-300 rounded-md p-2 text-xs"
+                  className="w-full bg-surface-card border border-surface-border rounded-md p-2 text-xs text-city-charcoal focus:ring-2 focus:ring-city-terracotta outline-none"
                 />
               </div>
 
               <div>
-                <label className="block font-bold text-slate-900 mb-1">Caller Details & Tactical Notes</label>
+                <label className="block font-bold text-city-charcoal mb-1">Caller Details & Tactical Notes</label>
                 <textarea
                   rows={3}
                   placeholder="Caller remarks, victim count, hazards..."
                   value={newDesc}
                   onChange={(e) => setNewDesc(e.target.value)}
-                  className="w-full bg-slate-50 border border-slate-300 rounded-md p-2 text-xs"
+                  className="w-full bg-surface-card border border-surface-border rounded-md p-2 text-xs text-city-charcoal focus:ring-2 focus:ring-city-terracotta outline-none"
                 />
               </div>
 
-              <div className="pt-3 border-t border-slate-200 flex items-center justify-end space-x-2">
+              <div className="pt-3 border-t border-surface-border flex items-center justify-end space-x-2">
                 <Button
                   type="button"
                   variant="outline"
@@ -444,7 +449,7 @@ export const EmergencyControlCenter: React.FC = () => {
                   type="submit"
                   variant="danger"
                   size="sm"
-                  className="bg-red-700 hover:bg-red-600 font-bold"
+                  className="bg-red-700 hover:bg-red-600 font-bold text-white border-0"
                 >
                   Deploy Emergency Squads Now
                 </Button>
@@ -456,9 +461,9 @@ export const EmergencyControlCenter: React.FC = () => {
 
       {/* Incident Detail Modal */}
       {selectedIncident && (
-        <div className="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-xl shadow-2xl border border-slate-200 max-w-md w-full overflow-hidden">
-            <div className="bg-slate-900 text-white p-4 flex items-center justify-between">
+        <div className="fixed inset-0 z-50 bg-city-charcoal/70 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-surface-card rounded-xl shadow-2xl border border-surface-border max-w-md w-full overflow-hidden">
+            <div className="bg-gradient-to-r from-city-forest to-city-charcoal text-white p-4 flex items-center justify-between">
               <div>
                 <span className="text-[10px] font-mono uppercase bg-red-800 text-red-100 px-2 py-0.5 rounded font-bold">
                   {selectedIncident.incident_number}
@@ -467,38 +472,38 @@ export const EmergencyControlCenter: React.FC = () => {
               </div>
               <button
                 onClick={() => setSelectedIncident(null)}
-                className="text-slate-400 hover:text-white text-base font-bold"
+                className="text-city-ivory/70 hover:text-white text-base font-bold"
               >
                 ✕
               </button>
             </div>
 
-            <div className="p-5 space-y-3 text-xs text-slate-700">
-              <div className="grid grid-cols-2 gap-2 bg-slate-50 p-2.5 rounded border border-slate-200">
+            <div className="p-5 space-y-3 text-xs text-city-charcoal">
+              <div className="grid grid-cols-2 gap-2 bg-city-sand/20 p-2.5 rounded border border-surface-border">
                 <div>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase">Severity</span>
+                  <span className="text-[10px] font-bold text-city-charcoal/60 uppercase">Severity</span>
                   <div className="mt-0.5"><Badge status={selectedIncident.severity}>{selectedIncident.severity}</Badge></div>
                 </div>
                 <div>
-                  <span className="text-[10px] font-bold text-slate-500 uppercase">Status</span>
+                  <span className="text-[10px] font-bold text-city-charcoal/60 uppercase">Status</span>
                   <div className="mt-0.5"><Badge status={selectedIncident.status}>{selectedIncident.status}</Badge></div>
                 </div>
               </div>
 
               <div>
-                <h4 className="font-bold text-slate-900 mb-0.5">Description</h4>
-                <p className="p-2.5 bg-slate-50 rounded border border-slate-200">{selectedIncident.description}</p>
+                <h4 className="font-bold text-city-charcoal mb-0.5">Description</h4>
+                <p className="p-2.5 bg-city-sand/20 rounded border border-surface-border text-city-charcoal/80 leading-relaxed">{selectedIncident.description}</p>
               </div>
 
               <div>
-                <h4 className="font-bold text-slate-900 mb-0.5">Caller / Source</h4>
-                <div className="flex items-center justify-between p-2 bg-slate-50 rounded border border-slate-200 text-slate-600">
+                <h4 className="font-bold text-city-charcoal mb-0.5">Caller / Source</h4>
+                <div className="flex items-center justify-between p-2 bg-city-sand/20 rounded border border-surface-border text-city-charcoal/80">
                   <span>{selectedIncident.caller_name || 'Anonymous 911 Call'}</span>
                   <span className="font-mono">{selectedIncident.caller_phone || 'N/A'}</span>
                 </div>
               </div>
 
-              <div className="pt-3 border-t border-slate-200 flex justify-end">
+              <div className="pt-3 border-t border-surface-border flex justify-end">
                 <Button
                   variant="outline"
                   size="sm"

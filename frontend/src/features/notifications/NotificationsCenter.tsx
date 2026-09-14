@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from '../../components/ui/Button';
+import { useToast } from '../../context/ToastContext';
 import {
   AlertTriangle,
   Info,
@@ -20,6 +21,7 @@ interface NotificationItem {
 }
 
 export const NotificationsCenter: React.FC = () => {
+  const { addToast } = useToast();
   const [filter, setFilter] = useState<'ALL' | 'EMERGENCY' | 'UTILITY' | 'PUBLIC_WORKS'>('ALL');
   const [notifications, setNotifications] = useState<NotificationItem[]>([
     {
@@ -40,32 +42,33 @@ export const NotificationsCenter: React.FC = () => {
       timestamp: '2 hours ago',
       isRead: false,
       priority: 'MEDIUM',
-      targetAudience: 'Ward 4 (Indiranagar)',
+      targetAudience: 'Ward 3, 5, 8',
     },
     {
       id: 'n3',
       category: 'PUBLIC_WORKS',
-      title: 'Smart LED Streetlighting Upgrade Complete',
-      message: 'Conversion of 850 sodium vapor streetlights to IoT energy-saving smart dimmable LEDs completed along Airport Expressway.',
-      timestamp: '1 day ago',
+      title: 'Smart LED Streetlighting Phase 3 Infield Commissioning',
+      message: 'Retrofitting of 450 sodium-vapor poles with automated dusk-to-dawn LED luminaires completed along Outer Ring Road Corridor.',
+      timestamp: '5 hours ago',
       isRead: true,
       priority: 'LOW',
-      targetAudience: 'North Sector Residents',
+      targetAudience: 'Public Notice',
     },
     {
       id: 'n4',
-      category: 'GOVERNANCE',
-      title: 'Municipal Property Tax Rebate Window Extended',
-      message: 'Early-bird 5% rebate on annual civic property tax payments extended through the end of the current quarter.',
-      timestamp: '2 days ago',
+      category: 'EMERGENCY',
+      title: 'Hazardous Chemical Containment Drill - Industrial Area Ward 12',
+      message: 'Civil defence mock response drill scheduled for tomorrow at 11:00 AM. Emergency sirens may sound intermittently.',
+      timestamp: '1 day ago',
       isRead: true,
-      priority: 'LOW',
-      targetAudience: 'All Property Taxpayers',
+      priority: 'HIGH',
+      targetAudience: 'Ward 12 Industrial Zone',
     },
   ]);
 
   const markAllRead = () => {
     setNotifications((prev) => prev.map((n) => ({ ...n, isRead: true })));
+    addToast('All municipal alerts marked as read', 'info');
   };
 
   const filtered = notifications.filter((n) => {
@@ -76,15 +79,15 @@ export const NotificationsCenter: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-slate-900 text-white rounded-xl p-5 border border-slate-800 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-city-forest to-city-charcoal text-white rounded-xl p-5 border border-city-forest/40 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2">
-            <Megaphone className="h-5 w-5 text-teal-400" />
+            <Megaphone className="h-5 w-5 text-city-amber" />
             <h1 className="text-lg font-bold tracking-tight text-white">
               Municipal Public Alerts & Notifications Command
             </h1>
           </div>
-          <p className="text-xs text-slate-300 mt-1">
+          <p className="text-xs text-city-ivory/80 mt-1">
             Official emergency public warnings, scheduled utility outage alerts, and civic broadcast feeds.
           </p>
         </div>
@@ -94,15 +97,15 @@ export const NotificationsCenter: React.FC = () => {
             size="sm"
             variant="outline"
             onClick={markAllRead}
-            className="bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700 text-xs"
+            className="bg-white/10 hover:bg-white/20 text-city-ivory border-white/20 text-xs"
           >
             Mark All as Read
           </Button>
           <Button
             size="sm"
             variant="primary"
-            onClick={() => alert('Broadcast advisory authoring modal opened')}
-            className="bg-teal-600 hover:bg-teal-500 text-xs"
+            onClick={() => addToast('Advisory authoring composer queued for authorization', 'info')}
+            className="bg-city-terracotta hover:bg-city-terracotta/90 text-white font-semibold text-xs border-0"
           >
             <PlusCircle className="h-3.5 w-3.5 mr-1" />
             Publish New Broadcast
@@ -118,8 +121,8 @@ export const NotificationsCenter: React.FC = () => {
             onClick={() => setFilter(cat)}
             className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
               filter === cat
-                ? 'bg-slate-900 text-white border-slate-900 shadow-sm'
-                : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-50'
+                ? 'bg-city-terracotta text-white border-city-terracotta shadow-sm'
+                : 'bg-surface-card text-city-charcoal/80 border-surface-border hover:bg-city-sand/30'
             }`}
           >
             {cat}
@@ -134,8 +137,8 @@ export const NotificationsCenter: React.FC = () => {
             key={item.id}
             className={`p-4 rounded-xl border transition-all ${
               !item.isRead
-                ? 'bg-white border-teal-500/40 shadow-sm ring-1 ring-teal-500/20'
-                : 'bg-slate-50/70 border-slate-200 text-slate-600'
+                ? 'bg-surface-card border-city-terracotta/50 shadow-sm ring-1 ring-city-terracotta/20'
+                : 'bg-surface-card/60 border-surface-border text-city-charcoal/70'
             }`}
           >
             <div className="flex items-start justify-between gap-4">
@@ -145,8 +148,8 @@ export const NotificationsCenter: React.FC = () => {
                     item.category === 'EMERGENCY'
                       ? 'bg-red-100 text-red-700'
                       : item.category === 'UTILITY'
-                      ? 'bg-sky-100 text-sky-700'
-                      : 'bg-teal-100 text-teal-700'
+                      ? 'bg-purple-100 text-purple-800'
+                      : 'bg-purple-50 text-purple-950'
                   }`}
                 >
                   {item.category === 'EMERGENCY' ? (
@@ -165,25 +168,25 @@ export const NotificationsCenter: React.FC = () => {
                         item.category === 'EMERGENCY'
                           ? 'bg-red-50 text-red-800 border border-red-200'
                           : item.category === 'UTILITY'
-                          ? 'bg-sky-50 text-sky-800 border border-sky-200'
-                          : 'bg-slate-100 text-slate-800 border border-slate-200'
+                          ? 'bg-purple-50 text-purple-800 border border-purple-200'
+                          : 'bg-purple-100/60 text-purple-950 border border-purple-200'
                       }`}
                     >
                       {item.category}
                     </span>
-                    <span className="text-[11px] text-slate-400 font-mono">• {item.timestamp}</span>
-                    <span className="text-[10px] bg-slate-100 text-slate-600 px-1.5 py-0.5 rounded font-medium">
+                    <span className="text-[11px] text-city-charcoal/50 font-mono">• {item.timestamp}</span>
+                    <span className="text-[10px] bg-city-sand/40 text-city-charcoal/70 px-1.5 py-0.5 rounded font-medium border border-surface-border">
                       Audience: {item.targetAudience}
                     </span>
                   </div>
 
-                  <h3 className="text-sm font-bold text-slate-900 mt-1">{item.title}</h3>
-                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">{item.message}</p>
+                  <h3 className="text-sm font-bold text-city-charcoal mt-1">{item.title}</h3>
+                  <p className="text-xs text-city-charcoal/70 mt-1 leading-relaxed">{item.message}</p>
                 </div>
               </div>
 
               {!item.isRead && (
-                <span className="h-2.5 w-2.5 rounded-full bg-teal-600 shrink-0 mt-2" title="Unread"></span>
+                <span className="h-2.5 w-2.5 rounded-full bg-city-terracotta shrink-0 mt-2" title="Unread"></span>
               )}
             </div>
           </div>

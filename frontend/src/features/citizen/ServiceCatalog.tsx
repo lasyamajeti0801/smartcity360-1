@@ -77,20 +77,20 @@ export const ServiceCatalog: React.FC = () => {
   });
 
   return (
-    <div className="space-y-6">
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-slate-200 pb-4">
+    <div className="space-y-6 select-none font-sans">
+      <div className="bg-white p-5 rounded-xl border border-surface-border shadow-civic flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-xl font-bold text-slate-900 tracking-tight">Municipal Civic Service Directory</h1>
-          <p className="text-xs text-slate-500 mt-0.5">
+          <h1 className="text-xl font-bold text-city-forest tracking-tight">Municipal Civic Service Directory</h1>
+          <p className="text-xs text-city-charcoal/70 mt-0.5">
             Discover verified city services, check eligibility requirements, statutory fees, and SLA timelines.
           </p>
         </div>
         <div className="relative w-full md:w-72">
-          <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+          <Search className="absolute left-3 top-2.5 h-4 w-4 text-city-charcoal/40" />
           <input
             type="text"
             placeholder="Search service title or keywords..."
-            className="w-full bg-white border border-slate-300 rounded-md pl-9 pr-3 py-2 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-1 focus:ring-slate-900"
+            className="w-full bg-white border border-surface-border rounded-lg pl-9 pr-3 py-2 text-xs text-city-charcoal placeholder-city-charcoal/40 focus:outline-none focus:ring-1 focus:ring-city-terracotta"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -103,10 +103,10 @@ export const ServiceCatalog: React.FC = () => {
           <button
             key={cat}
             onClick={() => setSelectedCategory(cat)}
-            className={`px-3 py-1 rounded-full text-xs font-semibold border transition-colors ${
+            className={`px-3 py-1.5 rounded-full text-xs font-semibold border transition-all ${
               selectedCategory === cat
-                ? 'bg-slate-900 text-white border-slate-900'
-                : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-50'
+                ? 'bg-city-terracotta text-white border-city-terracotta shadow-civic'
+                : 'bg-white text-city-charcoal border-surface-border hover:bg-city-sand/30'
             }`}
           >
             {cat}
@@ -117,34 +117,34 @@ export const ServiceCatalog: React.FC = () => {
       {/* Grid of Services */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {filtered.map((service) => (
-          <Card key={service.id} className="flex flex-col justify-between hover:border-slate-300 transition-colors">
+          <Card key={service.id} className="flex flex-col justify-between hover:border-city-terracotta transition-all shadow-civic">
             <div>
               <div className="flex items-center justify-between gap-2 mb-2">
-                <span className="text-[11px] font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded border border-sky-200">
+                <span className="text-[11px] font-mono font-bold text-city-forest bg-city-sand/40 px-2 py-0.5 rounded border border-city-sand">
                   {service.department}
                 </span>
                 <Badge variant="neutral">{service.category}</Badge>
               </div>
-              <h3 className="text-sm font-bold text-slate-900">{service.title}</h3>
-              <p className="text-xs text-slate-600 mt-1.5 leading-relaxed">{service.description}</p>
+              <h3 className="text-sm font-bold text-city-forest">{service.title}</h3>
+              <p className="text-xs text-city-charcoal/80 mt-1.5 leading-relaxed">{service.description}</p>
 
-              <div className="mt-4 pt-3 border-t border-slate-100 space-y-1.5 text-xs text-slate-600">
+              <div className="mt-4 pt-3 border-t border-surface-border space-y-1.5 text-xs text-city-charcoal/80">
                 <div>
-                  <span className="font-semibold text-slate-700">Eligibility: </span>
+                  <span className="font-semibold text-city-forest">Eligibility: </span>
                   {service.eligibility}
                 </div>
               </div>
             </div>
 
-            <div className="mt-5 pt-3 border-t border-slate-200 flex items-center justify-between">
+            <div className="mt-5 pt-3 border-t border-surface-border flex items-center justify-between">
               <div className="flex items-center space-x-3 text-xs">
-                <div className="flex items-center text-slate-500">
-                  <Clock className="h-3.5 w-3.5 mr-1 text-slate-400" />
+                <div className="flex items-center text-city-charcoal/70">
+                  <Clock className="h-3.5 w-3.5 mr-1 text-city-amber" />
                   <span>{service.slaDays} Days Turnaround</span>
                 </div>
-                <span className="font-semibold text-slate-900">Fee: ${service.fee.toFixed(2)}</span>
+                <span className="font-mono font-bold text-city-forest">Fee: ₹{(service.fee * 80).toFixed(0)}</span>
               </div>
-              <Button size="sm" variant="primary" className="bg-slate-900 hover:bg-slate-800">
+              <Button size="sm" variant="primary">
                 Apply Online
                 <ArrowRight className="h-3.5 w-3.5 ml-1" />
               </Button>

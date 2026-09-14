@@ -142,3 +142,47 @@ export interface CityKPIs {
   active_work_orders: number;
   average_resolution_hours: number;
 }
+
+export type PrimaryRole = 'Citizen' | 'Staff' | 'Admin';
+
+export interface UserIdentity {
+  id: string;
+  email: string;
+  fullName: string;
+  role: PrimaryRole;
+  subRole?: string;
+  badgeOrWard?: string;
+  zone?: string;
+  departmentCode?: string;
+  phone?: string;
+  avatarInitials: string;
+}
+
+export interface WorkOrderTask {
+  id: string;
+  title: string;
+  completed: boolean;
+}
+
+export interface CivicNotification {
+  id: string;
+  title: string;
+  message: string;
+  timestamp: string;
+  targetRole: PrimaryRole | 'ALL';
+  type: 'info' | 'warning' | 'success' | 'danger';
+  isRead: boolean;
+  link?: string;
+}
+
+export interface PaymentRecord {
+  id: string;
+  receiptNumber: string;
+  serviceTitle: string;
+  department: string;
+  amount: number;
+  date: string;
+  status: 'PAID' | 'PENDING' | 'FAILED';
+  paymentMethod: string;
+}
+

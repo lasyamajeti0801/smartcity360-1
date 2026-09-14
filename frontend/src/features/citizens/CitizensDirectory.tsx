@@ -3,6 +3,7 @@ import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
 import { Table, Column } from '../../components/ui/Table';
+import { useToast } from '../../context/ToastContext';
 import { Users, Search, Mail, Phone, Download } from 'lucide-react';
 
 interface CitizenRecord {
@@ -19,6 +20,7 @@ interface CitizenRecord {
 }
 
 export const CitizensDirectory: React.FC = () => {
+  const { addToast } = useToast();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedWard, setSelectedWard] = useState<string>('ALL');
 
@@ -99,17 +101,17 @@ export const CitizensDirectory: React.FC = () => {
     {
       key: 'national_id',
       header: 'Citizen ID',
-      render: (c) => <span className="font-mono font-bold text-teal-800 text-xs">{c.national_id}</span>,
+      render: (c) => <span className="font-mono font-bold text-city-forest text-xs">{c.national_id}</span>,
     },
     {
       key: 'full_name',
       header: 'Resident Profile',
       render: (c) => (
         <div>
-          <div className="font-bold text-slate-900">{c.full_name}</div>
-          <div className="text-[11px] text-slate-500 flex items-center space-x-2 mt-0.5">
-            <span className="flex items-center"><Mail className="h-3 w-3 mr-1 text-slate-400" />{c.email}</span>
-            <span className="flex items-center"><Phone className="h-3 w-3 mr-1 text-slate-400" />{c.phone}</span>
+          <div className="font-bold text-city-charcoal">{c.full_name}</div>
+          <div className="text-[11px] text-city-charcoal/70 flex items-center space-x-2 mt-0.5">
+            <span className="flex items-center"><Mail className="h-3 w-3 mr-1 text-city-charcoal/50" />{c.email}</span>
+            <span className="flex items-center"><Phone className="h-3 w-3 mr-1 text-city-charcoal/50" />{c.phone}</span>
           </div>
         </div>
       ),
@@ -119,10 +121,10 @@ export const CitizensDirectory: React.FC = () => {
       header: 'Ward Jurisdiction',
       render: (c) => (
         <div>
-          <span className="inline-block bg-slate-100 text-slate-800 px-2 py-0.5 rounded text-xs font-semibold border border-slate-200">
+          <span className="inline-block bg-city-forest/10 text-city-forest px-2 py-0.5 rounded text-xs font-semibold border border-city-forest/20">
             Ward {c.ward}
           </span>
-          <div className="text-[11px] text-slate-500 mt-0.5 truncate max-w-xs">{c.address}</div>
+          <div className="text-[11px] text-city-charcoal/60 mt-0.5 truncate max-w-xs">{c.address}</div>
         </div>
       ),
     },
@@ -139,7 +141,7 @@ export const CitizensDirectory: React.FC = () => {
       key: 'active_complaints',
       header: 'Active Grievances',
       render: (c) => (
-        <span className={`text-xs font-bold ${c.active_complaints > 0 ? 'text-amber-600' : 'text-slate-400'}`}>
+        <span className={`text-xs font-bold ${c.active_complaints > 0 ? 'text-city-terracotta' : 'text-city-charcoal/40'}`}>
           {c.active_complaints} active
         </span>
       ),
@@ -147,22 +149,22 @@ export const CitizensDirectory: React.FC = () => {
     {
       key: 'registered_date',
       header: 'Registered',
-      render: (c) => <span className="text-[11px] font-mono text-slate-500">{c.registered_date}</span>,
+      render: (c) => <span className="text-[11px] font-mono text-city-charcoal/60">{c.registered_date}</span>,
     },
   ];
 
   return (
     <div className="space-y-6">
       {/* Header Banner */}
-      <div className="bg-slate-900 text-white rounded-xl p-5 border border-slate-800 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-city-forest to-city-charcoal text-white rounded-xl p-5 border border-city-forest/40 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2">
-            <Users className="h-5 w-5 text-teal-400" />
+            <Users className="h-5 w-5 text-city-amber" />
             <h1 className="text-lg font-bold tracking-tight text-white">
               Municipal Citizen Registry & Resident Services
             </h1>
           </div>
-          <p className="text-xs text-slate-300 mt-1">
+          <p className="text-xs text-city-ivory/80 mt-1">
             Centralized database of verified civic residents, ward allocations, linked complaints, and property tax accounts.
           </p>
         </div>
@@ -170,8 +172,8 @@ export const CitizensDirectory: React.FC = () => {
           <Button
             variant="outline"
             size="sm"
-            onClick={() => alert('Exporting Citizen Registry CSV...')}
-            className="bg-slate-800 hover:bg-slate-700 text-slate-200 border-slate-700 text-xs"
+            onClick={() => addToast('Exporting Citizen Registry CSV...', 'info')}
+            className="bg-white/10 hover:bg-white/20 text-city-ivory border-white/20 text-xs"
           >
             <Download className="h-3.5 w-3.5 mr-1" />
             Export CSV
@@ -179,8 +181,8 @@ export const CitizensDirectory: React.FC = () => {
           <Button
             variant="primary"
             size="sm"
-            onClick={() => alert('Resident registration modal opened')}
-            className="bg-teal-600 hover:bg-teal-500 text-xs"
+            onClick={() => addToast('Resident registration form opened', 'info')}
+            className="bg-city-terracotta hover:bg-city-terracotta/90 text-white font-semibold text-xs border-0"
           >
             + Register New Citizen
           </Button>
@@ -189,25 +191,25 @@ export const CitizensDirectory: React.FC = () => {
 
       {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-        <Card className="border-l-4 border-l-teal-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Verified Residents</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">148,920</div>
-          <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">99.2% Aadhaar / ID verified</div>
+        <Card className="border-l-4 border-l-city-terracotta">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Verified Residents</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">148,920</div>
+          <div className="text-[10px] text-city-forest font-semibold mt-0.5">99.2% Aadhaar / ID verified</div>
         </Card>
-        <Card className="border-l-4 border-l-sky-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Active Municipal Wards</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">16 Wards</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Metropolitan Urban District</div>
+        <Card className="border-l-4 border-l-city-forest">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Active Municipal Wards</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">16 Wards</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Metropolitan Urban District</div>
         </Card>
-        <Card className="border-l-4 border-l-amber-500">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Pending KYC Verification</div>
-          <div className="text-2xl font-black text-amber-600 mt-0.5">342</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Under ward supervisor review</div>
+        <Card className="border-l-4 border-l-city-amber">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Pending KYC Verification</div>
+          <div className="text-2xl font-black text-city-amber mt-0.5">342</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Under ward supervisor review</div>
         </Card>
-        <Card className="border-l-4 border-l-emerald-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Avg Citizen Satisfaction</div>
-          <div className="text-2xl font-black text-emerald-600 mt-0.5">4.8 / 5.0</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Based on post-resolution feedback</div>
+        <Card className="border-l-4 border-l-city-ochre">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Avg Citizen Satisfaction</div>
+          <div className="text-2xl font-black text-city-forest mt-0.5">4.8 / 5.0</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Based on post-resolution feedback</div>
         </Card>
       </div>
 
@@ -218,19 +220,19 @@ export const CitizensDirectory: React.FC = () => {
         action={
           <div className="flex flex-wrap items-center gap-2">
             <div className="relative w-64">
-              <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-slate-400" />
+              <Search className="absolute left-2.5 top-2.5 h-3.5 w-3.5 text-city-charcoal/40" />
               <input
                 type="text"
                 placeholder="Search by Name, ID, Email, Ward..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full bg-slate-50 border border-slate-300 rounded-md pl-8 pr-3 py-1.5 text-xs text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500"
+                className="w-full bg-surface-card border border-surface-border rounded-md pl-8 pr-3 py-1.5 text-xs text-city-charcoal placeholder-city-charcoal/40 focus:outline-none focus:ring-2 focus:ring-city-terracotta"
               />
             </div>
             <select
               value={selectedWard}
               onChange={(e) => setSelectedWard(e.target.value)}
-              className="bg-slate-50 border border-slate-300 rounded-md px-2.5 py-1.5 text-xs text-slate-700 focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="bg-surface-card border border-surface-border rounded-md px-2.5 py-1.5 text-xs text-city-charcoal focus:outline-none focus:ring-2 focus:ring-city-terracotta"
             >
               <option value="ALL">All Wards</option>
               <option value="2">Ward 2 (Commercial)</option>

@@ -3,6 +3,7 @@ import { Card } from '../../components/ui/Card';
 import { Badge } from '../../components/ui/Badge';
 import { Button } from '../../components/ui/Button';
 import { Table, Column } from '../../components/ui/Table';
+import { useToast } from '../../context/ToastContext';
 import {
   Car,
   Zap
@@ -29,6 +30,7 @@ interface TransitVehicle {
 }
 
 export const TrafficTransitControl: React.FC = () => {
+  const { addToast } = useToast();
   const [corridors, setCorridors] = useState<CorridorStatus[]>([
     {
       id: 'c1',
@@ -134,8 +136,8 @@ export const TrafficTransitControl: React.FC = () => {
       header: 'Arterial Corridor',
       render: (c) => (
         <div>
-          <div className="font-bold text-slate-900">{c.name}</div>
-          <div className="text-[11px] text-slate-500 font-mono">
+          <div className="font-bold text-city-charcoal">{c.name}</div>
+          <div className="text-[11px] text-city-charcoal/60 font-mono">
             {c.active_vehicles_hourly.toLocaleString()} vehicles/hr
           </div>
         </div>
@@ -145,7 +147,7 @@ export const TrafficTransitControl: React.FC = () => {
       key: 'speed_kmh',
       header: 'Avg Flow Speed',
       render: (c) => (
-        <span className="font-mono font-bold text-slate-900 text-xs">{c.speed_kmh} km/h</span>
+        <span className="font-mono font-bold text-city-charcoal text-xs">{c.speed_kmh} km/h</span>
       ),
     },
     {
@@ -173,8 +175,8 @@ export const TrafficTransitControl: React.FC = () => {
           onClick={() => toggleSignalAI(c.id)}
           className={`px-2 py-0.5 rounded text-[11px] font-semibold border transition-all ${
             c.signal_status === 'AI_OPTIMIZED'
-              ? 'bg-teal-50 text-teal-800 border-teal-300 hover:bg-teal-100'
-              : 'bg-amber-50 text-amber-800 border-amber-300 hover:bg-amber-100'
+              ? 'bg-purple-100 text-purple-950 border-purple-300 hover:bg-purple-200/70'
+              : 'bg-purple-50 text-purple-700 border-purple-200 hover:bg-purple-100'
           }`}
         >
           {c.signal_status === 'AI_OPTIMIZED' ? '● AI Adaptive Wave' : '⚙ Manual Override'}
@@ -187,15 +189,15 @@ export const TrafficTransitControl: React.FC = () => {
     {
       key: 'vehicle_number',
       header: 'Vehicle ID',
-      render: (v) => <span className="font-mono font-bold text-teal-800 text-xs">{v.vehicle_number}</span>,
+      render: (v) => <span className="font-mono font-bold text-city-forest text-xs">{v.vehicle_number}</span>,
     },
     {
       key: 'route',
       header: 'Transit Route',
       render: (v) => (
         <div>
-          <div className="font-semibold text-slate-900">{v.route}</div>
-          <div className="text-[11px] text-slate-500">Driver: {v.driver}</div>
+          <div className="font-semibold text-city-charcoal">{v.route}</div>
+          <div className="text-[11px] text-city-charcoal/60">Driver: {v.driver}</div>
         </div>
       ),
     },
@@ -203,8 +205,8 @@ export const TrafficTransitControl: React.FC = () => {
       key: 'power_type',
       header: 'Propulsion',
       render: (v) => (
-        <span className="inline-flex items-center text-[10px] font-bold bg-emerald-50 text-emerald-800 border border-emerald-200 px-1.5 py-0.5 rounded">
-          <Zap className="h-3 w-3 mr-0.5 text-emerald-600" />
+        <span className="inline-flex items-center text-[10px] font-bold bg-city-forest/10 text-city-forest border border-city-forest/20 px-1.5 py-0.5 rounded">
+          <Zap className="h-3 w-3 mr-0.5 text-city-forest" />
           {v.power_type}
         </span>
       ),
@@ -214,14 +216,14 @@ export const TrafficTransitControl: React.FC = () => {
       header: 'Passenger Load',
       render: (v) => (
         <div className="w-24">
-          <div className="flex justify-between text-[10px] text-slate-600 font-mono mb-0.5">
+          <div className="flex justify-between text-[10px] text-city-charcoal/70 font-mono mb-0.5">
             <span>Load</span>
             <span>{v.occupancy_pct}%</span>
           </div>
-          <div className="w-full bg-slate-200 rounded-full h-1.5 overflow-hidden">
+          <div className="w-full bg-city-sand/40 rounded-full h-1.5 overflow-hidden">
             <div
               className={`h-1.5 rounded-full ${
-                v.occupancy_pct > 85 ? 'bg-red-500' : v.occupancy_pct > 60 ? 'bg-amber-500' : 'bg-teal-600'
+                v.occupancy_pct > 85 ? 'bg-red-600' : v.occupancy_pct > 60 ? 'bg-city-amber' : 'bg-city-forest'
               }`}
               style={{ width: `${v.occupancy_pct}%` }}
             />
@@ -243,24 +245,24 @@ export const TrafficTransitControl: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Top Banner */}
-      <div className="bg-slate-900 text-white rounded-xl p-5 border border-slate-800 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-gradient-to-r from-city-forest to-city-charcoal text-white rounded-xl p-5 border border-city-forest/40 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2">
-            <Car className="h-5 w-5 text-teal-400" />
+            <Car className="h-5 w-5 text-city-amber" />
             <h1 className="text-lg font-bold tracking-tight text-white">
               Intelligent Traffic & Public Transit Command System
             </h1>
           </div>
-          <p className="text-xs text-slate-300 mt-1">
+          <p className="text-xs text-city-ivory/80 mt-1">
             Real-time optical radar telemetry, adaptive signal phase timings, and zero-emission municipal bus fleet tracking.
           </p>
         </div>
         <div className="flex items-center space-x-2">
           <Button
             size="sm"
-            variant="outline"
-            onClick={() => alert('Green Wave synchronization applied to MG Road')}
-            className="bg-slate-800 hover:bg-slate-700 text-teal-300 border-slate-700 text-xs"
+            variant="primary"
+            onClick={() => addToast('Green Wave AI priority phase triggered across MG Road corridor', 'success')}
+            className="bg-city-terracotta hover:bg-city-terracotta/90 text-white font-semibold text-xs border-0"
           >
             ⚡ Trigger Green Wave
           </Button>
@@ -269,25 +271,25 @@ export const TrafficTransitControl: React.FC = () => {
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-        <Card className="border-l-4 border-l-teal-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">City Congestion Index</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">32% (Fluid)</div>
-          <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">-4.5% vs yesterday peak</div>
+        <Card className="border-l-4 border-l-city-terracotta">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">City Congestion Index</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">32% (Fluid)</div>
+          <div className="text-[10px] text-city-forest font-semibold mt-0.5">-4.5% vs yesterday peak</div>
         </Card>
-        <Card className="border-l-4 border-l-sky-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Adaptive Traffic Signals</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">248 / 250</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">99.2% AI sync efficiency</div>
+        <Card className="border-l-4 border-l-city-forest">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Adaptive Traffic Signals</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">248 / 250</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">99.2% AI sync efficiency</div>
         </Card>
-        <Card className="border-l-4 border-l-indigo-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Active Transit Fleet</div>
-          <div className="text-2xl font-black text-indigo-700 mt-0.5">184 Buses</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">91% On-time schedule rate</div>
+        <Card className="border-l-4 border-l-city-ochre">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Active Transit Fleet</div>
+          <div className="text-2xl font-black text-city-charcoal mt-0.5">184 Buses</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">91% On-time schedule rate</div>
         </Card>
-        <Card className="border-l-4 border-l-emerald-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">EV Transit Fleet Ratio</div>
-          <div className="text-2xl font-black text-emerald-600 mt-0.5">74.2% EV</div>
-          <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">Target: 80% by 2027</div>
+        <Card className="border-l-4 border-l-city-amber">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">EV Transit Fleet Ratio</div>
+          <div className="text-2xl font-black text-city-forest mt-0.5">74.2% EV</div>
+          <div className="text-[10px] text-city-forest font-semibold mt-0.5">Target: 80% by 2027</div>
         </Card>
       </div>
 

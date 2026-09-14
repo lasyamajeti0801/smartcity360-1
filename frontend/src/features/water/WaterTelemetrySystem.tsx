@@ -125,8 +125,8 @@ export const WaterTelemetrySystem: React.FC = () => {
       header: 'Reservoir / Balancing Tank',
       render: (r) => (
         <div>
-          <div className="font-bold text-slate-900">{r.name}</div>
-          <div className="text-[11px] text-slate-500 font-mono">
+          <div className="font-bold text-city-forest">{r.name}</div>
+          <div className="text-[11px] text-city-charcoal/60 font-mono">
             {r.capacity_ml} Million Liters (ML) capacity
           </div>
         </div>
@@ -137,14 +137,14 @@ export const WaterTelemetrySystem: React.FC = () => {
       header: 'Water Storage Level',
       render: (r) => (
         <div className="w-28">
-          <div className="flex justify-between text-[10px] font-mono mb-0.5 font-bold text-slate-700">
+          <div className="flex justify-between text-[10px] font-mono mb-0.5 font-bold text-city-charcoal">
             <span>{r.current_level_pct}%</span>
             <span>{((r.capacity_ml * r.current_level_pct) / 100).toFixed(0)} ML</span>
           </div>
-          <div className="w-full bg-slate-200 rounded-full h-2 overflow-hidden">
+          <div className="w-full bg-surface-muted rounded-full h-2 overflow-hidden">
             <div
               className={`h-2 rounded-full ${
-                r.current_level_pct > 75 ? 'bg-teal-600' : r.current_level_pct > 40 ? 'bg-amber-500' : 'bg-red-500'
+                r.current_level_pct > 75 ? 'bg-city-terracotta' : r.current_level_pct > 40 ? 'bg-city-amber' : 'bg-city-danger'
               }`}
               style={{ width: `${r.current_level_pct}%` }}
             />
@@ -157,7 +157,7 @@ export const WaterTelemetrySystem: React.FC = () => {
       header: 'Water Quality (WQI)',
       render: (r) => (
         <div>
-          <div className="font-bold text-xs text-slate-900">{r.wqi_score} / 100</div>
+          <div className="font-bold text-xs text-city-forest">{r.wqi_score} / 100</div>
           <Badge status="GOOD">{r.wqi_grade}</Badge>
         </div>
       ),
@@ -166,7 +166,7 @@ export const WaterTelemetrySystem: React.FC = () => {
       key: 'supply_hours_daily',
       header: 'Supply Schedule',
       render: (r) => (
-        <span className="font-mono text-xs text-slate-700 font-semibold">
+        <span className="font-mono text-xs text-city-charcoal/80 font-semibold">
           {r.supply_hours_daily} hrs/day
         </span>
       ),
@@ -177,18 +177,18 @@ export const WaterTelemetrySystem: React.FC = () => {
     {
       key: 'node_code',
       header: 'Sensor Code',
-      render: (n) => <span className="font-mono font-bold text-teal-800 text-xs">{n.node_code}</span>,
+      render: (n) => <span className="font-mono font-bold text-city-terracotta text-xs">{n.node_code}</span>,
     },
     {
       key: 'zone',
       header: 'Pipeline Zone',
-      render: (n) => <span className="font-semibold text-slate-900 text-xs">{n.zone}</span>,
+      render: (n) => <span className="font-semibold text-city-forest text-xs">{n.zone}</span>,
     },
     {
       key: 'pressure_psi',
       header: 'Hydraulic Pressure',
       render: (n) => (
-        <span className={`font-mono font-bold text-xs ${n.pressure_psi < 40 ? 'text-red-600' : 'text-slate-800'}`}>
+        <span className={`font-mono font-bold text-xs ${n.pressure_psi < 40 ? 'text-city-danger' : 'text-city-charcoal'}`}>
           {n.pressure_psi} PSI
         </span>
       ),
@@ -196,7 +196,7 @@ export const WaterTelemetrySystem: React.FC = () => {
     {
       key: 'flow_rate_lps',
       header: 'Flow Rate',
-      render: (n) => <span className="font-mono text-xs text-slate-600">{n.flow_rate_lps} L/s</span>,
+      render: (n) => <span className="font-mono text-xs text-city-charcoal/70">{n.flow_rate_lps} L/s</span>,
     },
     {
       key: 'status',
@@ -210,17 +210,17 @@ export const WaterTelemetrySystem: React.FC = () => {
   ];
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 select-none font-sans">
       {/* Header Banner */}
-      <div className="bg-slate-900 text-white rounded-xl p-5 border border-slate-800 shadow-md flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+      <div className="bg-city-charcoal text-city-ivory rounded-xl p-5 border border-city-forest shadow-civic flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
         <div>
           <div className="flex items-center space-x-2">
-            <Droplets className="h-5 w-5 text-teal-400" />
-            <h1 className="text-lg font-bold tracking-tight text-white">
+            <Droplets className="h-5 w-5 text-city-sand" />
+            <h1 className="text-lg font-bold tracking-tight text-city-ivory">
               Smart Water Supply & SCADA Telemetry Network
             </h1>
           </div>
-          <p className="text-xs text-slate-300 mt-1">
+          <p className="text-xs text-city-concrete/80 mt-1">
             Real-time reservoir capacities, water quality index (WQI) testing, hydraulic pipe pressures, and automated leak detection.
           </p>
         </div>
@@ -229,7 +229,7 @@ export const WaterTelemetrySystem: React.FC = () => {
             size="sm"
             variant="primary"
             onClick={handleBalancePressure}
-            className="bg-teal-600 hover:bg-teal-500 text-xs"
+            className="text-xs"
           >
             <RefreshCw className="h-3.5 w-3.5 mr-1" />
             Auto-Balance Pressure
@@ -239,25 +239,25 @@ export const WaterTelemetrySystem: React.FC = () => {
 
       {/* KPI Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
-        <Card className="border-l-4 border-l-teal-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Total City Water Storage</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">2,620 ML</div>
-          <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">82.4% aggregate capacity</div>
+        <Card className="border-l-4 border-l-city-terracotta">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Total City Water Storage</div>
+          <div className="text-2xl font-black text-city-forest mt-0.5">2,620 ML</div>
+          <div className="text-[10px] text-city-success font-semibold mt-0.5">82.4% aggregate capacity</div>
         </Card>
-        <Card className="border-l-4 border-l-sky-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Daily Drinking Supply</div>
-          <div className="text-2xl font-black text-slate-900 mt-0.5">490 MLD</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">135 Liters per capita per day</div>
+        <Card className="border-l-4 border-l-city-amber">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Daily Drinking Supply</div>
+          <div className="text-2xl font-black text-city-forest mt-0.5">490 MLD</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">135 Liters per capita per day</div>
         </Card>
-        <Card className="border-l-4 border-l-emerald-600">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Potable Water Quality Index</div>
-          <div className="text-2xl font-black text-emerald-600 mt-0.5">91.5 / 100</div>
-          <div className="text-[10px] text-emerald-600 font-semibold mt-0.5">Grade A (Statutory Potable)</div>
+        <Card className="border-l-4 border-l-city-forest">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Potable Water Quality Index</div>
+          <div className="text-2xl font-black text-city-success mt-0.5">91.5 / 100</div>
+          <div className="text-[10px] text-city-success font-semibold mt-0.5">Grade A (Statutory Potable)</div>
         </Card>
-        <Card className="border-l-4 border-l-amber-500">
-          <div className="text-[11px] font-bold text-slate-500 uppercase">Non-Revenue Water / Leaks</div>
-          <div className="text-2xl font-black text-amber-600 mt-0.5">9.8%</div>
-          <div className="text-[10px] text-slate-500 mt-0.5">Well under 15% national target</div>
+        <Card className="border-l-4 border-l-city-ochre">
+          <div className="text-[11px] font-bold text-city-charcoal/60 uppercase">Non-Revenue Water / Leaks</div>
+          <div className="text-2xl font-black text-city-amber mt-0.5">9.8%</div>
+          <div className="text-[10px] text-city-charcoal/60 mt-0.5">Well under 15% national target</div>
         </Card>
       </div>
 

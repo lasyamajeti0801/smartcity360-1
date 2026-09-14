@@ -31,12 +31,12 @@ export const Badge: React.FC<BadgeProps> = ({
   }
 
   const variantStyles = {
-    default: 'bg-slate-100 text-slate-800 border-slate-200',
-    neutral: 'bg-slate-100 text-slate-700 border-slate-300',
-    info: 'bg-sky-50 text-sky-800 border-sky-300',
-    warning: 'bg-amber-50 text-amber-900 border-amber-300',
-    success: 'bg-emerald-50 text-emerald-900 border-emerald-300',
-    danger: 'bg-red-50 text-red-900 border-red-300',
+    default: 'bg-purple-50 text-purple-900 border-purple-200',
+    neutral: 'bg-purple-50/50 text-purple-800 border-purple-100',
+    info: 'bg-purple-100 text-purple-800 border-purple-200',
+    warning: 'bg-amber-50 text-amber-800 border-amber-200',
+    success: 'bg-emerald-50 text-emerald-800 border-emerald-200',
+    danger: 'bg-rose-50 text-rose-800 border-rose-200',
   };
 
   return (
