@@ -1,0 +1,22 @@
+{
+  "pr_number": 183,
+  "title": "feat(water_mana): implement time-series anomaly detection and outlier filtering for city sensors (PR #183)",
+  "branch": "feature/water_management-anomaly-detection-pr183",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-14",
+  "merged_at": "2026-09-14",
+  "problem": "Municipal domain water_management required enterprise grade time-series anomaly detection and outlier filtering for city sensors.",
+  "solution": "Implemented and verified anomaly-detection pipeline for water_management with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "water_management"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}
