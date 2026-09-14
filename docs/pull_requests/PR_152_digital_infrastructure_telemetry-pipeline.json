@@ -1,0 +1,22 @@
+{
+  "pr_number": 152,
+  "title": "feat(digital_in): implement telemetry streaming ingest and edge buffer verification (PR #152)",
+  "branch": "feature/digital_infrastructure-telemetry-pipeline-pr152",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-14",
+  "merged_at": "2026-09-14",
+  "problem": "Municipal domain digital_infrastructure required enterprise grade telemetry streaming ingest and edge buffer verification.",
+  "solution": "Implemented and verified telemetry-pipeline pipeline for digital_infrastructure with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "digital_infrastructure"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}
