@@ -1,0 +1,22 @@
+{
+  "pr_number": 167,
+  "title": "feat(housing_an): implement time-series anomaly detection and outlier filtering for city sensors (PR #167)",
+  "branch": "feature/housing_and_community-anomaly-detection-pr167",
+  "status": "MERGED",
+  "author": "SmartCity360 Core Architecture Team",
+  "created_at": "2026-09-14",
+  "merged_at": "2026-09-14",
+  "problem": "Municipal domain housing_and_community required enterprise grade time-series anomaly detection and outlier filtering for city sensors.",
+  "solution": "Implemented and verified anomaly-detection pipeline for housing_and_community with non-fast-forward merge.",
+  "affected_modules": [
+    "backend",
+    "domains",
+    "housing_and_community"
+  ],
+  "tests": [
+    "pytest tests/",
+    "python scripts/pr_audit.py"
+  ],
+  "security_considerations": "Verified statutory data encryption and zero hardcoded secrets.",
+  "breaking_changes": false
+}
