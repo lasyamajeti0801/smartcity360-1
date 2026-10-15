@@ -156,6 +156,24 @@ cd frontend && npm run dev
 - API Documentation (Swagger UI): `http://localhost:8000/docs`
 - Health Check: `http://localhost:8000/health`
 
+### 3. One-Click Launchers (Windows)
+For single-click initialization and simultaneous startup of backend and frontend:
+```powershell
+# PowerShell Quick Launcher
+.\start_smartcity360.ps1
+
+# Windows Command Prompt Batch Launcher
+.\start_smartcity360.bat
+```
+
+### 4. Demo Access Credentials
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **City Administrator** | `admin@smartcity360.local` | `AdminSecurePass2026!` |
+| **Citizen Portal** | `citizen@smartcity360.local` | `CitizenSecurePass2026!` |
+| **Field Staff** | `staff.roads@smartcity360.local` | `StaffSecurePass2026!` |
+| **Emergency Operator** | `emergency@smartcity360.local` | `EmergencySecurePass2026!` |
+
 ---
 
 ## Verification & Audit Tooling
